@@ -59,7 +59,7 @@ class AgendaController extends Controller
                 'keterangan_acara' => $Keterangan_Acara,
                 'ditampilkan' => $Ditampilkan,
             ]);
-        return Redirect::route('agenda_index');
+        return redirect('agenda_index');
     }
 
   }
