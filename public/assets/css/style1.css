@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Hind");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
+@import url("http://www.w3schools.com/lib/w3.css");
+/*@import url("{{ url('/') }}/dist/css/AdminLTE.min.css");*/
+
+/*a{
+  font-family: "Hind",sans-serif;
+}*/
+
+h4{
+  font-family: "Hind",sans-serif;
+}
+
+p{
+  font-family: "Hind",sans-serif;
+}
+
+
+
+.row .row1::after{
+    content: ' ';
+    margin-top: 10px;
+    width: 980px;
+    display: block;
+    border: 1px solid #F5F5F5;
+}
+
+.mySlides {display:none;}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.small-box {
+	background: #F47920;
+  color: #fff;
+}
+
+.small-box2{
+  background: #0060AF;
+  color: #fff;
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.box1{
+  background: red;
+  height:50px;
+  width:50px;
+  float: left;
+}
+
+.box2{
+  background: yellow;
+  height:50px;
+  width:50px;
+  float: left;
+}
+
+.agenda-date{
+  color:#5f5656
+}
+
+
+@media (max-width: 1199px) and (min-width: 992px)
+.visible-md {
+    display: block!important;
+}
+.visible-lg, .visible-md, .visible-sm, .visible-xs {
+    /*display: none!important;*/
+}
+
+@media (min-width: 992px)
+.col-md-2 {
+    width: 16.66666667%;
+}
+
+/* navbar */
+.navbar-inverse {
+  background-color: #0060AF;
+  border-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  font-family:"Montserrat",sans-serif;;
+}
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #F47920;
+  font-weight: bold;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #5f5656;
+  background-color: #fff;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #D5D5D5;
+}
+/* caret */
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+  border-top-color: #777;
+  border-bottom-color: #777;
+}
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #333;
+  border-bottom-color: #333;
+}
+.navbar-inverse .navbar-nav > .open > a .caret,
+.navbar-inverse .navbar-nav > .open > a:hover .caret,
+.navbar-inverse .navbar-nav > .open > a:focus .caret {
+  border-top-color: #555;
+  border-bottom-color: #555;
+}
+/* mobile version */
+.navbar-inverse .navbar-toggle {
+  border-color: #DDD;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #DDD;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #CCC;
+}
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+      color: #777;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #333;
+  }
+}
+
+.container {
+padding-right: 0px;
+padding-left: 0px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.logo{
+padding-bottom: 10px;
+padding-top: 10px;
+}
+
+.carousel-button{
+  margin-top:50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*h1::after {
+content: ' ';
+margin-top: 50px;
+width: 100px;
+display: block;
+border: 2px solid #0060AF;
+}*/
+
+.title{
+  color: #5f5656;
+}
