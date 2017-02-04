@@ -30,8 +30,8 @@ class AgendaController extends Controller
 
   public function edit($id)
   {
-    $agenda = Agenda::findorFail($id);
-      return view('agenda.edit');
+    $agenda = Agenda::find($id);
+      return view('agenda.edit',compact('agenda'));
   }
 
   public function update(Request $request)
