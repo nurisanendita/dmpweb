@@ -45,7 +45,7 @@
 	</span><br><br>
 
 	<b>Tampilkan</b>
-	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" value="{{$agenda->ditampilkan==1}}" checked>Ya
+	<input style="margin-left:50px;" type="radio" name="input_ditampilkan"  checked>Ya
 	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" value="{{$agenda->ditampilkan==0}}" checked>Tidak<br><br>
 
 	<b>Nama Kegiatan</b>
