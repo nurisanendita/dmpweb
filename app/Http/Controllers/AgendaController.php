@@ -29,8 +29,9 @@ class AgendaController extends Controller
   }
 
 
-  public function update()
+  public function update($id)
   {
+    $agenda = Agenda::findorFail($id);
 
       return view('agenda.edit');
   }
