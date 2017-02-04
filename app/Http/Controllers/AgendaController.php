@@ -71,7 +71,7 @@ class AgendaController extends Controller
     $agenda->keterangan_acara = $request->input_keterangan;
     $agenda->ditampilkan = $request->input_ditampilkan;
     $agenda->save();
-    return redirect('agenda_index');
+    return view('agenda.index');
   }
 
   public function destroy($id)
