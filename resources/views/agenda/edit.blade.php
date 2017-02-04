@@ -4,7 +4,7 @@
 
 <h2>Edit Agenda</h2>
 
-<form action="{{ url('/') }}/agenda_edit/{{$agenda_list->id}}" method="post">
+<form action="{{ url('/') }}/agenda_edit/{{$agenda->id}}" method="post">
 
 	<b>Tanggal Kegiatan</b>
 	<input style="margin-left:10px;" type="date" name="input_tanggal" value="{{$agenda->tanggal_acara}}"><br><br>
