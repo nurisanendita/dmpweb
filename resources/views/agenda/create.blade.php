@@ -3,11 +3,6 @@
 @section('content')
 
 <h2>Tambah Agenda</h2>
-<!-- <script>
-$( function() {
-  $( "#datepicker" ).datepicker();
-} );
-</script> -->
 
 <form action="{{ url('/agenda_store') }}" method="post">
 	<b>Tanggal Kegiatan</b>

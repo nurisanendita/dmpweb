@@ -2,45 +2,48 @@
 
 @section('content')
 
-{!! Form::model($book, array('method' => 'PATCH', 'route' => array('books.update', $book->id))) !!}
+<h2>Tambah Agenda</h2>
 
-<h1> {{ $book->title }} </h1>
+<form action="{{ url('/agenda_store') }}" method="post">
+	<b>Tanggal Kegiatan</b>
+	<input style="margin-left:10px;" type="date" name="input_tanggal"><br><br>
 
-<div class="form-group">
-    {!! Form::label('id', 'Barcode:', ['class' => 'control-label']) !!}
-    {!! Form::text('id', $book->id, ['class' => 'form-control', 'disabled' => 'disabled']) !!}
-</div>
+	<b>Kode Ruang</b>
+	<select type="text" style="margin-left:40px;" name="input_koderuang">
+		@foreach($kodeRuang as $kRuang)
+				<option value="{{ $kRuang->kode }}"> {{ $kRuang->kode }}</option>
+		@endforeach
+	</select>
 
-<div class="form-group">
-    {!! Form::label('title', 'Judul:', ['class' => 'control-label']) !!}
-    {!! Form::text('title', $book->title, ['class' => 'form-control']) !!}
-</div>
+	<span style="margin-left:110px;"><b>Nama Ruang</b>
+		<select type="text" style="margin-left:10px;" name="input_namaruang">
+			@foreach($namaRuang as $nRuang)
+					<option value="{{ $nRuang->nama }}"> {{ $nRuang->nama }}</option>
+			@endforeach
+		</select>
+	</span>
 
-<div class="form-group">
-    {!! Form::label('title', 'Pengarang:', ['class' => 'control-label']) !!}
-    {!! Form::text('author', $book->author, ['class' => 'form-control']) !!}
-</div>
+	<span style="margin-left:110px;"><b>Lantai</b>
+		<select type="text" style="margin-left:10px;" name="input_lantairuang">
+			@foreach($lantaiRuang as $lRuang)
+					<option value="{{ $lRuang->lantai }}"> {{ $lRuang->lantai }}</option>
+			@endforeach
+		</select>
+	</span><br><br>
 
-<div class="form-group">
-    {!! Form::label('description', 'Kategori:', ['class' => 'control-label']) !!}
-    {!! Form::select('id_category', $categories, $book->id_category, ['class' => 'form-control']) !!}
-</div>
+	<b>Tampilkan</b>
+	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" value="1">Ya
+	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" value="0">Tidak<br><br>
 
-<div class="form-group">
-    {!! Form::label('quantity', 'Jumlah buku:', ['class' => 'control-label']) !!}
-    <input type='number' id='quantity' name='quantity' value='{!! $book->quantity !!}' min='{!! $book->quantity !!}' class='form-control'>
-</div>
+	<b>Nama Kegiatan</b>
+	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan"></textarea><br><br>
 
-<div class="form-group">
-    {!! Form::label('can_be_borrowed', 'Dapat dipinjam:', ['class' => 'control-label']) !!}
-    {!! Form::radio('can_be_borrowed', '1', $book->can_be_borrowed==1) !!} ya
-    {!! Form::radio('can_be_borrowed', '0', $book->can_be_borrowed==0) !!} tidak
-</div>
+	<b>Keterangan</b>
+	<textarea class="form-control" style="height:200px; width:700px;" type="text" name="input_keterangan"></textarea><br><br><br>
 
-
-{!! Form::submit('Simpan', ['class' => 'btn btn-primary']) !!}
-
-{!! Form::close() !!}
+	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
+	{{ csrf_field() }}
+</form>
 
 
 @stop
