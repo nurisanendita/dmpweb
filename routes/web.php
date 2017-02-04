@@ -38,7 +38,7 @@ Route::get('/agenda_index', 'AgendaController@index');
 Route::get('/agenda_create', 'AgendaController@create');
 Route::post('/agenda_store', 'AgendaController@store');
 Route::get('/agenda_edit', 'AgendaController@update');
-
+Route::get('/agenda_delete/{id}', 'AgendaController@destroy');
 
 Auth::routes();
 

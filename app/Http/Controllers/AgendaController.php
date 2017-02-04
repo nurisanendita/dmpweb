@@ -61,4 +61,11 @@ class AgendaController extends Controller
         return redirect('agenda_index');
     }
 
+    public function destroy($id)
+    {
+      $agenda = Agenda::findorFail($id);
+      $agenda->delete();
+      return redirect('agenda_index');
+    }
+
   }
