@@ -60,18 +60,20 @@ class AgendaController extends Controller
       // return $agenda;
   }
 
-  public function update(Request $request, $id)
+  public function update($id)
   {
     $agenda = Agenda::find($id);
-    $agenda->tanggal_acara = $request->input_tanggal;
-    $agenda->kode_ruang = $request->input_koderuang;
-    $agenda->nama_ruang = $request->input_namaruang;
-    $agenda->lantai = $request->input_lantairuang;
-    $agenda->nama_acara = $request->input_namakegiatan;
-    $agenda->keterangan_acara = $request->input_keterangan;
-    $agenda->ditampilkan = $request->input_ditampilkan;
+    $agenda->tanggal_acara = Request::input('input_tanggal');
+    $agenda->kode_ruang = Request::input('input_koderuang');
+    $agenda->nama_ruang = Request::input('input_namaruang');
+    $agenda->lantai = Request::input('input_lantairuang');
+    $agenda->nama_acara = Request::input('input_namakegiatan');
+    $agenda->keterangan_acara = Request::input('input_keterangan');
+    $agenda->ditampilkan = Request::input('input_ditampilkan');
     $agenda->save();
-    return view('agenda.index');
+
+    $agenda = Agenda::all();
+    return redirect('/agenda_index');
   }
 
   public function destroy($id)
