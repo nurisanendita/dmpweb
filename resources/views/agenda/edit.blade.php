@@ -45,8 +45,8 @@
 	</span><br><br>
 
 	<b>Tampilkan</b>
-	<input style="margin-left:50px;" type="radio" name="input_ditampilkan">{{$agenda->ditampilkan==1}}Ya
-	<input style="margin-left:30px;" type="radio" name="input_ditampilkan">{{$agenda->ditampilkan==0}}Tidak<br><br>
+	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" value="{{$agenda->ditampilkan==1}}" checked="true">Ya
+	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" value="{{$agenda->ditampilkan==0}}" checked="true">Tidak<br><br>
 
 	<b>Nama Kegiatan</b>
 	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan">{{$agenda->nama_acara}}</textarea><br><br>
