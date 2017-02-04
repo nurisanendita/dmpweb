@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>Tambah Agenda</h2>
+<h2>Edit Agenda</h2>
 
 <form action="{{ url('/agenda_edit/{{$agenda_list->id}}') }}" method="post">
 
@@ -12,14 +12,14 @@
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">
 		@foreach($kodeRuang as $kRuang)
-				<option value="{{ $agenda->kode_ruang }}"></option>
+				<option value="{{ $agenda->kode_ruang }}">{{ $kRuang->kode }}</option>
 		@endforeach
 	</select>
 
 	<span style="margin-left:110px;"><b>Nama Ruang</b>
 		<select type="text" style="margin-left:10px;" name="input_namaruang">
 			@foreach($namaRuang as $nRuang)
-					<option value="{{ $agenda->nama_ruang }}"></option>
+					<option value="{{ $agenda->nama_ruang }}">{{ $nRuang->nama }}</option>
 			@endforeach
 		</select>
 	</span>
@@ -27,7 +27,7 @@
 	<span style="margin-left:110px;"><b>Lantai</b>
 		<select type="text" style="margin-left:10px;" name="input_lantairuang">
 			@foreach($lantaiRuang as $lRuang)
-					<option value="{{ $agenda->lantai }}"></option>
+					<option value="{{ $agenda->lantai }}">{{ $lRuang->lantai }}</option>
 			@endforeach
 		</select>
 	</span><br><br>
