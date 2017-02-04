@@ -12,7 +12,7 @@
 
 <div class="box">
 	<div class"box-header" style="margin-top:10px;">
-		<div class="col-sm-2">
+		<div class="col-sm-12">
 			<a class="btn btn-success" href="{{ url('/') }}/agenda_create" style="float: right;">TAMBAH</a>
 		</div>
 	</div>
