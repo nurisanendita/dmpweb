@@ -42,8 +42,8 @@
 				          <td>{{ $agenda_list->keterangan_acara }}</td>
 				          <td>@if ($agenda_list->ditampilkan == 1) Ya @else Tidak @endif</td>
 		                  <td>
-												<a class="btn btn-warning" href="{{ url('/') }}/agenda_edit/{{ $agenda_list -> id }}">EDIT</a>
-												<a class="btn btn-danger" href="{{ url('/') }}/agenda_delete/{{ $agenda_list -> id }}">HAPUS</a>
+												<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $agenda_list -> id }}">EDIT</a>
+												<a class="btn btn-danger btn-xs" href="{{ url('/') }}/agenda_delete/{{ $agenda_list -> id }}">HAPUS</a>
 		                  </td>
 	                </tr>
 	            @endforeach
