@@ -45,8 +45,11 @@
 	</span><br><br>
 
 	<b>Tampilkan</b>
-	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" value="$agenda->ditampilkan">Ya
-	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" value="$agenda->ditampilkan">Tidak<br><br>
+	@if($agenda->ditampilkan == 1)
+	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" checked>Ya
+	@else
+	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" checked>Tidak<br><br>
+	@endif
 
 	<b>Nama Kegiatan</b>
 	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan">{{$agenda->nama_acara}}</textarea><br><br>
