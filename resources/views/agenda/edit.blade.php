@@ -12,14 +12,14 @@
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">
 		@foreach($kodeRuang as $kRuang)
-				<option value="{{ $agenda->kode_ruang }}">{{ $kRuang->kode }}</option>
+				<option value="{{ $kRuang->kode }}">{{ $agenda->kode_ruang }}</option>
 		@endforeach
 	</select>
 
 	<span style="margin-left:110px;"><b>Nama Ruang</b>
 		<select type="text" style="margin-left:10px;" name="input_namaruang">
 			@foreach($namaRuang as $nRuang)
-					<option value="{{ $agenda->nama_ruang }}"></option>
+					<option value="{{ $nRuang->nama }}">{{ $agenda->nama_ruang }}</option>
 			@endforeach
 		</select>
 	</span>
@@ -27,7 +27,7 @@
 	<span style="margin-left:110px;"><b>Lantai</b>
 		<select type="text" style="margin-left:10px;" name="input_lantairuang">
 			@foreach($lantaiRuang as $lRuang)
-					<option value="{{ $agenda->lantai }}"></option>
+					<option value="{{ $lRuang->lantai }}">{{ $agenda->lantai }}</option>
 			@endforeach
 		</select>
 	</span><br><br>
