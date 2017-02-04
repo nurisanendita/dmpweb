@@ -34,8 +34,8 @@ class AgendaController extends Controller
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-      //return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
-      return $agenda;
+      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
+      // return $agenda;
   }
 
   public function update(Request $request)
