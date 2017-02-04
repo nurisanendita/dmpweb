@@ -28,12 +28,17 @@ class AgendaController extends Controller
         return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang'));
   }
 
+  public function edit()
+  {
+    $agenda = Agenda::findorFail($id);
+      return view('agenda.edit');
+  }
 
   public function update($id)
   {
     $agenda = Agenda::findorFail($id);
 
-      return view('agenda.edit');
+
   }
 
 

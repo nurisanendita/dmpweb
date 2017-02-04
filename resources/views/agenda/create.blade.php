@@ -4,7 +4,7 @@
 
 <h2>Tambah Agenda</h2>
 
-<form action="{{ url('/')/agenda_store }}" method="post">
+<form action="{{ url('/agenda_store') }}" method="post">
 	<b>Tanggal Kegiatan</b>
 	<input style="margin-left:10px;" type="date" name="input_tanggal"><br><br>
 
