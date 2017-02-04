@@ -11,7 +11,9 @@
 
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">
-				<option value="{{ $agenda->kode_ruang }}"></option>
+		@foreach($kodeRuang as $kRuang)
+				<option value="{{ $agenda->kode_ruang }}">{{ $kRuang->kode }}</option>
+		@endforeach
 	</select>
 
 	<span style="margin-left:110px;"><b>Nama Ruang</b>
