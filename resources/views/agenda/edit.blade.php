@@ -47,6 +47,7 @@
 	<b>Tampilkan</b>
 	@if ($agenda->ditampilkan==1)
 	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" checked="true">Ya
+	<input style="margin-left:30px;" type="radio" name="input_ditampilkan">Tidak<br><br>
 	@else
 	<input style="margin-left:50px;" type="radio" name="input_ditampilkan">Ya
 	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" checked="true">Tidak<br><br>
