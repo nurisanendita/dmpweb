@@ -11,15 +11,13 @@
 
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">
-		@foreach($kodeRuang as $kRuang)
-				<option value="{{ $agenda->kode_ruang }}">{{ $kRuang->kode }}</option>
-		@endforeach
+				<option value="{{ $agenda->kode_ruang }}"></option>
 	</select>
 
 	<span style="margin-left:110px;"><b>Nama Ruang</b>
 		<select type="text" style="margin-left:10px;" name="input_namaruang">
 			@foreach($namaRuang as $nRuang)
-					<option value="{{ $agenda->nama_ruang }}">{{ $nRuang->nama }}</option>
+					<option value="{{ $agenda->nama_ruang }}"></option>
 			@endforeach
 		</select>
 	</span>
@@ -27,14 +25,14 @@
 	<span style="margin-left:110px;"><b>Lantai</b>
 		<select type="text" style="margin-left:10px;" name="input_lantairuang">
 			@foreach($lantaiRuang as $lRuang)
-					<option value="{{ $agenda->lantai }}">{{ $lRuang->lantai }}</option>
+					<option value="{{ $agenda->lantai }}"></option>
 			@endforeach
 		</select>
 	</span><br><br>
 
 	<b>Tampilkan</b>
-	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" value="$agenda->ditampilkan==1">Ya
-	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" value="$agenda->ditampilkan==0">Tidak<br><br>
+	<input style="margin-left:50px;" type="radio" name="input_ditampilkan" value="$agenda->ditampilkan">Ya
+	<input style="margin-left:30px;" type="radio" name="input_ditampilkan" value="$agenda->ditampilkan">Tidak<br><br>
 
 	<b>Nama Kegiatan</b>
 	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan" value="{{$agenda->nama_acara}}"></textarea><br><br>
