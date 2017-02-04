@@ -13,7 +13,7 @@
 <div class="box">
 	<div class"box-header" style="margin-top:10px;">
 		<div class="col-sm-2">
-			<a class="btn btn-success" href="{{ url('/') }}/agenda_create">TAMBAH</a>
+			<a class="btn btn-success" href="{{ url('/') }}/agenda_create" style="float: right;">TAMBAH</a>
 		</div>
 	</div>
 	<div class="box-body">
