@@ -28,32 +28,12 @@ class AgendaController extends Controller
         return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang'));
   }
 
-  public function edit($id)
-  {
-    $agenda = Agenda::find($id);
-    $kodeRuang = KodeRuang::all();
-    $namaRuang = NamaRuang::all();
-    $lantaiRuang = LantaiRuang::all();
-      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
-      // return $agenda;
-  }
-
-  public function update(Request $request)
-  {
-    dd($request);
-
-  }
-
-
   public function store(Request $request)
   {
-
         $Tanggal_Acara = Request::input('input_tanggal');
-
         $Kode_Ruang = Request::input('input_koderuang');
         $Nama_Ruang = Request::input('input_namaruang');
         $Lantai_Ruang = Request::input('input_lantairuang');
-
         $Ditampilkan = Request::input('input_ditampilkan');
         $Nama_Kegiatan = Request::input('input_namakegiatan');
         $Keterangan_Acara = Request::input('input_keterangan');
@@ -70,11 +50,35 @@ class AgendaController extends Controller
         return redirect('agenda_index');
     }
 
-    public function destroy($id)
-    {
-      $agenda = Agenda::findorFail($id);
-      $agenda->delete();
-      return redirect('agenda_index');
-    }
-
+  public function edit($id)
+  {
+    $agenda = Agenda::find($id);
+    $kodeRuang = KodeRuang::all();
+    $namaRuang = NamaRuang::all();
+    $lantaiRuang = LantaiRuang::all();
+      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
+      // return $agenda;
   }
+
+  public function update(Request $request, $id)
+  {
+    $agenda = Agenda::find($id);
+    $agenda->tanggal_acara = $request->input_tanggal;
+    $agenda->kode_ruang = $request->input_koderuang;
+    $agenda->nama_ruang = $request->input_namaruang;
+    $agenda->lantai = $request->input_lantairuang;
+    $agenda->nama_acara = $request->input_namakegiatan;
+    $agenda->keterangan_acara = $request->input_keterangan;
+    $agenda->ditampilkan = $request->input_ditampilkan;
+    $agenda->save();
+    return redirect('agenda_index');
+  }
+
+  public function destroy($id)
+  {
+    $agenda = Agenda::findorFail($id);
+    $agenda->delete();
+    return redirect('agenda_index');
+  }
+
+}
