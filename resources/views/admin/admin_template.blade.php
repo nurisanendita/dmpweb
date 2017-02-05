@@ -39,7 +39,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <style>
     h2::after{
         content: ' ';
@@ -84,8 +84,8 @@
                     </a>
                 </li>
 
-                <li href="{{ url('/') }}/berita_index" class="active treeview">
-                    <a href="{{ url('/') }}/berita_index">
+                <li href="#" class="active treeview">
+                    <a href="#">
                         <i class="fa fa-newspaper-o"></i><span>Berita</span>
                     </a>
                 </li>
@@ -96,8 +96,8 @@
                     </a>
                 </li>
 
-                <li href="{{ url('/') }}/quote_index" class="active treeview">
-                    <a href="{{ url('/') }}/quote_index">
+                <li href="#" class="active treeview">
+                    <a href="#">
                         <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                     </a>
                 </li>

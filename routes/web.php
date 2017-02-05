@@ -36,7 +36,6 @@ Route::get('/agenda_edit/{id}', 'AgendaController@edit');
 Route::put('/agenda_update/{id}', 'AgendaController@update');
 Route::get('/agenda_delete/{id}', 'AgendaController@destroy');
 
-Route::get('/quote_index', 'QuoteController@index');
 Auth::routes();
 
 Route::get('/admin_dmp', 'HomeController@index');

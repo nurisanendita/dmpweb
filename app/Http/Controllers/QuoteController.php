@@ -36,23 +36,8 @@ class QuoteController extends Controller
 
   public function store(Request $request)
   {
-        $Tanggal_Acara = Request::input('input_tanggal');
-        $Kode_Ruang = Request::input('input_koderuang');
-        $Nama_Ruang = Request::input('input_namaruang');
-        $Lantai_Ruang = Request::input('input_lantairuang');
-        // $Ditampilkan = Request::input('input_ditampilkan');
-        $Nama_Kegiatan = Request::input('input_namakegiatan');
-        $Keterangan_Acara = Request::input('input_keterangan');
-
-        DB::table('agenda')->insert([
-                'tanggal_acara' => $Tanggal_Acara,
-                'kode_ruang' => $Kode_Ruang,
-                'nama_ruang' => $Nama_Ruang,
-                'lantai' => $Lantai_Ruang,
-                'nama_acara' => $Nama_Kegiatan,
-                'keterangan_acara' => $Keterangan_Acara,
-                // 'ditampilkan' => $Ditampilkan,
-              ]);
+        $Quote = Request::input('input_quote');
+        
         return redirect('agenda_index');
     }
 
