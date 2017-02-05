@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-6">
-                  <h4 style="text-transform:uppercase;"><a href="#"></a>{{$agenda_list->nama_acara}}</h4>
+                  <a href="#"><h4 style="text-transform:uppercase; color:#0060AF">{{$agenda_list->nama_acara}}</h4></a>
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{$agenda_list->keterangan_acara}}</p>
                 </div>
               </div>
