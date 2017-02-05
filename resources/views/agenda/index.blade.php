@@ -2,6 +2,10 @@
 
 @section('content')
 
+@if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+@endif
+
 <section class="content-header">
 	<h1>AGENDA</h1>
 	<ol class="breadcrumb">

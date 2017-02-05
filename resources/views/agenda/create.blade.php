@@ -4,9 +4,7 @@
 
 <h2>Tambah Agenda</h2>
 
-@if (Session::has('message'))
-    <div class="alert alert-info">{{ Session::get('message') }}</div>
-@endif
+
 
 <form action="{{ url('/') }}/agenda_store" method="post">
 	<b>Tanggal Kegiatan</b>
