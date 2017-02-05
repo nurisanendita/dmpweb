@@ -3,7 +3,7 @@
 @section('content')
 
 @if (Session::has('message'))
-    <div class="alert alert-info">{{ Session::get('message') }}</div>
+    <div class="alert alert-danger">{{ Session::get('message') }}</div>
 @endif
 
 <section class="content-header">
