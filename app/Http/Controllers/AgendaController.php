@@ -38,14 +38,6 @@ class AgendaController extends Controller
         $Nama_Kegiatan = Request::input('input_namakegiatan');
         $Keterangan_Acara = Request::input('input_keterangan');
 
-        if ($Ditampilkan > 12 && $Ditampilkan == 1){
-          function myFunction() {
-              alert("Maksimum Ditampilkan 12 Agenda");
-          }
-          window.alert("myFunction");
-          return redirect('agenda_create');
-        }
-
         DB::table('agenda')->insert([
                 'tanggal_acara' => $Tanggal_Acara,
                 'kode_ruang' => $Kode_Ruang,
@@ -54,6 +46,14 @@ class AgendaController extends Controller
                 'nama_acara' => $Nama_Kegiatan,
                 'keterangan_acara' => $Keterangan_Acara,
                 'ditampilkan' => $Ditampilkan,
+
+                if ($Ditampilkan > 12 && $Ditampilkan == 1){
+                  function myFunction() {
+                      alert("Maksimum Ditampilkan 12 Agenda");
+                  }
+                  window.alert("myFunction");
+                  return redirect('agenda_create');
+                }
             ]);
 
 
