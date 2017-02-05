@@ -17,8 +17,6 @@ class CreateDokumentasiTable extends Migration
           $table->increments('id');
           $table->text('keterangan_foto');
           $table->string('foto');
-          $table->string('ukuran');
-          $table->string('tipe');
           $table->timestamps();
         });
     }
