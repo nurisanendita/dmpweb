@@ -10,15 +10,15 @@
 
           <!-- carousel slide 1 -->
           <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
-            @while($agenda->id==9)
+            @while($agenda == $agenda1 && $agenda1->id==9)
             <!-- Individual row agenda slide 1-->
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:18px; ">{{date('M Y',strtotime($agenda->tanggal_acara))}}</span>
-                    <span class="info-box-number" style="font-size:30px; ">{{date('j',strtotime($agenda->tanggal_acara))}}</span>
+                    <span class="info-box-text" style="font-size:18px; ">{{date('M Y',strtotime($agenda1->tanggal_acara))}}</span>
+                    <span class="info-box-number" style="font-size:30px; ">{{date('j',strtotime($agenda1->tanggal_acara))}}</span>
                   </div>
                   </div>
                 </div>
@@ -27,16 +27,16 @@
                   <div class="info-box bg-orange" style="font-family:Hind;">
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:16px;">{{$agenda->kode_ruang}}</span>
-                    <span class="info-box-tex" style="font-size:16px;">{{$agenda->nama_ruang}}</span>
-                    <span class="info-box-text" style="font-size:16px;">{{$agenda->lantai}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{$agenda1->kode_ruang}}</span>
+                    <span class="info-box-tex" style="font-size:16px;">{{$agenda1->nama_ruang}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{$agenda1->lantai}}</span>
                   </div>
                   </div>
                 </div>
 
                 <div class="col-md-6 col-lg-6">
-                  <a href="#"><h4 style="text-transform:uppercase; color:#0060AF">{{$agenda->nama_acara}}</h4></a>
-                  <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{$agenda->keterangan_acara}}</p>
+                  <a href="#"><h4 style="text-transform:uppercase; color:#0060AF">{{$agenda1->nama_acara}}</h4></a>
+                  <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{$agenda1->keterangan_acara}}</p>
                 </div>
               </div>
               @endwhile
