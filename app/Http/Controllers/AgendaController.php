@@ -56,7 +56,7 @@ class AgendaController extends Controller
 
     public function show()
     {
-      $agenda1 = DB::table('agenda')::where_id(9)->get();
+      $agenda1 = Agenda::where_id(9)->get();
       return view('welcome', compact('agenda1'));
     }
 
