@@ -19,8 +19,7 @@ class AgendaController extends Controller
   public function index()
   {
     $agenda = Agenda::all();
-    $show = DB::table('agenda')->where('ditampilkan', '=', 1)->count();
-    return view('agenda.index', compact('agenda', 'show'));
+    return view('agenda.index', compact('agenda'));
   }
 
   public function create()
@@ -28,7 +27,6 @@ class AgendaController extends Controller
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-    $show = DB::table('agenda')->where('ditampilkan', '=', 1)->count();
         return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang', 'show'));
   }
 
@@ -66,7 +64,6 @@ class AgendaController extends Controller
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-    $show = DB::table('agenda')->where('ditampilkan', '=', 1)->count();
       return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang', 'show'));
       // return $agenda;
   }
