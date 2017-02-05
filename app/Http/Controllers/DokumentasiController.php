@@ -13,6 +13,7 @@ use App\Models\LantaiRuang;
 use App\Models\NamaRuang;
 use App\Counter;
 use Session;
+use Storage;
 
 class DokumentasiController extends Controller
 {
@@ -34,19 +35,16 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-        $Foto = Request::input('input_foto');
-        $Keterangan_Foto = Request::input('input_keteranganfoto');
+        $Foto = $request->file('input_foto');
+        $FileFoto = $Foto->getClientOriginalName();
+        Storage::put('/', $FileFoto, file_get_contents($request->file('input_foto')->getRealPath()));
 
-        DB::table('dokumentasi')->insert([
-                'tanggal_acara' => $Tanggal_Acara,
-                'kode_ruang' => $Kode_Ruang,
-                'nama_ruang' => $Nama_Ruang,
-                'lantai' => $Lantai_Ruang,
-                'nama_acara' => $Nama_Kegiatan,
-                'keterangan_acara' => $Keterangan_Acara,
-                // 'ditampilkan' => $Ditampilkan,
-              ]);
-        return redirect('agenda_index');
+        $Dokumentasi = new Dokumentasi;
+        $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
+        $Dokumentasi->foto = $FileFoto;
+        $Dokumentasi->save();
+
+        return redirect('dokumentasi_index');
     }
 
     public function show()
