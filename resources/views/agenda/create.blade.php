@@ -45,7 +45,6 @@
 	{{ csrf_field() }}
 </form>
 
-
 @stop
 
 @extends('admin.footapp')

@@ -24,6 +24,7 @@
 		<table class="table table-bordered table-hover dataTable">
 				<thead>
 						<tr>
+            <th>No.</th>
 						<th>Tanggal</th>
 						<th>Kode Ruang</th>
 						<th>Ruang</th>
@@ -38,12 +39,13 @@
 				<tbody>
 	            @foreach ($agenda as $agenda_list)
 	                <tr>
+                  <td>{{ $agenda_list->id }}</td>
 				          <td>{{ date('j M Y',strtotime($agenda_list->tanggal_acara)) }}</td>
 				          <td>{{ $agenda_list->kode_ruang }}</td>
 				          <td>{{ $agenda_list->nama_ruang }}</td>
 				          <td>{{ $agenda_list->lantai }}</td>
-				          <td>{{ $agenda_list->nama_acara }}</td>
-				          <td>{{ $agenda_list->keterangan_acara }}</td>
+				          <td style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{ $agenda_list->nama_acara }}</td>
+				          <td style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{ $agenda_list->keterangan_acara }}</td>
 				          <!-- <td>@if ($agenda_list->ditampilkan == 1) Ya @else Tidak @endif</td> -->
                   <td>
 										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $agenda_list -> id }}">EDIT</a>

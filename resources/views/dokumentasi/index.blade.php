@@ -7,48 +7,37 @@
 @endif
 
 <section class="content-header">
-	<h1>AGENDA</h1>
+	<h1>DOKUMENTASI</h1>
 	<ol class="breadcrumb">
 		<li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Beranda</a></li>
-		<li class="active">Agenda</li>
+		<li class="active">Dokumentasi</li>
 	</ol>
 </section>
 
 <div class="box">
 	<div class"box-header" style="margin-top:10px;">
 		<div class="col-sm-12">
-			<a class="btn btn-success" href="{{ url('/') }}/agenda_create" style="float: right;">TAMBAH</a>
+			<a class="btn btn-success" href="{{ url('/') }}/dokumentasi_create" style="float: right;">TAMBAH</a>
 		</div>
 	</div>
 	<div class="box-body">
 		<table class="table table-bordered table-hover dataTable">
 				<thead>
 						<tr>
-						<th>Tanggal</th>
-						<th>Kode Ruang</th>
-						<th>Ruang</th>
-						<th>Lantai</th>
-						<th>Nama Kegiatan</th>
-						<th>Keterangan</th>
-						<!-- <th>Tampilkan</th> -->
+						<th>No.</th>
+						<th>Foto</th>
+						<th>Keterangan Foto</th>
 						<th>Aksi</th>
 						</tr>
 				</thead>
 
 				<tbody>
-	            @foreach ($agenda as $agenda_list)
+	            @foreach ($dokumentasi as $dokumentasi_list)
 	                <tr>
-				          <td>{{ date('j M Y',strtotime($agenda_list->tanggal_acara)) }}</td>
-				          <td>{{ $agenda_list->kode_ruang }}</td>
-				          <td>{{ $agenda_list->nama_ruang }}</td>
-				          <td>{{ $agenda_list->lantai }}</td>
-				          <td>{{ $agenda_list->nama_acara }}</td>
-				          <td>{{ $agenda_list->keterangan_acara }}</td>
-				          <!-- <td>@if ($agenda_list->ditampilkan == 1) Ya @else Tidak @endif</td> -->
-                  <td>
-										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $agenda_list -> id }}">EDIT</a>
-										<!-- <a class="btn btn-danger btn-xs" href="{{ url('/') }}/agenda_delete/{{ $agenda_list -> id }}">HAPUS</a> -->
-                  </td>
+				          <td>{{ $dokumentasi_list->id }}</td>
+				          <td>{{ $dokumentasi_list->foto }}</td>
+				          <td style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{ $dokumentasi_list->keterangan_foto }}</td>
+                  <td><a class="btn btn-warning btn-xs" href="{{ url('/') }}/dokumentasi_edit/{{ $dokumentasi_list -> id }}">EDIT</a>
 	                </tr>
 	            @endforeach
 	        </tbody>
