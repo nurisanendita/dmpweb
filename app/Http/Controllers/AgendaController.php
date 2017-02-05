@@ -59,10 +59,10 @@ class AgendaController extends Controller
 
     public function show()
     {
-      if($agenda = Agenda::where('id','=','0')->get())
+      if($agenda = Agenda::where('id','<','12')->get())
       {
-        Session::flash('message', 'Belum Melakukan Input Agenda');
-        return view('welcome');
+        Session::flash('message', 'Masukkan Seluruh Agenda');
+        return redirect('agenda_index');
       }
 
       $agenda1 = Agenda::find(1);
