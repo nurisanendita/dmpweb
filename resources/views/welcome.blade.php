@@ -11,7 +11,7 @@
           <!-- carousel slide 1 -->
           <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
             <!-- Individual row agenda slide 1-->
-            $agenda1 as $agenda_list
+            @for($agenda1 as $agenda_list)
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
@@ -39,7 +39,7 @@
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{$agenda_list->keterangan_acara}}</p>
                 </div>
               </div>
-            
+            @endfor
     					<!-- Individual News slide 1-->
 
               <!-- Individual News slide 1-->
