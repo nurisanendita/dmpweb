@@ -26,8 +26,8 @@ class AgendaController extends Controller
   {
     if($agenda = Agenda::where('id','=','12')->count())
     {
-      Session::flash('success', 'Event delete successfully!');
-      // return redirect('agenda_index');
+      Session::flash('message', 'Event delete successfully!');
+      return redirect('agenda_index');
     }
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
