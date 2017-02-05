@@ -38,7 +38,7 @@ class AgendaController extends Controller
         $Kode_Ruang = Request::input('input_koderuang');
         $Nama_Ruang = Request::input('input_namaruang');
         $Lantai_Ruang = Request::input('input_lantairuang');
-        $Ditampilkan = Request::input('input_ditampilkan');
+        // $Ditampilkan = Request::input('input_ditampilkan');
         $Nama_Kegiatan = Request::input('input_namakegiatan');
         $Keterangan_Acara = Request::input('input_keterangan');
 
@@ -49,7 +49,7 @@ class AgendaController extends Controller
                 'lantai' => $Lantai_Ruang,
                 'nama_acara' => $Nama_Kegiatan,
                 'keterangan_acara' => $Keterangan_Acara,
-                'ditampilkan' => $Ditampilkan,
+                // 'ditampilkan' => $Ditampilkan,
               ]);
         return redirect('agenda_index');
     }
@@ -80,7 +80,7 @@ class AgendaController extends Controller
     $agenda->lantai = Request::input('input_lantairuang');
     $agenda->nama_acara = Request::input('input_namakegiatan');
     $agenda->keterangan_acara = Request::input('input_keterangan');
-    $agenda->ditampilkan = Request::input('input_ditampilkan');
+    // $agenda->ditampilkan = Request::input('input_ditampilkan');
     $agenda->save();
 
     $agenda = Agenda::all();

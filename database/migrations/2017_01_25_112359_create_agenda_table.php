@@ -21,7 +21,6 @@ class CreateAgendaTable extends Migration
           $table->string('lantai');
           $table->text('nama_acara');
           $table->text('keterangan_acara');
-          $table->integer('ditampilkan');
           $table->timestamps();
       });
     }
