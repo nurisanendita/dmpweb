@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AgendaController@show');
 
 Route::get('/dokumentasi', function () {
     return view('dokumentasi.dokumentasi');
