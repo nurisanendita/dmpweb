@@ -47,8 +47,8 @@ class AgendaController extends Controller
                 'keterangan_acara' => $Keterangan_Acara,
                 'ditampilkan' => $Ditampilkan,
             ]);
-            
-            if ($Ditampilkan > 12 && $Ditampilkan == 1){
+
+            if (DB::table('agenda')->ditampilkan > 12 && DB::table('agenda')->ditampilkan == 1){
               function myFunction() {
                   alert("Maksimum Ditampilkan 12 Agenda");
               }
