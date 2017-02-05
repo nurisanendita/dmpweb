@@ -39,15 +39,13 @@ class AgendaController extends Controller
         $Keterangan_Acara = Request::input('input_keterangan');
 
         if ($agenda->ditampilkan == 1 && ditampilkan > 12 ){
-          <script>
           function myFunction() {
               alert("Maksimum Ditampilkan 12 Agenda");
           }
           window.alert("myFunction");
-          </script>
           return redirect('agenda_create');
         }
-        
+
         DB::table('agenda')->insert([
                 'tanggal_acara' => $Tanggal_Acara,
                 'kode_ruang' => $Kode_Ruang,
