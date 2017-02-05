@@ -1,9 +1,7 @@
 @extends('admin.admin_template')
 
 @section('content')
-@if($show > 12)
-<script type='text/javascript'>alert('Agenda Ditampilkan 12')</script>
-@endif
+
 <section class="content-header">
 	<h1>AGENDA</h1>
 	<ol class="breadcrumb">
