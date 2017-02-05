@@ -24,7 +24,10 @@ class AgendaController extends Controller
 
   public function create()
   {
-    $agenda = Agenda::where('id','=','12')->get(alert("Maksimal Agenda ditampilkan adalah 12"));
+    if($agenda = Agenda::where('id','=','12')->count())
+    {
+      alert("Maksimal Agenda ditampilkan adalah 12");
+    }
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
