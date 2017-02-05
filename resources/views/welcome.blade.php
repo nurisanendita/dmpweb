@@ -17,8 +17,8 @@
                   <div class="info-box bg-blue" style="font-family:Hind;">
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:18px; ">{{($agenda_list->tanggal_acara(format->'mm','YY'))}}</span>
-                    <span class="info-box-number" style="font-size:30px; ">{{($agenda_list->tanggal_acara(format->'dd'))}}</span>
+                    <span class="info-box-text" style="font-size:18px; ">{{($agenda_list->tanggal_acara)}}</span>
+                    <span class="info-box-number" style="font-size:30px; ">{{($agenda_list->tanggal_acara)}}</span>
                   </div>
                   </div>
                 </div>
