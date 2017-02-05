@@ -56,7 +56,7 @@ class AgendaController extends Controller
 
     public function show()
     {
-      $agenda = DB::table('agenda')->where ('ditampilkan','=','1')->select();
+      $agenda = DB::table('agenda')->where ('ditampilkan','=','1');
       return view('welcome', compact('agenda'));
     }
 
