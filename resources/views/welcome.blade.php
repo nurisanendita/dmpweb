@@ -1,6 +1,11 @@
 @extends('template')
 
 @section('content')
+
+@if (Session::has('message'))
+    <div class="alert alert-danger">{{ Session::get('message') }}</div>
+@endif
+
   <div class="container">
     <h1 class="title" style="font-family:Hind">Agenda</h1>
     <div class="row" style="margin-top:20px;">

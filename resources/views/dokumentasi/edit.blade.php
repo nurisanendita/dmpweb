@@ -4,7 +4,7 @@
 
 <h2>Edit Dokumentasi</h2>
 
-<form action="{{ url('/') }}/dokumentasi_update/{{$dokumentasi->id}}" method="post">
+<form action="{{ url('/') }}/dokumentasi_update/{{$dokumentasi->id}}" method="post" enctype="multipart/form-data">
 
 	<b>Tanggal Kegiatan</b>
 	<input style="margin-left:10px;" type="file" name="input_foto" value="{{$dokumentasi->foto}}"><br><br>

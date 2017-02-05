@@ -4,7 +4,7 @@
 
 <h2>Tambah Dokumentasi</h2>
 
-<form action="{{ url('/') }}/dokumentasi_store" method="post">
+<form action="{{ url('/') }}/dokumentasi_store" method="post" enctype="multipart/form-data">
 
 	<b>Foto</b>
 	<input style="margin-left:10px;" type="file" name="input_foto"><br><br>
