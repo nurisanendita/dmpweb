@@ -42,8 +42,6 @@ class DokumentasiController extends Controller
 
         $Dokumentasi = new Dokumentasi;
         $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
-        $Dokumentasi->ukuran = $FileFoto->getClientsize();
-        $Dokumentasi->tipe = $FileFoto->getClientMimeType();
         $Dokumentasi->foto = $FileFoto;
         $Dokumentasi->save();
 
