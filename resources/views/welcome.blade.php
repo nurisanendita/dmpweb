@@ -27,9 +27,9 @@
                   <div class="info-box bg-orange" style="font-family:Hind;">
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:16px;">{{($agenda_list->kode_ruang)}}</span>
-                    <span class="info-box-tex" style="font-size:16px;">{{($agenda_list->nama_ruang)}}</span>
-                    <span class="info-box-text" style="font-size:16px;">{{($agenda_list->lantai)}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{$agenda_list->kode_ruang}}</span>
+                    <span class="info-box-tex" style="font-size:16px;">{{$agenda_list->nama_ruang}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{$agenda_list->lantai}}</span>
                   </div>
                   </div>
                 </div>
