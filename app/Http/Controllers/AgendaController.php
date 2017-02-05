@@ -61,7 +61,7 @@ class AgendaController extends Controller
     {
       if($agenda = Agenda::where('id','<','12')->get())
       {
-        Session::flash('message', 'Masukkan Seluruh Agenda');
+        Session::flash('message', 'Masukkan Seluruh (12) Agenda');
         return redirect('agenda_index');
       }
 
