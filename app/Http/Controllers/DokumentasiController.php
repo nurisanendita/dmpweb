@@ -36,16 +36,6 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-    'disks' => [
-                'local' => [
-                    'driver' => 'local',
-                    'root'   => storage_path(),
-                ],
-                'uploads' => [
-                    'driver' => 'local',
-                    'root'   => public_path() . '/uploads',
-                ],
-            ]
         $Foto = $request->file('input_foto');
         $FileFoto = $Foto->getClientOriginalName();
         Storage::disk('uploads')->put('$Foto', $FileFoto);
