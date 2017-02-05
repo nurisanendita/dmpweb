@@ -59,7 +59,7 @@ class AgendaController extends Controller
 
     public function show()
     {
-      if($agenda = Agenda::where('id','<','12')->count())
+      if($agenda = Agenda::where('id','=','0')->count())
       {
         Session::flash('message', 'Masukkan Seluruh (12) Agenda');
         return redirect('agenda_index');
