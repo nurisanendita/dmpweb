@@ -11,13 +11,16 @@ use App\Models\Dokumentasi;
 use App\Models\KodeRuang;
 use App\Models\LantaiRuang;
 use App\Models\NamaRuang;
+use App\Counter;
+use Session;
 
 class AgendaController extends Controller
 {
   public function index()
   {
     $agenda = Agenda::all();
-      return view('agenda.index', compact('agenda'));
+    $show = DB::table('agenda')->where('ditampilkan', '=', 1)->count();
+    return view('agenda.index', compact('agenda', 'show'));
   }
 
   public function create()
@@ -25,7 +28,8 @@ class AgendaController extends Controller
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-        return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang'));
+    $show = DB::table('agenda')->where('ditampilkan', '=', 1)->count();
+        return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang', 'show'));
   }
 
   public function store(Request $request)
@@ -46,16 +50,7 @@ class AgendaController extends Controller
                 'nama_acara' => $Nama_Kegiatan,
                 'keterangan_acara' => $Keterangan_Acara,
                 'ditampilkan' => $Ditampilkan,
-            ]);
-
-            if (DB::table('agenda')->ditampilkan > 12 && DB::table('agenda')->ditampilkan == 1){
-              function myFunction() {
-                  alert("Maksimum Ditampilkan 12 Agenda");
-              }
-              window.alert("myFunction");
-              return redirect('agenda_create');
-            }
-
+              ]);
         return redirect('agenda_index');
     }
 
@@ -65,7 +60,8 @@ class AgendaController extends Controller
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
+    $show = DB::table('agenda')->where('ditampilkan', '=', 1)->count();
+      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang', 'show'));
       // return $agenda;
   }
 

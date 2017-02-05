@@ -1,7 +1,9 @@
 @extends('admin.admin_template')
 
 @section('content')
-
+@if($show == 12)
+<script type='text/javascript'>alert('Agenda Ditampilkan 12')</script>
+@endif
 <h2>Tambah Agenda</h2>
 
 <form action="{{ url('/') }}/agenda_store" method="post">
