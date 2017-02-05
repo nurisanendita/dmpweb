@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-6">
-                  <a href="#"><h4 style="text-transform:uppercase; color:#0060AF">{{$agenda1->nama_acara}}</h4></a>
+                  <a href="{{url('/')}}/{{$agenda1->nama_acara}}"><h4 style="text-transform:uppercase; color:#0060AF">{{$agenda1->nama_acara}}</h4></a>
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda1->keterangan_acara}}</p>
                 </div>
               </div>
