@@ -27,7 +27,7 @@
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
                     <span class="info-box-text" style="font-size:16px;">{{$agenda1->kode_ruang}}</span>
-                    <span class="info-box-tex" style="font-size:16px;">{{$agenda1->nama_ruang}}</span>
+                    <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;">{{$agenda1->nama_ruang}}</span>
                     <span class="info-box-text" style="font-size:16px;">{{$agenda1->lantai}}</span>
                   </div>
                   </div>
