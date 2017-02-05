@@ -10,7 +10,6 @@
 
           <!-- carousel slide 1 -->
           <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
-            @while($agenda == $agenda1 && $agenda1->id==9)
             <!-- Individual row agenda slide 1-->
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
@@ -39,7 +38,7 @@
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{$agenda1->keterangan_acara}}</p>
                 </div>
               </div>
-              @endwhile
+
 
     					<!-- Individual News slide 1-->
 
