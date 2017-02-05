@@ -24,15 +24,12 @@ class DokumentasiController extends Controller
 
   public function create()
   {
-    if($agenda = Agenda::where('id','=','12')->count())
+    if($dokumentasi = Dokumentasi::where('id','=','6')->count())
     {
-      Session::flash('message', 'Maksimum Menampilkan 12 Agenda');
-      return redirect('agenda_index');
+      Session::flash('message', 'Maksimum Menampilkan 6 Dokumentasi');
+      return redirect('dokumentasi_index');
     }
-    $kodeRuang = KodeRuang::all();
-    $namaRuang = NamaRuang::all();
-    $lantaiRuang = LantaiRuang::all();
-        return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang'));
+        return view('dokumentasi.create');
   }
 
   public function store(Request $request)
