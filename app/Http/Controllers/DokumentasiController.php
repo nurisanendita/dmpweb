@@ -19,7 +19,7 @@ class DokumentasiController extends Controller
   public function index()
   {
     $dokumentasi = Dokumentasi::all();
-    return view('agenda.index', compact('agenda'));
+    return view('dokumentasi.index', compact('dokumentasi'));
   }
 
   public function create()
