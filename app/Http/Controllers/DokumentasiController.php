@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
@@ -36,9 +36,9 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-        $Foto = Request::('input_foto');
+        $Foto = $request->file('input_foto');
         $FileFoto = $Foto->getClientOriginalName();
-        Storage::put('/', $FileFoto, file_get_contents(Request::input('input_foto')->getRealPath()));
+        Storage::put('/', $FileFoto, file_get_contents($request->file('input_foto');->getRealPath()));
 
         $Dokumentasi = new Dokumentasi;
         $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
