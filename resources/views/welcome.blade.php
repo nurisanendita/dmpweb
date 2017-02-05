@@ -18,7 +18,7 @@
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
                     <span class="info-box-text" style="font-size:18px; "></span>
-                    <span class="info-box-number" style="font-size:30px; ">{{date('j',($agenda_list->tanggal_acara))}}</span>
+                    <span class="info-box-number" style="font-size:30px; ">{{date('j',strtotime($agenda_list->tanggal_acara))}}</span>
                   </div>
                   </div>
                 </div>
