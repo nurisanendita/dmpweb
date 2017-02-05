@@ -38,12 +38,12 @@ class DokumentasiController extends Controller
   {
         $Foto = $request->file('input_foto');
         $FileFoto = $Foto->getClientOriginalName();
-        Storage::put('/', $FileFoto, file_get_contents($request->file('input_foto')->getRealPath()));
+        Storage::put('/upload/', $FileFoto, file_get_contents($request->file('input_foto')->getRealPath()));
 
         $Dokumentasi = new Dokumentasi;
         $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
         $Dokumentasi->foto = $FileFoto;
-        $Dokumentasi->save();
+        // $Dokumentasi->save();
 
         return redirect('dokumentasi_index');
     }
