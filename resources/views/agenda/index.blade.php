@@ -28,7 +28,7 @@
 						<th>Lantai</th>
 						<th>Nama Kegiatan</th>
 						<th>Keterangan</th>
-						<th>Tampilkan</th>
+						<!-- <th>Tampilkan</th> -->
 						<th>Aksi</th>
 						</tr>
 				</thead>
