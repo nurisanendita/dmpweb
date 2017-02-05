@@ -54,6 +54,12 @@ class AgendaController extends Controller
         return redirect('agenda_index');
     }
 
+    public function show()
+    {
+      $agenda = DB::table('agenda')->where ('ditampilkan','=','1')->select();
+      return view('welcome', compact('agenda'));
+    }
+
   public function edit($id)
   {
     $agenda = Agenda::find($id);

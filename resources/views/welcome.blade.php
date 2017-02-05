@@ -11,13 +11,14 @@
           <!-- carousel slide 1 -->
           <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
             <!-- Individual row agenda slide 1-->
+            @foreach ($agenda as $agenda_list)
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:18px; ">Jan 2017</span>
-                    <span class="info-box-number" style="font-size:30px; ">23</span>
+                    <span class="info-box-text" style="font-size:18px; ">{{($agenda_list->tanggal_acara(format->'mm','YY'))}}</span>
+                    <span class="info-box-number" style="font-size:30px; ">{{($agenda_list->tanggal_acara(format->'dd'))}}</span>
                   </div>
                   </div>
                 </div>
@@ -26,22 +27,23 @@
                   <div class="info-box bg-orange" style="font-family:Hind;">
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:16px;">B1</span>
-                    <span class="info-box-tex" style="font-size:16px;">R. Pertemuan</span>
-                    <span class="info-box-text" style="font-size:16px;">Lantai 3</span>
+                    <span class="info-box-text" style="font-size:16px;">{{($agenda_list->kode_ruang)}}</span>
+                    <span class="info-box-tex" style="font-size:16px;">{{($agenda_list->nama_ruang)}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{($agenda_list->lantai)}}</span>
                   </div>
                   </div>
                 </div>
 
                 <div class="col-md-6 col-lg-6">
-                  <h5 style="text-transform:uppercase;"><a href="#">fedfwefwfef pelatihan dan sertifikasi karyawan pt pupuk kaltim periode ii</a></h5>
-                  <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">Deskripsi acara, persyaratan peserta dasad adad adada adasd asdas da sda dsa sda da sda sd asd a sda sd a sda sd a da sd as da sd a sd asd a sda sd a sd as da sd asd a d asd a d asd as d asd as da a da ds da  dsa da sd a sd ad as da sd a da d as da d a sda  dsa da  dsa ds da sd ad wdqda da sda sd a ed q wd wqw ed ed ed</p>
+                  <h5 style="text-transform:uppercase;"><a href="#"></a>{{($agenda_list->nama_acara)}}</h5>
+                  <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{($agenda_list->keterangan_acara)}}</p>
                 </div>
               </div>
+              @endforeach
     					<!-- Individual News slide 1-->
 
               <!-- Individual News slide 1-->
-              <div class="row row1" style="margin-top:10px;">
+              <!-- <div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
@@ -67,11 +69,11 @@
                   <h4 style="text-transform:uppercase;"><a href="#">pelatihan dan sertifikasi karyawan pt pupuk kaltim periode ii</a></h4>
                   <p>Deskripsi acara, persyaratan peserta</p>
                 </div>
-              </div>
+              </div> -->
           			<!-- Individual News slide 1-->
 
                 <!-- Individual News slide 1-->
-                <div class="row row1" style="margin-top:10px;">
+                <!-- <div class="row row1" style="margin-top:10px;">
           				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                     <div class="info-box bg-blue" style="font-family:Hind;">
                     <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
@@ -97,11 +99,11 @@
                     <h4 style="text-transform:uppercase;"><a href="#">pelatihan dan sertifikasi karyawan pt pupuk kaltim periode ii</a></h4>
                     <p>Deskripsi acara, persyaratan peserta</p>
                   </div>
-                </div>
+                </div> -->
             		<!-- Individual News slide 1-->
 
                 <!-- Individual News slide 1-->
-                <div class="row row1" style="margin-top:10px;">
+                <!-- <div class="row row1" style="margin-top:10px;">
                   <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                     <div class="info-box bg-blue" style="font-family:Hind;">
                     <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
@@ -127,7 +129,7 @@
                     <h4 style="text-transform:uppercase;"><a href="#">pelatihan dan sertifikasi karyawan pt pupuk kaltim periode ii</a></h4>
                     <p>Deskripsi acara, persyaratan peserta</p>
                   </div>
-                </div>
+                </div> -->
         					<!-- Individual News slide 1-->
           </div>
         <!-- carousel slide 1 -->
