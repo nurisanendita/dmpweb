@@ -26,7 +26,8 @@ class AgendaController extends Controller
   {
     if($agenda = Agenda::where('id','=','12')->count())
     {
-      alert("Maksimal Agenda ditampilkan adalah 12");
+      Session::flash('success', 'Event delete successfully!');
+      return view('agenda.index');
     }
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
