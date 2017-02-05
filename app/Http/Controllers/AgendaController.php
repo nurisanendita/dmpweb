@@ -46,15 +46,15 @@ class AgendaController extends Controller
                 'nama_acara' => $Nama_Kegiatan,
                 'keterangan_acara' => $Keterangan_Acara,
                 'ditampilkan' => $Ditampilkan,
-
-                if ($Ditampilkan == 1 && $Ditampilkan > 12 ){
-                  function myFunction() {
-                      alert("Maksimum Ditampilkan 12 Agenda");
-                  }
-                  window.alert("myFunction");
-                  return redirect('agenda_create');
-                }
             ]);
+            // if ($Ditampilkan == 1 && $Ditampilkan > 12 ){
+            //   function myFunction() {
+            //       alert("Maksimum Ditampilkan 12 Agenda");
+            //   }
+            //   window.alert("myFunction");
+            //   return redirect('agenda_create');
+            // }
+
         return redirect('agenda_index');
     }
 
