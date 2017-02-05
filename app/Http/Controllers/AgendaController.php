@@ -24,10 +24,14 @@ class AgendaController extends Controller
 
   public function create()
   {
+    if($agenda = Agenda::find(>12){
+      window.alert("Maksimal Agenda ditampilkan adalah 12");
+    }
+
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-        return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang', 'show'));
+        return view('agenda.create', compact('kodeRuang','namaRuang','lantaiRuang'));
   }
 
   public function store(Request $request)
@@ -75,7 +79,7 @@ class AgendaController extends Controller
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
-      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang', 'show'));
+      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
       // return $agenda;
   }
 
