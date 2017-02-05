@@ -5,7 +5,6 @@
     <h1 class="title" style="font-family:Hind">Agenda</h1>
     <div class="row" style="margin-top:20px;">
     	<div class="col-md-10 col-lg-10">
-        $agenda as $agenda-list;
 
         <div class="row container">
 
@@ -27,7 +26,7 @@
                   <div class="info-box bg-orange" style="font-family:Hind;">
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:16px;">{{($agenda_list->kode_ruang)}}</span>
+                    <span class="info-box-text" style="font-size:16px;">B1</span>
                     <span class="info-box-tex" style="font-size:16px;">R. Pertemuan</span>
                     <span class="info-box-text" style="font-size:16px;">Lantai 3</span>
                   </div>
