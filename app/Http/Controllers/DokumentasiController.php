@@ -38,7 +38,7 @@ class DokumentasiController extends Controller
   {
         $Foto = $request->file('input_foto');
         $FileFoto = $Foto->getClientOriginalName();
-        Storage::disk('uploads')->put('$Foto', $FileFoto);
+        Storage::public_path('/')->put('$Foto', $FileFoto);
         // Storage::disk('upload/', $FileFoto, file_get_contents($request->file('input_foto')->getRealPath()));
 
         $Dokumentasi = new Dokumentasi;
