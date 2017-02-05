@@ -62,7 +62,7 @@ class AgendaController extends Controller
       if($agenda = Agenda::where('id','=','0')->get())
       {
         Session::flash('message', 'Belum Melakukan Input Agenda');
-        return redirect('/');
+        return view('welcome');
       }
 
       $agenda1 = Agenda::find(1);
