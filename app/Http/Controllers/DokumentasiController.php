@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
@@ -37,20 +37,15 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-    $this->validate($request(
-      'img' => 'image'));
+    $image = $request->file('input_foto');
+    $imgname = $image->getClientOriginalName();
+    $image = $image->move(public_path() . "/images/" . $imgname);
+    $Keterangan_Foto = Request::input('input_keteranganfoto');
 
-        $Dokumentasi = DB::table('dokumentasi');
-        $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
-        if($request->hasFile('img')){
-          $img = $request->file('img');
-          $imageName = time().'.'.$image->getClientOriginalExtension();
-          $location='photos/'.$imageName;
-          Image::make($image)->save($location);
-          $Dokumentasi->foto=$imageName;
-        }
-        // $Dokumentasi->save();
-
+    DB::table('dokumentasi')->insert([
+            'foto' => $image,
+            'keterangan_foto' => $Keterangan_Foto,
+          ]);
         return redirect('dokumentasi_index');
     }
 
