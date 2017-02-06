@@ -40,13 +40,15 @@ class DokumentasiController extends Controller
     $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
     $image = $image->move(public_path() . "/images/" . $imgname);
+
     $Keterangan_Foto = $request->input('input_keteranganfoto');
 
     DB::table('dokumentasi')->insert([
             'foto' => $image,
             'keterangan_foto' => $Keterangan_Foto,
           ]);
-        return redirect('dokumentasi_index');
+    // return redirect('dokumentasi_index');
+    return $imgname;
     }
 
     public function show()
@@ -69,17 +71,16 @@ class DokumentasiController extends Controller
   public function update($id)
   {
     $dokumentasi = Dokumentasi::find($id);
-    $dokumentasi->foto = Request::input('input_foto');
-    $agenda->kode_ruang = Request::input('input_koderuang');
-    $agenda->nama_ruang = Request::input('input_namaruang');
-    $agenda->lantai = Request::input('input_lantairuang');
-    $agenda->nama_acara = Request::input('input_namakegiatan');
-    $agenda->keterangan_acara = Request::input('input_keterangan');
-    // $agenda->ditampilkan = Request::input('input_ditampilkan');
+    $image = $request->file('input_foto');
+    $imgname = $image->getClientOriginalName();
+    $image = $image->move(public_path() . "/images/" . $imgname);
+
+    $dokumentasi->keterangan_foto = Request::input('input_keteranganfoto');
+
     $agenda->save();
 
     $agenda = Agenda::all();
-    return redirect('/agenda_index');
+    return redirect('dokumentasi_index');
   }
 
   public function destroy($id)
