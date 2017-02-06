@@ -59,7 +59,7 @@ class DokumentasiController extends Controller
         Session::flash('message', 'Masukkan Seluruh (6) Agenda');
         return redirect('dokumentasi_index');
       }
-      
+
       $dokumentasi1 = Dokumentasi::find(1);
       $dokumentasi2 = Dokumentasi::find(2);
       $dokumentasi3 = Dokumentasi::find(3);
@@ -79,7 +79,7 @@ class DokumentasiController extends Controller
         }
       }
     }
-    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
+    //return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
   }
 
   public function edit($id)
