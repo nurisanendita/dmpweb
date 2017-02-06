@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => 'public',
+    'default' => 'local',
 
     /*
     |--------------------------------------------------------------------------
@@ -61,17 +61,6 @@ return [
             'secret' => env('AWS_SECRET'),
             'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
-        ],
-
-        'disks' => [
-                    'local' => [
-                        'driver' => 'local',
-                        'root'   => storage_path(),
-                    ],
-                    'uploads' => [
-                        'driver' => 'local',
-                        'root'   => public_path() . '/uploads',
-                    ],
         ],
 
     ],
