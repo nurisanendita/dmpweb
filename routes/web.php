@@ -23,8 +23,8 @@
 
   Route::get('/admin_dmp', function () {return view('admin.admin_login');});
   Route::post('/admin_dmpPost', 'AdminController@authenticate');
-  
-Route::group(['middleware' => 'auth'], function () {
+
+// Route::group(['middleware' => 'auth'], function () {
   Route::get('/agenda_index', 'AgendaController@index');
   Route::get('/agenda_create', 'AgendaController@create');
   Route::post('/agenda_store', 'AgendaController@store');
@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
   // Route::get('/dokumentasi_delete/{id}', 'AgendaController@destroy');
 
   Route::get('/quote_index', function () {return view('quote.index');});
-});
+// });
 // Auth::routes();
 //
 // Route::get('/admin_dmp', 'HomeController@index');
