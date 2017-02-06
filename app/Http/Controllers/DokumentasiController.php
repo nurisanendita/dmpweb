@@ -34,17 +34,17 @@ class DokumentasiController extends Controller
     $dokumentasi5 = Dokumentasi::find(5);
     $dokumentasi6 = Dokumentasi::find(6);
 
-    $quote = $request->input('input_quote');
-    function submit(){
-      if(!empty($quote)){
-        Session::flash('message', 'Quote Telah Diperbarui');
-        return redirect('quote_index');
-      }
-      else {
-        Session::flash('message', 'Masukkan Quote');
-        return redirect('quote_index');
-      }
-    }
+    // $quote = $request->input('input_quote');
+    // function submit(){
+    //   if(!empty($quote)){
+    //     Session::flash('message', 'Quote Telah Diperbarui');
+    //     return redirect('quote_index');
+    //   }
+    //   else {
+    //     Session::flash('message', 'Masukkan Quote');
+    //     return redirect('quote_index');
+    //   }
+    // }
     return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
   }
 
