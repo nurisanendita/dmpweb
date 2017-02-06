@@ -55,7 +55,7 @@ class DokumentasiController extends Controller
     public function show()
     {
       $dokumentasi1 = Dokumentasi::find(1);
-      $dokumentasi2 = Dokumentasi::find(7);
+      $dokumentasi2 = Dokumentasi::find(8);
       // $agenda3 = Agenda::find(3);
       // $agenda4 = Agenda::find(4);
       // $agenda5 = Agenda::find(5);
