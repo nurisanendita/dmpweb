@@ -52,20 +52,6 @@ p{
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-.box1{
-  background: red;
-  height:50px;
-  width:50px;
-  float: left;
-}
-
-.box2{
-  background: yellow;
-  height:50px;
-  width:50px;
-  float: left;
-}
-
 .agenda-date{
   color:#5f5656
 }
