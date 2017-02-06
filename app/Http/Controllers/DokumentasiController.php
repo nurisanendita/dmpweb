@@ -57,7 +57,7 @@ class DokumentasiController extends Controller
       // $agenda4 = Agenda::find(4);
       // $agenda5 = Agenda::find(5);
       // $agenda6 = Agenda::find(6);
-      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi3'));
+      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2'));
     }
 
   public function edit($id)
