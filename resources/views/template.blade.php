@@ -54,13 +54,23 @@
         </nav>
         @yield('content')
         <script>
-        $(function() {
-             var pgurl = window.location.href.substr(window.location.href
-        .lastIndexOf("/")+1);
-             $(".nav .navbar-nav li a").each(function(){
-                  if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-                  $(this).addClass("active");
-             })
+        $(".nav .navbar-nav li a").each(function()
+        {
+            if (this.href.search(location.href) != -1)
+            {
+                $(this).addClass("active");
+            }
+        });
+
+        $(function(){
+            var url = window.location.pathname,
+            urlRegExp = new RegExp(url.replace(/\/$/,'') + "$");
+
+            $('.nav .navbar-nav li a').each(function(){
+                if(urlRegExp.test(this.href.replace(/\/$/,''))){
+                    $(this).addClass('active');
+                }
+            });
         });
         </script>
     </body>
