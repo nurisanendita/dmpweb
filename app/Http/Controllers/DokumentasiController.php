@@ -39,7 +39,7 @@ class DokumentasiController extends Controller
   {
     $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
-    $path = public_path() . "\images\" . $imgname;
+    $path = public_path() . "/images/" . $imgname;
     $image = $image->move($path);
 
     $Keterangan_Foto = $request->input('input_keteranganfoto');
@@ -55,7 +55,7 @@ class DokumentasiController extends Controller
     public function show()
     {
       $dokumentasi1 = Dokumentasi::find(1);
-      $dokumentasi2 = Dokumentasi::find(9);
+      $dokumentasi2 = Dokumentasi::find(7);
       // $agenda3 = Agenda::find(3);
       // $agenda4 = Agenda::find(4);
       // $agenda5 = Agenda::find(5);
