@@ -50,7 +50,7 @@ class DokumentasiController extends Controller
           Image::make($image)->save($location);
           $Dokumentasi->image=$imageName;
         }
-        $Dokumentasi->save();
+        // $Dokumentasi->save();
 
         return redirect('dokumentasi_index');
     }
