@@ -43,7 +43,7 @@
               </div>
               <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li><a href="{{ url('/') }}">BERANDA</a></li>
+                  <li><a class="active" href="{{ url('/') }}">BERANDA</a></li>
                   <li><a href="{{ url('/') }}/berita">BERITA</a></li>
                   <li><a href="{{ url('/') }}/dokumentasi">DOKUMENTASI</a></li>
                   <li><a href="{{ url('/') }}/kontak">KONTAK</a></li>
