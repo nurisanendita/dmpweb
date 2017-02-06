@@ -48,7 +48,7 @@ class DokumentasiController extends Controller
             'keterangan_foto' => $Keterangan_Foto,
           ]);
     // return redirect('dokumentasi_index');
-    return $imgname;
+    return $image;
     }
 
     public function show()
