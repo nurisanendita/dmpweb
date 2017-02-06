@@ -27,11 +27,11 @@ class DokumentasiController extends Controller
 
   public function create()
   {
-    if($dokumentasi = Dokumentasi::where('id','=','6')->count())
-    {
-      Session::flash('message', 'Maksimum Menampilkan 6 Dokumentasi');
-      return redirect('dokumentasi_index');
-    }
+    // if($dokumentasi = Dokumentasi::where('id','=','6')->count())
+    // {
+    //   Session::flash('message', 'Maksimum Menampilkan 6 Dokumentasi');
+    //   return redirect('dokumentasi_index');
+    // }
         return view('dokumentasi.create');
   }
 
