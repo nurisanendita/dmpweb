@@ -49,7 +49,7 @@
 
       </div>
 
-      <div class="container mySlides col-md-12 col-lg-12" id="slide3">
+      <!-- <div class="container mySlides col-md-12 col-lg-12" id="slide3">
 
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
@@ -135,7 +135,7 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
     </div>
   </div>
