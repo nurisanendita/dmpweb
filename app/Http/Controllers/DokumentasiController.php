@@ -45,7 +45,7 @@ class DokumentasiController extends Controller
     //     return redirect('quote_index');
     //   }
     // }
-    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
+    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6'));
   }
 
   public function __construct()
