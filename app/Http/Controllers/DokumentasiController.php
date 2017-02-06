@@ -19,10 +19,39 @@ use File;
 
 class DokumentasiController extends Controller
 {
-  // public function __construct()
-  //   {
-  //       $this->middleware('auth');
-  //   }
+  public function show()
+  {
+    if($dokumentasi = Dokumentasi::count() < 6)
+    {
+      Session::flash('message', 'Masukkan Seluruh (6) Agenda');
+      return redirect('dokumentasi_index');
+    }
+
+    $dokumentasi1 = Dokumentasi::find(1);
+    $dokumentasi2 = Dokumentasi::find(2);
+    $dokumentasi3 = Dokumentasi::find(3);
+    $dokumentasi4 = Dokumentasi::find(4);
+    $dokumentasi5 = Dokumentasi::find(5);
+    $dokumentasi6 = Dokumentasi::find(6);
+
+    $quote = $request->input('input_quote');
+    function submit(){
+      if(!empty($quote)){
+        Session::flash('message', 'Quote Telah Diperbarui');
+        return redirect('quote_index');
+      }
+      else {
+        Session::flash('message', 'Masukkan Quote');
+        return redirect('quote_index');
+      }
+    }
+    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
+  }
+
+  public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
   public function index()
   {
@@ -55,35 +84,6 @@ class DokumentasiController extends Controller
           ]);
     return redirect('dokumentasi_index');
     // return $Keterangan_Foto;
-    }
-
-    public function show()
-    {
-      if($dokumentasi = Dokumentasi::count() < 6)
-      {
-        Session::flash('message', 'Masukkan Seluruh (6) Agenda');
-        return redirect('dokumentasi_index');
-      }
-
-      $dokumentasi1 = Dokumentasi::find(1);
-      $dokumentasi2 = Dokumentasi::find(2);
-      $dokumentasi3 = Dokumentasi::find(3);
-      $dokumentasi4 = Dokumentasi::find(4);
-      $dokumentasi5 = Dokumentasi::find(5);
-      $dokumentasi6 = Dokumentasi::find(6);
-
-      $quote = $request->input('input_quote');
-      function submit(){
-        if(!empty($quote)){
-          Session::flash('message', 'Quote Telah Diperbarui');
-          return redirect('quote_index');
-        }
-        else {
-          Session::flash('message', 'Masukkan Quote');
-          return redirect('quote_index');
-        }
-      }
-      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
     }
 
   public function edit($id)
