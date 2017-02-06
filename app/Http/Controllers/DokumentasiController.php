@@ -45,7 +45,7 @@ class DokumentasiController extends Controller
     $Keterangan_Foto = $request->input('input_keteranganfoto');
 
     DB::table('dokumentasi')->insert([
-            'foto' => $image,
+            'foto' => $path,
             'keterangan_foto' => $Keterangan_Foto,
           ]);
     // return redirect('dokumentasi_index');
