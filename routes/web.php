@@ -15,17 +15,11 @@ Route::get('/', 'AgendaController@show');
 
 Route::get('/dokumentasi', 'DokumentasiController@show');
 
-Route::get('/berita', function () {
-    return view('berita.berita');
-});
+Route::get('/berita', function () {return view('berita.berita');});
 
-Route::get('/tentang_kami', function () {
-    return view('profil.profil');
-});
+Route::get('/tentang_kami', function () {return view('profil.profil');});
 
-Route::get('/kontak', function () {
-    return view('kontak.kontak');
-});
+Route::get('/kontak', function () {return view('kontak.kontak');});
 
 Route::get('/agenda_index', 'AgendaController@index');
 Route::get('/agenda_create', 'AgendaController@create');
