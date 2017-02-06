@@ -6,7 +6,7 @@
 
 <form action="{{ url('/') }}/dokumentasi_update/{{$dokumentasi->id}}" method="post" enctype="multipart/form-data">
 
-	<b>Tanggal Kegiatan</b>
+	<b>Foto</b>
 	<input style="margin-left:10px;" type="file" name="input_foto" value="{{$dokumentasi->foto}}"><br><br>
 
   <b>Keterangan Foto</b>

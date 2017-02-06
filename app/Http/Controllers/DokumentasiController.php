@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
@@ -52,28 +52,24 @@ class DokumentasiController extends Controller
     public function show()
     {
       $dokumentasi1 = Dokumentasi::find(1);
-      $dokumentasi2 = Dokumentasi::find(2);
+      $dokumentasi2 = Dokumentasi::find(3);
       // $agenda3 = Agenda::find(3);
       // $agenda4 = Agenda::find(4);
       // $agenda5 = Agenda::find(5);
       // $agenda6 = Agenda::find(6);
-      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2'));
+      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi3'));
     }
 
   public function edit($id)
   {
-    $agenda = Agenda::find($id);
-    $kodeRuang = KodeRuang::all();
-    $namaRuang = NamaRuang::all();
-    $lantaiRuang = LantaiRuang::all();
-      return view('agenda.edit',compact('agenda','kodeRuang','namaRuang','lantaiRuang'));
-      // return $agenda;
+    $dokumentasi = Dokumentasi::find($id);
+      return view('dokumentasi.edit',compact('dokumentasi'));
   }
 
   public function update($id)
   {
-    $agenda = Agenda::find($id);
-    $agenda->tanggal_acara = Request::input('input_tanggal');
+    $dokumentasi = Dokumentasi::find($id);
+    $dokumentasi->foto = Request::input('input_foto');
     $agenda->kode_ruang = Request::input('input_koderuang');
     $agenda->nama_ruang = Request::input('input_namaruang');
     $agenda->lantai = Request::input('input_lantairuang');
