@@ -4,10 +4,10 @@
 
 <h2>Tambah Dokumentasi</h2>
 
-<form action="{{ url('/') }}/dokumentasi_store" method="post" enctype="multipart/form-data">
+<form class="{{$errors->has('img')?'has-error':''}}" action="{{ url('/') }}/dokumentasi_store" method="post" enctype="multipart/form-data">
 
-	<b>Foto</b>
-	<input style="margin-left:10px;" type="file" name="input_foto"><br><br>
+	<b for="img">Foto</b>
+	<input style="margin-left:10px;" type="file" name="img" id="img" multiple="multilple"><br><br>
 
 	<b>Keterangan Foto</b>
 	<textarea class="form-control" style="height:200px; width:700px;" type="text" name="input_keteranganfoto"></textarea><br><br><br>

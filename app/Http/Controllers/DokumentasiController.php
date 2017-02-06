@@ -15,6 +15,7 @@ use App\Models\NamaRuang;
 use App\Counter;
 use Session;
 use Storage;
+use Image;
 
 class DokumentasiController extends Controller
 {
@@ -36,14 +37,19 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-        $Foto = $request->file('input_foto');
-        $FileFoto = $Foto->getClientOriginalName();
-        Storage::disk('uploads')->put('$Foto', $FileFoto);
-        // Storage::disk('upload/', $FileFoto, file_get_contents($request->file('input_foto')->getRealPath()));
+    $this->validate($request, array(
+      'captions' => 'required',
+      'img' => 'image'));
 
         $Dokumentasi = new Dokumentasi;
-        $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
-        $Dokumentasi->foto = $FileFoto;
+        $Dokumentasi->captions = $request->input_keteranganfoto;
+        if($request->hasFile('img')){
+          $img = $request->file('img');
+          $imageName = time().'.'.$image->getClientOriginalExtension();
+          $location='photos/'.$imageName;
+          Image::make($image)->save($location);
+          $Dokumentasi->image=$imageName;
+        }
         $Dokumentasi->save();
 
         return redirect('dokumentasi_index');
