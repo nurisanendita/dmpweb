@@ -21,6 +21,9 @@ Route::get('/tentang_kami', function () {return view('profil.profil');});
 
 Route::get('/kontak', function () {return view('kontak.kontak');});
 
+Route::get('/admin_dmp', function () {return view('admin.admin_login');});
+Route::post('/admin_dmpPost', 'AdminController@authenticate');
+
 Route::get('/agenda_index', 'AgendaController@index');
 Route::get('/agenda_create', 'AgendaController@create');
 Route::post('/agenda_store', 'AgendaController@store');
@@ -35,6 +38,8 @@ Route::get('/dokumentasi_edit/{id}', 'DokumentasiController@edit');
 Route::put('/dokumentasi_update/{id}', 'DokumentasiController@update');
 // Route::get('/dokumentasi_delete/{id}', 'AgendaController@destroy');
 
-Auth::routes();
+Route::get('/quote_index', function () {return view('quote.index');});
 
-Route::get('/admin_dmp', 'HomeController@index');
+// Auth::routes();
+//
+// Route::get('/admin_dmp', 'HomeController@index');

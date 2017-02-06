@@ -27,11 +27,11 @@ class DokumentasiController extends Controller
 
   public function create()
   {
-    // if($dokumentasi = Dokumentasi::where('id','=','6')->count())
-    // {
-    //   Session::flash('message', 'Maksimum Menampilkan 6 Dokumentasi');
-    //   return redirect('dokumentasi_index');
-    // }
+    if($dokumentasi = Dokumentasi::where('id','=','6')->count())
+    {
+      Session::flash('message', 'Maksimum Menampilkan 6 Dokumentasi');
+      return redirect('dokumentasi_index');
+    }
         return view('dokumentasi.create');
   }
 
@@ -54,14 +54,32 @@ class DokumentasiController extends Controller
 
     public function show()
     {
+      if($dokumentasi = Dokumentasi::count() < 6)
+      {
+        Session::flash('message', 'Masukkan Seluruh (6) Agenda');
+        return redirect('dokumentasi_index');
+      }
       $dokumentasi1 = Dokumentasi::find(1);
-      $dokumentasi2 = Dokumentasi::find(1);
-      // $agenda3 = Agenda::find(3);
-      // $agenda4 = Agenda::find(4);
-      // $agenda5 = Agenda::find(5);
-      // $agenda6 = Agenda::find(6);
-      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2'));
+      $dokumentasi2 = Dokumentasi::find(2);
+      $dokumentasi3 = Dokumentasi::find(3);
+      $dokumentasi4 = Dokumentasi::find(4);
+      $dokumentasi5 = Dokumentasi::find(5);
+      $dokumentasi6 = Dokumentasi::find(6);
+
+      $quote = $request->input('input_quote');
+      function submit(){
+        if(!empty($quote)){
+          Session::flash('message', 'Quote Telah Diperbarui');
+          return redirect('quote_index');
+        }
+        else {
+          Session::flash('message', 'Masukkan Quote');
+          return redirect('quote_index');
+        }
+      }
     }
+      return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
+  }
 
   public function edit($id)
   {

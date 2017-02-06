@@ -8,10 +8,10 @@
 
 <h2>Perbarui Quote</h2>
 
-<form action="{{ url('/') }}/quote_store" method="post">
+<form action="{{ url('/') }}/dokumentasi_store" method="post">
 	<br><b>Masukkan Quote</b><br><br>
 	<input class="form-control" style="margin-left:10px;" type="text" name="input_quote"><br><br>
-	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
+	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN" onsubmit="return submit()">
 	{{ csrf_field() }}
 </form>
 
