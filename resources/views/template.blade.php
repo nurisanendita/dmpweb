@@ -43,7 +43,7 @@
               </div>
               <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="{{ url('/') }}">BERANDA</a></li>
+                  <li><a href="{{ url('/') }}">BERANDA</a></li>
                   <li><a href="{{ url('/') }}/berita">BERITA</a></li>
                   <li><a href="{{ url('/') }}/dokumentasi">DOKUMENTASI</a></li>
                   <li><a href="{{ url('/') }}/kontak">KONTAK</a></li>
@@ -57,7 +57,7 @@
         $(function() {
              var pgurl = window.location.href.substr(window.location.href
         .lastIndexOf("/")+1);
-             $("a").each(function(){
+             $("li").each(function(){
                   if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
                   $(this).addClass("active");
              })
