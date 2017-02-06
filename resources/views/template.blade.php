@@ -53,25 +53,5 @@
             </div>
         </nav>
         @yield('content')
-        <script>
-        $(".nav .navbar-nav li a").each(function()
-        {
-            if (this.href.search(location.href) != -1)
-            {
-                $(this).addClass("active");
-            }
-        });
-
-        $(function(){
-            var url = window.location.pathname,
-            urlRegExp = new RegExp(url.replace(/\/$/,'') + "$");
-
-            $('.nav .navbar-nav li a').each(function(){
-                if(urlRegExp.test(this.href.replace(/\/$/,''))){
-                    $(this).addClass('active');
-                }
-            });
-        });
-        </script>
     </body>
 </html>

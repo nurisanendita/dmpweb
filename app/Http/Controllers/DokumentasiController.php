@@ -72,15 +72,18 @@ class DokumentasiController extends Controller
   public function update($id)
   {
     $dokumentasi = Dokumentasi::find($id);
+
     $image = Request::file('input_foto');
     $imgname = $image->getClientOriginalName();
-    $image = $image->move(public_path() . "/images/" . $imgname);
+    $oldPath = public_path() . "/images/" . $imgname;
+    $oldPath->delete();
+    $newPath = public_path() . "/images/" . $imgname;
+    $image = $image->move($newPath);
 
+    $dokumentasi->foto = $image;
     $dokumentasi->keterangan_foto = Request::input('input_keteranganfoto');
-
-    $agenda->save();
-
-    $agenda = Agenda::all();
+    $dokumentasi->save();
+    $dokumentasi = Dokumentasi::all();
     return redirect('dokumentasi_index');
   }
 
