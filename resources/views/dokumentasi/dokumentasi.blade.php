@@ -10,13 +10,13 @@
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
             <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi1->keterangan_foto}}</h3>
+              <h3 style="margin-top:30px; margin-bottom:30px;">{{ $dokumentasi1->keterangan_foto }}</h3>
             </div>
           </div>
         </div>
 
         <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi1->foto}}" style="height:500px; width:850px;">
+          <img src="{{ $dokumentasi1->foto }}" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
               <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
@@ -32,13 +32,13 @@
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
             <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi2->keterangan_foto}}</h3>
+              <h3 style="margin-top:30px; margin-bottom:30px;">{{ $dokumentasi2->keterangan_foto }}</h3>
             </div>
           </div>
         </div>
 
         <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi2->foto}}" style="height:500px; width:850px;">
+          <img src="{{ $dokumentasi2->foto }}" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
               <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
@@ -159,7 +159,7 @@
       myIndex++;
       if (myIndex > x.length) {myIndex = 1}
       x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 10000); // Change image every 2 seconds
+      setTimeout(carousel, 10000); // Change image every 10 seconds
   }
 
   var slideIndex = 1;
