@@ -39,7 +39,8 @@ class DokumentasiController extends Controller
   {
     $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
-    $image = $image->move(public_path() . "/images/" . $imgname);
+    $path = public_path() . "/images/" . $imgname;
+    $image = $image->move($path);
 
     $Keterangan_Foto = $request->input('input_keteranganfoto');
 
