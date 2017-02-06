@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-// use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
@@ -16,6 +15,7 @@ use App\Counter;
 use Session;
 use Storage;
 use Image;
+use File;
 
 class DokumentasiController extends Controller
 {
@@ -37,19 +37,19 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-    $image = Request::file('input_foto');
+    $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
-    $path = public_path() . "/images/" . $imgname;
-    $image = $image->move($path);
-
-    $Keterangan_Foto = Request::input('input_keteranganfoto');
+    // $path = url('/') ;
+    $image = $image->move(public_path() . "/images/", $imgname);
+    $save_path = "images/" . $imgname;
+    $Keterangan_Foto = $request->input_keteranganfoto;
 
     DB::table('dokumentasi')->insert([
-            'foto' => $path,
+            'foto' => $save_path,
             'keterangan_foto' => $Keterangan_Foto,
           ]);
-    // return redirect('dokumentasi_index');
-    return $image;
+    return redirect('dokumentasi_index');
+    // return $Keterangan_Foto;
     }
 
     public function show()
@@ -69,21 +69,20 @@ class DokumentasiController extends Controller
       return view('dokumentasi.edit',compact('dokumentasi'));
   }
 
-  public function update($id)
+  public function update($id, Request $request)
   {
     $dokumentasi = Dokumentasi::find($id);
 
-    $image = Request::file('input_foto');
+    $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
-    $oldPath = public_path() . "/images/" . $imgname;
-    $oldPath->delete();//delete foto lama
-    $newPath = public_path() . "/images/" . $imgname;
-    $image = $image->move($newPath);
+    File::delete(public_path() . '/' .$dokumentasi->foto);
+    $newSavePath = "images/" . $imgname;
+    $image = $image->move(public_path() . "/images/", $imgname);
 
-    $dokumentasi->foto = $image;
-    $dokumentasi->keterangan_foto = Request::input('input_keteranganfoto');
+    $dokumentasi->foto = $newSavePath;
+    $dokumentasi->keterangan_foto = $request->input_keteranganfoto;
     $dokumentasi->save();
-    $dokumentasi = Dokumentasi::all();
+    // $dokumentasi = Dokumentasi::all();
     return redirect('dokumentasi_index');
   }
 
