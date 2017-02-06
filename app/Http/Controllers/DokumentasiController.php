@@ -37,18 +37,17 @@ class DokumentasiController extends Controller
 
   public function store(Request $request)
   {
-    $this->validate($request, array(
-      'captions' => 'required',
+    $this->validate($request(
       'img' => 'image'));
 
-        $Dokumentasi = new Dokumentasi;
-        $Dokumentasi->captions = $request->input_keteranganfoto;
+        $Dokumentasi = DB::table('dokumentasi');
+        $Dokumentasi->keterangan_foto = $request->input_keteranganfoto;
         if($request->hasFile('img')){
           $img = $request->file('img');
           $imageName = time().'.'.$image->getClientOriginalExtension();
           $location='photos/'.$imageName;
           Image::make($image)->save($location);
-          $Dokumentasi->image=$imageName;
+          $Dokumentasi->foto=$imageName;
         }
         // $Dokumentasi->save();
 
