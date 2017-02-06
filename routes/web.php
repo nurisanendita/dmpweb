@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['middleware' => 'auth'], function () {
+
   Route::get('/', 'AgendaController@show');
 
   Route::get('/dokumentasi', 'DokumentasiController@show');
@@ -23,7 +23,8 @@ Route::group(['middleware' => 'auth'], function () {
 
   Route::get('/admin_dmp', function () {return view('admin.admin_login');});
   Route::post('/admin_dmpPost', 'AdminController@authenticate');
-
+  
+Route::group(['middleware' => 'auth'], function () {
   Route::get('/agenda_index', 'AgendaController@index');
   Route::get('/agenda_create', 'AgendaController@create');
   Route::post('/agenda_store', 'AgendaController@store');
