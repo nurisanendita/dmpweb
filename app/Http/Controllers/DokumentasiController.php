@@ -23,7 +23,7 @@ class DokumentasiController extends Controller
   {
     if($dokumentasi = Dokumentasi::count() < 6)
     {
-      Session::flash('message', 'Masukkan Seluruh (6) Agenda');
+      Session::flash('message', 'Masukkan Seluruh (6) Foto');
       return redirect('dokumentasi_index');
     }
 
