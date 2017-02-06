@@ -21,11 +21,11 @@ class DokumentasiController extends Controller
 {
   public function show()
   {
-    if($dokumentasi = Dokumentasi::count() < 6)
-    {
-      Session::flash('message', 'Masukkan Seluruh (6) Foto');
-      return redirect('dokumentasi_index');
-    }
+    // if($dokumentasi = Dokumentasi::count() < 6)
+    // {
+    //   Session::flash('message', 'Masukkan Seluruh (6) Foto');
+    //   return redirect('dokumentasi_index');
+    // }
 
     $dokumentasi1 = Dokumentasi::find(1);
     $dokumentasi2 = Dokumentasi::find(2);
