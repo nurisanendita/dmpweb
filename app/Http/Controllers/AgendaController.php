@@ -16,6 +16,11 @@ use Session;
 
 class AgendaController extends Controller
 {
+  public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
   public function index()
   {
     $agenda = Agenda::all();
