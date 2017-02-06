@@ -76,7 +76,7 @@ class DokumentasiController extends Controller
     $image = Request::file('input_foto');
     $imgname = $image->getClientOriginalName();
     $oldPath = public_path() . "/images/" . $imgname;
-    $oldPath->delete();
+    $oldPath->delete();//delete foto lama
     $newPath = public_path() . "/images/" . $imgname;
     $image = $image->move($newPath);
 
