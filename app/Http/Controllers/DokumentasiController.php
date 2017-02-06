@@ -19,7 +19,7 @@ use File;
 
 class DokumentasiController extends Controller
 {
-  public function show(Request $request)
+  public function show()
   {
     if($dokumentasi = Dokumentasi::count() < 6)
     {
