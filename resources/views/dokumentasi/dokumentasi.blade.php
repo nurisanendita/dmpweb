@@ -10,7 +10,7 @@
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
             <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{ $dokumentasi1->keterangan_foto }}</h3>
+              <h3 style="margin-top:30px; margin-bottom:30px;">haloo</h3>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
             <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{ $dokumentasi2->keterangan_foto }}</h3>
+              <h3 style="margin-top:30px; margin-bottom:30px;">halooo</h3>
             </div>
           </div>
         </div>
