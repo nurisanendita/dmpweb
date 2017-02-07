@@ -39,10 +39,10 @@ class AgendaController extends Controller
     return view('welcome', compact('agenda1','agenda2','agenda3','agenda4','agenda5','agenda6','agenda7','agenda8','agenda9','agenda10','agenda11','agenda12'));
   }
 
-  public function __construct()
-    {
-        $this->middleware('auth');
-    }
+  // public function __construct()
+  //   {
+  //       $this->middleware('auth');
+  //   }
 
   public function index()
   {

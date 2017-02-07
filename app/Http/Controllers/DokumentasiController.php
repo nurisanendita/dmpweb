@@ -43,10 +43,10 @@ class DokumentasiController extends Controller
     //return view('dokumentasi.dokumentasi');
   }
 
-  public function __construct()
-    {
-        $this->middleware('auth');
-    }
+  // public function __construct()
+  //   {
+  //       $this->middleware('auth');
+  //   }
 
   public function index()
   {
