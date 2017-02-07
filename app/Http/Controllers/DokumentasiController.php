@@ -37,16 +37,6 @@ class DokumentasiController extends Controller
 
     $quote = Quotes::all();
     $quote->quote = $request->input('input_quote');
-    function submit(){
-      if(!empty($quote)){
-        Session::flash('message', 'Quote Telah Diperbarui');
-        return redirect('quote_index');
-      }
-      else {
-        Session::flash('message', 'Masukkan Quote');
-        return redirect('quote_index');
-      }
-    }
     return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
     //return view('dokumentasi.dokumentasi');
   }

@@ -11,7 +11,7 @@
 <form action="{{ url('/') }}/dokumentasi" method="post">
 	<br><b>Masukkan Quote</b><br><br>
 	<input class="form-control" style="margin-left:10px;" type="text" name="input_quote"><br><br>
-	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN" onsubmit="return submit()">
+	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
 	{{ csrf_field() }}
 </form>
 
