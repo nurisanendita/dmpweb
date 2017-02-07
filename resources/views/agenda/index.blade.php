@@ -46,8 +46,8 @@
 				          <td>{{ $agenda_list->kode_ruang }}</td>
 				          <td>{{ $agenda_list->nama_ruang }}</td>
 				          <td>{{ $agenda_list->lantai }}</td>
-				          <td style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{ $agenda_list->nama_acara }}</td>
-				          <td style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{ $agenda_list->keterangan_acara }}</td>
+				          <td>{{ $agenda_list->nama_acara }}</td>
+				          <td>{{ $agenda_list->keterangan_acara }}</td>
 				          <!-- <td>@if ($agenda_list->ditampilkan == 1) Ya @else Tidak @endif</td> -->
                   <td>
 										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $agenda_list -> id }}">EDIT</a>

@@ -15,8 +15,10 @@ class CreateDokumentasiTable extends Migration
     {
         Schema::create('dokumentasi', function (Blueprint $table) {
           $table->increments('id');
-          $table->text('keterangan_foto');
           $table->string('foto');
+          $table->text('judul_foto');
+          $table->text('keterangan_foto');
+          $table->text('tanggal');
           $table->timestamps();
         });
     }

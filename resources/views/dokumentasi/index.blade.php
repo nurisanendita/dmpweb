@@ -25,7 +25,9 @@
 				<thead>
 						<tr>
 						<th>No.</th>
+            <th>Tanggal</th>
 						<th>Foto</th>
+            <th>Judul Foto</th>
 						<th>Keterangan Foto</th>
 						<th>Aksi</th>
 						</tr>
@@ -35,8 +37,10 @@
 	            @foreach ($dokumentasi as $dokumentasi_list)
 	                <tr>
 				          <td>{{ $dokumentasi_list->id }}</td>
+                  <td>{{ $dokumentasi_list->tanggal }}</td>
 				          <td>{{ $dokumentasi_list->foto }}</td>
-				          <td style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden;">{{ $dokumentasi_list->keterangan_foto }}</td>
+                  <td>{{ $dokumentasi_list->judul_foto }}</td>
+				          <td>{{ $dokumentasi_list->keterangan_foto }}</td>
                   <td><a class="btn btn-warning btn-xs" href="{{ url('/') }}/dokumentasi_edit/{{ $dokumentasi_list -> id }}">EDIT</a>
 	                </tr>
 	            @endforeach

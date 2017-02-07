@@ -31,6 +31,8 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{ url('/') }}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
+    <link rel="stylesheet" href="{{ url('/') }}/assets/css/table1.css">
+
     <link rel="icon" type="image/png" href="{{ url('/') }}/favicon-32x32.png" sizes="32x32" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
