@@ -16,7 +16,7 @@
         </div>
 
         <div class="col-md-9 col-lg-9">
-          <img src="{{ $dokumentasi1->foto }}" style="height:500px; width:850px;">
+          <img src="" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
               <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
@@ -38,7 +38,7 @@
         </div>
 
         <div class="col-md-9 col-lg-9">
-          <img src="{{ $dokumentasi2->foto }}" style="height:500px; width:850px;">
+          <img src="" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
               <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
