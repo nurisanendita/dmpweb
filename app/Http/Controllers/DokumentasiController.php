@@ -36,6 +36,15 @@ class DokumentasiController extends Controller
     $dokumentasi6 = Dokumentasi::find(6);
 
     $quote = Quotes::all();
+    // DB::table('agenda')->insert([
+    //         'tanggal_acara' => $Tanggal_Acara,
+    //         'kode_ruang' => $Kode_Ruang,
+    //         'nama_ruang' => $Nama_Ruang,
+    //         'lantai' => $Lantai_Ruang,
+    //         'nama_acara' => $Nama_Kegiatan,
+    //         'keterangan_acara' => $Keterangan_Acara,
+    //         // 'ditampilkan' => $Ditampilkan,
+    //       ]);
     $quote->quote = $request->input('input_quote');
     $quote->save();
     return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
