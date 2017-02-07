@@ -14,7 +14,7 @@
   Route::get('/', 'AgendaController@show');
 
   Route::get('/dokumentasi', 'DokumentasiController@show');
-  //Route::post('/dokumentasi', 'DokumentasiController@show');
+  Route::post('/dokumentasi', 'DokumentasiController@show');
 
   Route::get('/berita', function () {return view('berita.berita');});
 
