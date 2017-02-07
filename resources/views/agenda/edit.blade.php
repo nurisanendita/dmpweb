@@ -6,8 +6,12 @@
 
 <form action="{{ url('/') }}/agenda_update/{{$agenda->id}}" method="post">
 
-	<b>Tanggal Kegiatan</b>
-	<input style="margin-left:10px;" type="date" name="input_tanggal" value="{{$agenda->tanggal_acara}}"><br><br>
+	<b>Tanggal Mulai</b>
+	<input style="margin-left:10px;" type="date" name="input_tanggalmulai" value="{{$agenda->tanggal_mulai}}">
+
+	<span style="margin-left:110px;"><b>Tanggal Selesai</b>
+		<input style="margin-left:10px;" type="date" name="input_tanggalselesai" value="{{$agenda->tanggal_mulai}}">
+	</span> <br><br>
 
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">

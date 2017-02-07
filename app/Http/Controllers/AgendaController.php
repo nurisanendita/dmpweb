@@ -18,25 +18,15 @@ class AgendaController extends Controller
 {
   public function show()
   {
-    if($agenda = Agenda::count() < 12)
+    if($agenda = Agenda::count() = 0)
     {
-      Session::flash('message', 'Masukkan Seluruh (12) Agenda');
+      Session::flash('message', 'Masukkan Agenda');
       return redirect('agenda_index');
     }
-
-    $agenda1 = Agenda::find(1);
-    $agenda2 = Agenda::find(2);
-    $agenda3 = Agenda::find(3);
-    $agenda4 = Agenda::find(4);
-    $agenda5 = Agenda::find(5);
-    $agenda6 = Agenda::find(6);
-    $agenda7 = Agenda::find(7);
-    $agenda8 = Agenda::find(8);
-    $agenda9 = Agenda::find(9);
-    $agenda10 = Agenda::find(10);
-    $agenda11 = Agenda::find(11);
-    $agenda12 = Agenda::find(12);
-    return view('welcome', compact('agenda1','agenda2','agenda3','agenda4','agenda5','agenda6','agenda7','agenda8','agenda9','agenda10','agenda11','agenda12'));
+    $agenda1 = Agenda::where('kode_ruang','like','A%')->orderBy('tanggal_mulai','desc')->limit(4)->get();
+    $agenda2 = Agenda::where('kode_ruang','like','B%')->orderBy('tanggal_mulai','desc')->limit(4)->get();
+    $agenda3 = Agenda::where('kode_ruang','like','C%')->orderBy('tanggal_mulai','desc')->limit(4)->get();
+    return view('welcome', compact('agenda1','agenda2','agenda3'));
   }
 
   // public function __construct()
@@ -52,11 +42,6 @@ class AgendaController extends Controller
 
   public function create()
   {
-    if($agenda = Agenda::where('id','=','12')->count())
-    {
-      Session::flash('message', 'Maksimum Menampilkan 12 Agenda');
-      return redirect('agenda_index');
-    }
     $kodeRuang = KodeRuang::all();
     $namaRuang = NamaRuang::all();
     $lantaiRuang = LantaiRuang::all();
@@ -65,7 +50,8 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
-        $Tanggal_Acara = Request::input('input_tanggal');
+        $Tanggal_Mulai = Request::input('input_tanggalmulai');
+        $Tanggal_Selesai = Request::input('input_tanggalselesai');
         $Kode_Ruang = Request::input('input_koderuang');
         $Nama_Ruang = Request::input('input_namaruang');
         $Lantai_Ruang = Request::input('input_lantairuang');
@@ -74,7 +60,8 @@ class AgendaController extends Controller
         $Keterangan_Acara = Request::input('input_keterangan');
 
         DB::table('agenda')->insert([
-                'tanggal_acara' => $Tanggal_Acara,
+                'tanggal_mulai' => $Tanggal_Mulai,
+                'tanggal_selesai' => $tanggal_Selesai,
                 'kode_ruang' => $Kode_Ruang,
                 'nama_ruang' => $Nama_Ruang,
                 'lantai' => $Lantai_Ruang,
@@ -98,7 +85,8 @@ class AgendaController extends Controller
   public function update($id)
   {
     $agenda = Agenda::find($id);
-    $agenda->tanggal_acara = Request::input('input_tanggal');
+    $agenda->tanggal_mulai = Request::input('input_tanggalmulai');
+    $agenda->tanggal_selesai = Request::input('input_tanggalselesai');
     $agenda->kode_ruang = Request::input('input_koderuang');
     $agenda->nama_ruang = Request::input('input_namaruang');
     $agenda->lantai = Request::input('input_lantairuang');

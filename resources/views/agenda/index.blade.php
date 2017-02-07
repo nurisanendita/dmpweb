@@ -25,7 +25,8 @@
 				<thead>
 						<tr>
             <th>No.</th>
-						<th>Tanggal</th>
+						<th>Tanggal Mulai</th>
+            <th>Tanggal Selesai</th>
 						<th>Kode Ruang</th>
 						<th>Ruang</th>
 						<th>Lantai</th>
@@ -40,7 +41,8 @@
 	            @foreach ($agenda as $agenda_list)
 	                <tr>
                   <td>{{ $agenda_list->id }}</td>
-				          <td>{{ date('j M Y',strtotime($agenda_list->tanggal_acara)) }}</td>
+				          <td>{{ date('j M Y',strtotime($agenda_list->tanggal_mulai)) }}</td>
+                  <td>{{ date('j M Y',strtotime($agenda_list->tanggal_selesai)) }}</td>
 				          <td>{{ $agenda_list->kode_ruang }}</td>
 				          <td>{{ $agenda_list->nama_ruang }}</td>
 				          <td>{{ $agenda_list->lantai }}</td>

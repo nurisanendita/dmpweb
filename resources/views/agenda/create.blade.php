@@ -5,8 +5,12 @@
 <h2>Tambah Agenda</h2>
 
 <form action="{{ url('/') }}/agenda_store" method="post">
-	<b>Tanggal Kegiatan</b>
-	<input style="margin-left:10px;" type="date" name="input_tanggal"><br><br>
+	<b>Tanggal Mulai</b>
+		<input style="margin-left:10px;" type="date" name="input_tanggalmulai">
+
+	<span style="margin-left:110px;"><b>Tanggal Selesai</b>
+		<input style="margin-left:10px;" type="date" name="input_tanggalselesai">
+	</span> <br><br>
 
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">
