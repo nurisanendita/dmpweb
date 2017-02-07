@@ -3,7 +3,10 @@
 @section('content')
 
 @if (count ($errors) > 0)
-    <div class="alert alert-danger">{{ $errors }}</div>
+    <div class="alert alert-danger">
+			@foreach($errors->all() as $ error)
+			<li>{{$error}}</li>
+		</div>
 @endif
 
 <h2>Tambah Dokumentasi</h2>

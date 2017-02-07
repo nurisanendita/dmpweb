@@ -62,12 +62,6 @@ class AgendaController extends Controller
         'input_keterangan' => 'required',
     ]);
 
-    // if ($validator->fails()) {
-    //         return redirect('/agenda_create')
-    //                     ->withErrors($validator)
-    //                     ->withInput();
-    //     }
-
         $Tanggal_Mulai = $request->input('input_tanggalmulai');
         $Tanggal_Selesai = $request->input('input_tanggalselesai');
         $Kode_Ruang = $request->input('input_koderuang');
