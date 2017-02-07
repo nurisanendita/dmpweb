@@ -92,7 +92,7 @@ class AgendaController extends Controller
       // return $agenda;
   }
 
-  public function update($id)
+  public function update($id, Request $request)
   {
     $agenda = Agenda::find($id);
 
