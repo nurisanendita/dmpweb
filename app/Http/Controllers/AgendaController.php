@@ -51,7 +51,7 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
-    $validator = Validator::make( $messages [
+    $this->validate($request, [
         'input_tanggalmulai' => 'required',
         'input_tanggalselesai' => 'required',
         'input_koderuang' => 'required',
@@ -61,29 +61,19 @@ class AgendaController extends Controller
         'input_keterangan' => 'required',
     ]);
 
-    $messages = [
-    'input_tanggalmulai' => 'Harus Diisi',
-    'input_tanggalselesai' => 'Harus Diisi',
-    'input_koderuang' => 'Harus Diisi',
-    'input_namaruang' => 'Harus Diisi',
-    'input_lantairuang' => 'Harus Diisi',
-    'input_namakegiatan' => 'Harus Diisi',
-    'input_keterangan' => 'Harus Diisi',
-    ];
-
     if ($validator->fails()) {
             return redirect('/agenda_create')
                         ->withErrors($validator)
                         ->withInput();
         }
 
-        $Tanggal_Mulai = Request::input('input_tanggalmulai');
-        $Tanggal_Selesai = Request::input('input_tanggalselesai');
-        $Kode_Ruang = Request::input('input_koderuang');
-        $Nama_Ruang = Request::input('input_namaruang');
-        $Lantai_Ruang = Request::input('input_lantairuang');
-        $Nama_Kegiatan = Request::input('input_namakegiatan');
-        $Keterangan_Acara = Request::input('input_keterangan');
+        $Tanggal_Mulai = $request->input('input_tanggalmulai');
+        $Tanggal_Selesai = $request->input('input_tanggalselesai');
+        $Kode_Ruang = $request->input('input_koderuang');
+        $Nama_Ruang = $request->input('input_namaruang');
+        $Lantai_Ruang = $request->input('input_lantairuang');
+        $Nama_Kegiatan = $request->input('input_namakegiatan');
+        $Keterangan_Acara = $request->input('input_keterangan');
 
         DB::table('agenda')->insert([
                 'tanggal_mulai' => $Tanggal_Mulai,
@@ -110,13 +100,13 @@ class AgendaController extends Controller
   public function update($id)
   {
     $agenda = Agenda::find($id);
-    $agenda->tanggal_mulai = Request::input('input_tanggalmulai');
-    $agenda->tanggal_selesai = Request::input('input_tanggalselesai');
-    $agenda->kode_ruang = Request::input('input_koderuang');
-    $agenda->nama_ruang = Request::input('input_namaruang');
-    $agenda->lantai = Request::input('input_lantairuang');
-    $agenda->nama_acara = Request::input('input_namakegiatan');
-    $agenda->keterangan_acara = Request::input('input_keterangan');
+    $agenda->tanggal_mulai = $request->input('input_tanggalmulai');
+    $agenda->tanggal_selesai = $request->input('input_tanggalselesai');
+    $agenda->kode_ruang = $request->input('input_koderuang');
+    $agenda->nama_ruang = $request->input('input_namaruang');
+    $agenda->lantai = $request->input('input_lantairuang');
+    $agenda->nama_acara = $request->input('input_namakegiatan');
+    $agenda->keterangan_acara = $request->input('input_keterangan');
     // $agenda->ditampilkan = Request::input('input_ditampilkan');
     $agenda->save();
 
