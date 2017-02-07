@@ -2,6 +2,10 @@
 
 @section('content')
 
+@if (count($errors) > 0)
+    <div class="alert alert-danger">{{ $errors }}</div>
+@endif
+
 <h2>Tambah Dokumentasi</h2>
 
 <form class="{{$errors->has('img')?'has-error':''}}" action="{{ url('/') }}/dokumentasi_store" method="post" enctype="multipart/form-data">

@@ -50,12 +50,21 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
+    $this->validate($request, [
+        'input_tanggalmulai' => 'required',
+        'input_tanggalselesai' => 'required',
+        'input_koderuang' => 'required',
+        'input_namaruang' => 'required',
+        'input_lantairuang' => 'required',
+        'input_namakegiatan' => 'required',
+        'input_keteranga' => 'required',
+    ]);
+
         $Tanggal_Mulai = Request::input('input_tanggalmulai');
         $Tanggal_Selesai = Request::input('input_tanggalselesai');
         $Kode_Ruang = Request::input('input_koderuang');
         $Nama_Ruang = Request::input('input_namaruang');
         $Lantai_Ruang = Request::input('input_lantairuang');
-        // $Ditampilkan = Request::input('input_ditampilkan');
         $Nama_Kegiatan = Request::input('input_namakegiatan');
         $Keterangan_Acara = Request::input('input_keterangan');
 
@@ -67,7 +76,6 @@ class AgendaController extends Controller
                 'lantai' => $Lantai_Ruang,
                 'nama_acara' => $Nama_Kegiatan,
                 'keterangan_acara' => $Keterangan_Acara,
-                // 'ditampilkan' => $Ditampilkan,
               ]);
         return redirect('agenda_index');
     }
