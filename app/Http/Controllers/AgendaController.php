@@ -60,8 +60,9 @@ class AgendaController extends Controller
         'input_namakegiatan' => 'required',
         'input_keterangan' => 'required',
     ]);
-    $errors = Session::flash('message', 'Periksa dan Lengkapi Input');
-    if ($validator->fails($errors)) {
+
+    $errors = $validator->errors();
+    if ($validator->fails()) {
             return redirect('/agenda_create')
                         ->withErrors($validator)
                         ->withInput();
