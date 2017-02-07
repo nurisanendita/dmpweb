@@ -61,7 +61,7 @@ class AgendaController extends Controller
 
         DB::table('agenda')->insert([
                 'tanggal_mulai' => $Tanggal_Mulai,
-                'tanggal_selesai' => $tanggal_Selesai,
+                'tanggal_selesai' => $Tanggal_Selesai,
                 'kode_ruang' => $Kode_Ruang,
                 'nama_ruang' => $Nama_Ruang,
                 'lantai' => $Lantai_Ruang,
