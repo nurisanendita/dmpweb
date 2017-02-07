@@ -18,7 +18,7 @@ class AgendaController extends Controller
 {
   public function show()
   {
-    if($agenda = Agenda::count() = 0)
+    if($agenda = Agenda::count() < 1)
     {
       Session::flash('message', 'Masukkan Agenda');
       return redirect('agenda_index');
