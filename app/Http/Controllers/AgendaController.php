@@ -95,6 +95,17 @@ class AgendaController extends Controller
   public function update($id)
   {
     $agenda = Agenda::find($id);
+
+    $this->validate($request, [
+        'input_tanggalmulai' => 'required',
+        'input_tanggalselesai' => 'required',
+        'input_koderuang' => 'required',
+        'input_namaruang' => 'required',
+        'input_lantairuang' => 'required',
+        'input_namakegiatan' => 'required',
+        'input_keterangan' => 'required',
+    ]);
+
     $agenda->tanggal_mulai = $request->input('input_tanggalmulai');
     $agenda->tanggal_selesai = $request->input('input_tanggalselesai');
     $agenda->kode_ruang = $request->input('input_koderuang');
@@ -102,7 +113,6 @@ class AgendaController extends Controller
     $agenda->lantai = $request->input('input_lantairuang');
     $agenda->nama_acara = $request->input('input_namakegiatan');
     $agenda->keterangan_acara = $request->input('input_keterangan');
-    // $agenda->ditampilkan = Request::input('input_ditampilkan');
     $agenda->save();
 
     $agenda = Agenda::all();
