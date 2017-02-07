@@ -5,6 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="container">
+      
       <div class="container mySlides col-md-12 col-lg-12" id="slide1">
 
         <div class="col-md-3 col-lg-3">
