@@ -36,7 +36,7 @@ class AgendaController extends Controller
 
   public function index()
   {
-    $agenda = Agenda::where('kode_ruang','like','A%')->orderBy('tanggal_mulai','desc')->limit(4)->get();
+    $agenda = Agenda::all();
     return view('agenda.index', compact('agenda'));
   }
 

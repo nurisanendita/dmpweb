@@ -16,15 +16,15 @@
           <!-- carousel slide 1 -->
           <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
             <!-- Individual row agenda 1-->
-            @foreach($agenda1->$agenda1->list)
+            <!-- @foreach($agenda1->$agenda1->list) -->
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda1_list->tanggal_mulai))}}</span>
+                    <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda1->tanggal_mulai))}}</span>
                     <span class="info-box-text" style="font-size:15px; ">s.d.</span>
-                    <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda1_list->tanggal_selesai))}}</span>
+                    <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda1->tanggal_selesai))}}</span>
                   </div>
                   </div>
                 </div>
@@ -33,19 +33,19 @@
                   <div class="info-box bg-orange" style="font-family:Hind;">
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
-                    <span class="info-box-text" style="font-size:16px;">{{$agenda1_list->kode_ruang}}</span>
-                    <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;">{{$agenda1_list->nama_ruang}}</span>
-                    <span class="info-box-text" style="font-size:16px;">{{$agenda1_list->lantai}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{$agenda1->kode_ruang}}</span>
+                    <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;">{{$agenda1->nama_ruang}}</span>
+                    <span class="info-box-text" style="font-size:16px;">{{$agenda1->lantai}}</span>
                   </div>
                   </div>
                 </div>
 
                 <div class="col-md-6 col-lg-6">
-                  <a href="#"><h4 style="text-transform:uppercase;">{{$agenda1_list->nama_acara}}</h4></a>
-                  <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda1_list->keterangan_acara}}</p>
+                  <a href="#"><h4 style="text-transform:uppercase;">{{$agenda1->nama_acara}}</h4></a>
+                  <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda1->keterangan_acara}}</p>
                 </div>
               </div>
-              @endforeach
+              <!-- @endforeach -->
 
         <!-- carousel slide 2 -->
         <!-- <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2"> -->
