@@ -2,8 +2,8 @@
 
 @section('content')
 
-@if (Session::has('message'))
-    <div class="alert alert-danger">{{ Session::get('message') }}</div>
+@if (count ($errors) > 0)
+    <div class="alert alert-danger">{{ $errors }}</div>
 @endif
 
 <h2>Tambah Dokumentasi</h2>
