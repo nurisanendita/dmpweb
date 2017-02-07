@@ -11,6 +11,7 @@ use App\Models\Dokumentasi;
 use App\Models\KodeRuang;
 use App\Models\LantaiRuang;
 use App\Models\NamaRuang;
+use App\Models\Quotes;
 use App\Counter;
 use Session;
 use Storage;
@@ -34,7 +35,8 @@ class DokumentasiController extends Controller
     $dokumentasi5 = Dokumentasi::find(5);
     $dokumentasi6 = Dokumentasi::find(6);
 
-    $quote = $request->input('input_quote');
+    $quote = Quotes::all();
+    $quote->quote = $request->input('input_quote');
     function submit(){
       if(!empty($quote)){
         Session::flash('message', 'Quote Telah Diperbarui');
