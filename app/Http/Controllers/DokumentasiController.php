@@ -29,10 +29,10 @@ class DokumentasiController extends Controller
 
     $dokumentasi1 = Dokumentasi::find(1);
     $dokumentasi2 = Dokumentasi::find(2);
-    // $dokumentasi3 = Dokumentasi::find(3);
-    // $dokumentasi4 = Dokumentasi::find(4);
-    // $dokumentasi5 = Dokumentasi::find(5);
-    // $dokumentasi6 = Dokumentasi::find(6);
+    $dokumentasi3 = Dokumentasi::find(3);
+    $dokumentasi4 = Dokumentasi::find(4);
+    $dokumentasi5 = Dokumentasi::find(5);
+    $dokumentasi6 = Dokumentasi::find(6);
 
     // $quote = $request->input('input_quote');
     // function submit(){
@@ -45,7 +45,7 @@ class DokumentasiController extends Controller
     //     return redirect('quote_index');
     //   }
     // }
-    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2'));
+    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6'));
     //return view('dokumentasi.dokumentasi');
   }
 
