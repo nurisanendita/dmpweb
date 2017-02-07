@@ -35,7 +35,7 @@ class DokumentasiController extends Controller
     $dokumentasi5 = Dokumentasi::find(5);
     $dokumentasi6 = Dokumentasi::find(6);
 
-    $quote->quote = $request->input('input_quote');
+    $quote = $request->input('input_quote');
     DB::table('quotes')->insert([
             'quote' => $quote
           ]);
