@@ -45,7 +45,7 @@
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda1_list->keterangan_acara}}</p>
                 </div>
               </div>
-              <!-- @endforeach -->
+              @endforeach
 
         <!-- carousel slide 2 -->
         <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2">
