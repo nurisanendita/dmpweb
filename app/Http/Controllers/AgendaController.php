@@ -64,6 +64,7 @@ class AgendaController extends Controller
     if ($validator->fails()) {
             return redirect('/agenda_create')
                         ->withErrors($validator)
+                        ->errors();
                         ->withInput();
         }
 
