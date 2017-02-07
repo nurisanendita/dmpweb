@@ -9,7 +9,7 @@
 <section class="content-header">
 	<h1>DOKUMENTASI</h1>
 	<ol class="breadcrumb">
-		<li><a href="{{ url('/') }}"><i class="fa fa-picture-o"></i> Dokumentasi</a></li>
+		<li><a href="{{ url('/')/dokumentasi }}"><i class="fa fa-picture-o"></i> Dokumentasi</a></li>
 		<li class="active">Dokumentasi Index</li>
 	</ol>
 </section>
