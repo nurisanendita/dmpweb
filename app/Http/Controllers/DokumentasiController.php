@@ -95,11 +95,11 @@ class DokumentasiController extends Controller
 
     $this->validate($request, [
         'input_foto' => 'required',
-        'input_keteranganfoto' => 'required'|'max:340',
-        'input_judulfoto' => 'required'|'max:100',
+        'input_keteranganfoto' => 'required|max:340',
+        'input_judulfoto' => 'required|max:100',
         'input_tanggalfoto' => 'required',
     ]);
-    
+
     $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
     File::delete(public_path() . '/' .$dokumentasi->foto);
