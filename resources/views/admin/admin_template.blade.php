@@ -98,8 +98,8 @@
                     </a>
                 </li>
 
-                <li href="{{ url('/') }}/quote_index" class="active treeview">
-                    <a href="{{ url('/') }}/quote_index">
+                <li href="#" class="active treeview">
+                    <a href="#">
                         <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                     </a>
                 </li>
