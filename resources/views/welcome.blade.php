@@ -48,9 +48,9 @@
               @endforeach
 
         <!-- carousel slide 2 -->
-        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2">
+        <!-- <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2"> -->
           <!-- Individual row agenda 1-->
-          @foreach($agenda2->$agenda2->list)
+          <!-- @foreach($agenda2->$agenda2->list)
             <div class="row row1" style="margin-top:10px;">
               <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                 <div class="info-box bg-blue" style="font-family:Hind;">
@@ -79,12 +79,12 @@
                 <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda2_list->keterangan_acara}}</p>
               </div>
             </div>
-            @endforeach
+            @endforeach -->
 
         <!-- carousel slide 3 -->
-        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3">
+        <!-- <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3"> -->
           <!-- Individual row agenda 1-->
-          @foreach($agenda3->$agenda3->list)
+          <!-- @foreach($agenda3->$agenda3->list)
             <div class="row row1" style="margin-top:10px;">
               <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                 <div class="info-box bg-blue" style="font-family:Hind;">
@@ -113,7 +113,7 @@
                 <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda3_list->keterangan_acara}}</p>
               </div>
             </div>
-            @endforeach
+            @endforeach -->
         </div>
         <!-- carousel slide 3 -->
       </div>
