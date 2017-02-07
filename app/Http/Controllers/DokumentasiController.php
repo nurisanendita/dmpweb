@@ -45,7 +45,7 @@ class DokumentasiController extends Controller
 
   public function __construct()
     {
-        $this->middleware('web');
+        $this->middleware('auth');
     }
 
   public function index()
