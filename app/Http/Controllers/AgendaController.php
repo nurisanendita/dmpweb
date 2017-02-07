@@ -51,7 +51,7 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
-    $this=Validator::Request(
+    $this=Validator::Request [
         'input_tanggalmulai' => 'required',
         'input_tanggalselesai' => 'required',
         'input_koderuang' => 'required',
@@ -59,7 +59,7 @@ class AgendaController extends Controller
         'input_lantairuang' => 'required',
         'input_namakegiatan' => 'required',
         'input_keteranga' => 'required',
-    );
+    ];
 
         $Tanggal_Mulai = Request::input('input_tanggalmulai');
         $Tanggal_Selesai = Request::input('input_tanggalselesai');
