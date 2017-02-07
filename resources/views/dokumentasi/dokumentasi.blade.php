@@ -11,7 +11,7 @@
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
             <div class="info-box-content" style="margin-left:20px; margin-right:20px;">
-              <span><h5 style="margin-top:20px;"><b>{{ $dokumentasi_list->judul_foto }}</b></h5></span><br>
+              <span><h5 style="margin-top:20px;"><b>{{ $dokumentasi_list->judul_foto }} sdsdsfwefwefwfw</b></h5></span><br>
               <div class="container" style="height:500px; width:220px; font-family:Hind;">
                 <p>{{ $dokumentasi_list->keterangan_foto }} <br> {{ $dokumentasi_list->tanggal }}</p>
               </div>
