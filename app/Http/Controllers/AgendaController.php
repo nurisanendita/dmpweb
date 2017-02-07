@@ -58,7 +58,7 @@ class AgendaController extends Controller
         'input_namaruang' => 'required',
         'input_lantairuang' => 'required',
         'input_namakegiatan' => 'required',
-        'input_keteranga' => 'required',
+        'input_keterangan' => 'required',
     ]);
 
     if ($validator->fails()) {
