@@ -62,7 +62,7 @@ class AgendaController extends Controller
     ]);
 
     if ($validator->fails()) {
-            Session::flash('message', 'Masukkan Agenda');
+            Session::flash('message', 'Periksa dan Lengkapi Input');
             return redirect('/agenda_create')
                         ->withErrors($validator)
                         ->withInput();
