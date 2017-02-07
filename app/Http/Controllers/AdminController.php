@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-  public function authenticate() {
+  public function authenticate(Request $request) {
       if (Auth::attempt(['username' => $request['username'], 'password' => $request['password']])) {
         return redirect('agenda_index');
       }
