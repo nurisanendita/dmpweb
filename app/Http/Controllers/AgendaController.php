@@ -51,7 +51,7 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
-    $validator = Validator::make(Request::all(), $messages [
+    $validator = Validator::make( $messages [
         'input_tanggalmulai' => 'required',
         'input_tanggalselesai' => 'required',
         'input_koderuang' => 'required',
