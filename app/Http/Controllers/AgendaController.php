@@ -66,7 +66,7 @@ class AgendaController extends Controller
     //         return redirect('/agenda_create')
     //                     ->withErrors($validator)
     //                     ->withInput();
-        }
+    //     }
 
         $Tanggal_Mulai = $request->input('input_tanggalmulai');
         $Tanggal_Selesai = $request->input('input_tanggalselesai');
