@@ -42,7 +42,8 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <form>
+        <form role="form" method="POST" action="{{ route('login') }}">
+          {{ csrf_field() }}
             <div class="form-group has-feedback">
                 <input type="text" class="form-control" placeholder="Username" name="username" id="username">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
