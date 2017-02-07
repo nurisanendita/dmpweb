@@ -2,8 +2,8 @@
 
 @section('content')
 
-@if (count($errors) > 0)
-    <div class="alert alert-danger">{{ $errors }}</div>
+@if (count($validator) > 0)
+    <div class="alert alert-danger">{{ $validator }}</div>
 @endif
 
 <h2>Tambah Dokumentasi</h2>
