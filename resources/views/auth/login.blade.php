@@ -52,7 +52,7 @@
                     @endif
                 </div>
             @endif
-        </div>
+    </div>
     <div class="login-box-body">
         <form role="form" method="POST" action="{{ route('login') }}">
           {{ csrf_field() }}
