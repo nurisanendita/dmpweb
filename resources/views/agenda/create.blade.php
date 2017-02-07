@@ -2,6 +2,13 @@
 
 @section('content')
 
+@if (count ($errors) > 0)
+    <div class="alert alert-danger">
+			@foreach($errors->all() as $ error)
+			<li>{{$error}}</li>
+		</div>
+@endif
+
 <h2>Tambah Agenda</h2>
 
 <form action="{{ url('/') }}/agenda_store" method="post">

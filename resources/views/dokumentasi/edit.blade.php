@@ -2,6 +2,13 @@
 
 @section('content')
 
+@if (count ($errors) > 0)
+    <div class="alert alert-danger">
+			@foreach($errors->all() as $ error)
+			<li>{{$error}}</li>
+		</div>
+@endif
+
 <h2>Edit Dokumentasi</h2>
 
 <form action="{{ url('/') }}/dokumentasi_update/{{$dokumentasi->id}}" method="post" enctype="multipart/form-data">
