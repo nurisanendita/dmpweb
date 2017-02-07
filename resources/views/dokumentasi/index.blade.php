@@ -9,8 +9,8 @@
 <section class="content-header">
 	<h1>DOKUMENTASI</h1>
 	<ol class="breadcrumb">
-		<li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Beranda</a></li>
-		<li class="active">Dokumentasi</li>
+		<li><a href="{{ url('/') }}"><i class="fa fa-picture-o"></i> Dokumentasi</a></li>
+		<li class="active">Dokumentasi Index</li>
 	</ol>
 </section>
 

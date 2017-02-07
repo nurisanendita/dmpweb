@@ -10,7 +10,7 @@
 	<h1>AGENDA</h1>
 	<ol class="breadcrumb">
 		<li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Beranda</a></li>
-		<li class="active">Agenda</li>
+		<li class="active">Agenda Index</li>
 	</ol>
 </section>
 
