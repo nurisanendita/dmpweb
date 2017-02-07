@@ -28,7 +28,7 @@ class DokumentasiController extends Controller
       return redirect('dokumentasi_index');
     }
 
-    $dokumentasi = Dokumentasi::->orderBy('id','desc')->limit(4)->get();
+    $dokumentasi = Dokumentasi::orderBy('id','desc')->limit(4)->get();
 
     // $quote = $request->input('input_quote');
     // DB::table('quotes')->insert([
