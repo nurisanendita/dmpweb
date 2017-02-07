@@ -16,7 +16,7 @@
           <!-- carousel slide 1 -->
           <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
             <!-- Individual row agenda 1-->
-            @foreach($agenda1->$agenda1_list)
+            @foreach($agenda1 as $agenda1_list)
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
@@ -50,7 +50,7 @@
         <!-- carousel slide 2 -->
         <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2">
           <!-- Individual row agenda 1-->
-          @foreach($agenda2->$agenda2_list)
+          @foreach($agenda2 as $agenda2_list)
             <div class="row row1" style="margin-top:10px;">
               <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                 <div class="info-box bg-blue" style="font-family:Hind;">
@@ -84,7 +84,7 @@
         <!-- carousel slide 3 -->
         <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3">
           <!-- Individual row agenda 1-->
-          @foreach($agenda3->$agenda3_list)
+          @foreach($agenda3 as $agenda3_list)
             <div class="row row1" style="margin-top:10px;">
               <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                 <div class="info-box bg-blue" style="font-family:Hind;">
