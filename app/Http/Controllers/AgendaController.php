@@ -51,7 +51,7 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
-    $validator = Validator::make(Request::all(), [
+    $validator = Validator::make(Request::all(), $messages [
         'input_tanggalmulai' => 'required',
         'input_tanggalselesai' => 'required',
         'input_koderuang' => 'required',
@@ -61,7 +61,16 @@ class AgendaController extends Controller
         'input_keterangan' => 'required',
     ]);
 
-    $errors = $validator->errors();
+    $messages = [
+    'input_tanggalmulai' => 'Harus Diisi',
+    'input_tanggalselesai' => 'Harus Diisi',
+    'input_koderuang' => 'Harus Diisi',
+    'input_namaruang' => 'Harus Diisi',
+    'input_lantairuang' => 'Harus Diisi',
+    'input_namakegiatan' => 'Harus Diisi',
+    'input_keterangan' => 'Harus Diisi',
+    ];
+
     if ($validator->fails()) {
             return redirect('/agenda_create')
                         ->withErrors($validator)
