@@ -46,6 +46,7 @@
                 </div>
               </div>
               @endforeach
+            </div>
 
         <!-- carousel slide 2 -->
         <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2">
@@ -80,6 +81,7 @@
               </div>
             </div>
             @endforeach
+          </div>
 
         <!-- carousel slide 3 -->
         <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3">
