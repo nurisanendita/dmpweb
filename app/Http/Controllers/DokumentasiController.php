@@ -22,24 +22,19 @@ class DokumentasiController extends Controller
 {
   public function show(Request $request)
   {
-    if($dokumentasi = Dokumentasi::count() < 6)
+    if($dokumentasi = Dokumentasi::count() < 1)
     {
-      Session::flash('message', 'Masukkan Seluruh (6) Foto');
+      Session::flash('message', 'Masukkan Foto');
       return redirect('dokumentasi_index');
     }
 
-    $dokumentasi1 = Dokumentasi::find(1);
-    $dokumentasi2 = Dokumentasi::find(2);
-    $dokumentasi3 = Dokumentasi::find(3);
-    $dokumentasi4 = Dokumentasi::find(4);
-    $dokumentasi5 = Dokumentasi::find(5);
-    $dokumentasi6 = Dokumentasi::find(6);
+    $dokumentasi = Dokumentasi::->orderBy('id','desc')->limit(4)->get();
 
-    $quote = $request->input('input_quote');
-    DB::table('quotes')->insert([
-            'quote' => $quote
-          ]);
-    return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2','dokumentasi3','dokumentasi4','dokumentasi5','dokumentasi6','quote'));
+    // $quote = $request->input('input_quote');
+    // DB::table('quotes')->insert([
+    //         'quote' => $quote
+    //       ]);
+    return view('dokumentasi.dokumentasi', compact('dokumentasi'));
     //return view('dokumentasi.dokumentasi');
   }
 
@@ -56,11 +51,6 @@ class DokumentasiController extends Controller
 
   public function create()
   {
-    if($dokumentasi = Dokumentasi::where('id','=','6')->count())
-    {
-      Session::flash('message', 'Maksimum Menampilkan 6 Dokumentasi');
-      return redirect('dokumentasi_index');
-    }
         return view('dokumentasi.create');
   }
 
@@ -71,11 +61,16 @@ class DokumentasiController extends Controller
     // $path = url('/') ;
     $image = $image->move(public_path() . "/images/", $imgname);
     $save_path = "images/" . $imgname;
+
     $Keterangan_Foto = $request->input_keteranganfoto;
+    $Judul_Foto = $request->input_judulfoto;
+    $Tanggal_Foto = $request->input_tanggalfoto;
 
     DB::table('dokumentasi')->insert([
             'foto' => $save_path,
             'keterangan_foto' => $Keterangan_Foto,
+            'judul_foto' => $Judul_Foto,
+            'tanggal' => $Tanggal_Foto,
           ]);
     return redirect('dokumentasi_index');
     // return $Keterangan_Foto;
@@ -99,6 +94,8 @@ class DokumentasiController extends Controller
 
     $dokumentasi->foto = $newSavePath;
     $dokumentasi->keterangan_foto = $request->input_keteranganfoto;
+    $dokumentasi->judul_foto = $request->input_judulfoto;
+    $dokumentasi->tanggal = $request->input_tanggalfoto;
     $dokumentasi->save();
     // $dokumentasi = Dokumentasi::all();
     return redirect('dokumentasi_index');

@@ -6,17 +6,20 @@
   <div class="row">
     <div class="container">
 
-      <div class="container mySlides col-md-12 col-lg-12" id="slide1">
+      @foreach($dokumentasi as dokumentasi_list)
+      <div class="container mySlides col-md-12 col-lg-12" >
         <div class="col-md-3 col-lg-3">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
-            <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi1->keterangan_foto}}</h3>
+            <div class="info-box-content" style="margin-left:30px; margin-right:30px;">
+              <span><h5 style="margin-top:30px; margin-bottom:30px;"><b>{{$dokumentasi->judul_foto}}</b></h5></span><br><br>
+              <p>{{$dokumentasi->keterangan_foto}}</p>
+              <p>{{$dokumentasi->tanggal}}</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi1->foto}}" style="height:500px; width:850px;">
+          <img src="{{$dokumentasi->foto}}" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
               <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
@@ -25,108 +28,11 @@
           </div>
         </div>
       </div>
-
-      <div class="container mySlides col-md-12 col-lg-12" id="slide2">
-        <div class="col-md-3 col-lg-3">
-          <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
-            <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi2->keterangan_foto}}</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi2->foto}}" style="height:500px; width:850px;">
-          <div class="row">
-            <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.5;">&#10095;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mySlides col-md-12 col-lg-12" id="slide3">
-        <div class="col-md-3 col-lg-3">
-          <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
-            <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi3->keterangan_foto}}</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi3->foto}}" style="height:500px; width:850px;">
-          <div class="row">
-            <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.5;">&#10095;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mySlides col-md-12 col-lg-12" id="slide4">
-        <div class="col-md-3 col-lg-3">
-          <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
-            <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi4->keterangan_foto}}</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi4->foto}}" style="height:500px; width:850px;">
-          <div class="row">
-            <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.5;">&#10095;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mySlides col-md-12 col-lg-12" id="slide5">
-        <div class="col-md-3 col-lg-3">
-          <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
-            <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi5->keterangan_foto}}</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi5->foto}}" style="height:500px; width:850px;">
-          <div class="row">
-            <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.5;">&#10095;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container mySlides col-md-12 col-lg-12" id="slide6">
-        <div class="col-md-3 col-lg-3">
-          <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
-            <div class="info-box-content" style="margin-left:30px; margin-right:30px; font-size:18px;">
-              <h3 style="margin-top:30px; margin-bottom:30px;">{{$dokumentasi6->keterangan_foto}}</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-9 col-lg-9">
-          <img src="{{$dokumentasi6->foto}}" style="height:500px; width:850px;">
-          <div class="row">
-            <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.5;">&#10095;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      @endforeach
 
   <div class="row" style="margin-top:30px; font-family:Montserrat; font-size:20px;">
     <div class="container">
-      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{$quote}}</img></marquee>
+      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">running text</img></marquee>
     </div>
   </div>
 

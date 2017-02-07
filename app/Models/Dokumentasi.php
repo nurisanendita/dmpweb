@@ -8,5 +8,5 @@ class Dokumentasi extends Model
 {
   protected $table = 'dokumentasi';
   protected $primaryKey = 'id';
-  protected $fillable = array('foto','keterangan_foto');
+  protected $fillable = array('foto','keterangan_foto','judul_foto','tanggal');
 }
