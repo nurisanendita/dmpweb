@@ -34,7 +34,7 @@
 
   <div class="row" style="margin-top:30px; font-family:Montserrat; font-size:20px;">
     <div class="container">
-      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">running text</img></marquee>
+      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">running text</img></marquee><marquee behavior="scroll" direction="left" style="text-transform:uppercase;">running text</img></marquee>
     </div>
   </div>
 
