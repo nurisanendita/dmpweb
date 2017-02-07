@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use App\Models\Agenda;
 use App\Models\Dokumentasi;
@@ -51,7 +50,7 @@ class AgendaController extends Controller
 
   public function store(Request $request)
   {
-    $this=Validator::Request [
+    $this->validate($request, [
         'input_tanggalmulai' => 'required',
         'input_tanggalselesai' => 'required',
         'input_koderuang' => 'required',
@@ -59,7 +58,7 @@ class AgendaController extends Controller
         'input_lantairuang' => 'required',
         'input_namakegiatan' => 'required',
         'input_keteranga' => 'required',
-    ];
+    ]);
 
         $Tanggal_Mulai = Request::input('input_tanggalmulai');
         $Tanggal_Selesai = Request::input('input_tanggalselesai');
