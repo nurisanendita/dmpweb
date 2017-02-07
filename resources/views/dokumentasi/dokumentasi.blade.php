@@ -24,8 +24,8 @@
           <img src="{{ $dokumentasi_list->foto }}" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.5;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.5;">&#10095;</a>
+              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.2;">&#10094;</a>
+              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.2;">&#10095;</a>
             </div>
           </div>
         </div>
