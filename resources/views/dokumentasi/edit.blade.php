@@ -17,13 +17,13 @@
 	<b>Foto</b>
 	<input style="margin-left:10px;" type="file" name="input_foto" value="{{$dokumentasi->foto}}"><br><br>
 
-	<b>Judul Foto</b>
+	<b>Judul Foto</b> (maximal 100 karakter)
 	<textarea class="form-control" style="height:50px; width:400px;" type="text" name="input_judulfoto">{{$dokumentasi->judul_foto}}</textarea><br><br><br>
 
 	<b>Tanggal Foto Foto</b>
 	<textarea class="form-control" style="height:50px; width:400px;" type="text" name="input_tanggalfoto">{{$dokumentasi->tanggal}}</textarea><br><br><br>
 
-	<b>Keterangan Foto</b>
+	<b>Keterangan Foto</b> (maximal 300 karakter)
 	<textarea class="form-control" style="height:200px; width:700px;" type="text" name="input_keteranganfoto">{{$dokumentasi->keterangan_foto}}</textarea><br><br><br>
 
 	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
