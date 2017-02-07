@@ -13,9 +13,8 @@
             <div class="info-box-content" style="margin-left:20px; margin-right:20px;">
               <span><h5 style="margin-top:20px;"><b>{{ $dokumentasi_list->judul_foto }}</b></h5></span><br>
               <div class="container" style="height:400px; width:220px; font-family:Hind;">
-                <p>{{ $dokumentasi_list->keterangan_foto }}</p>
+                <p>{{ $dokumentasi_list->keterangan_foto }}<br>{{ $dokumentasi_list->tanggal }}</p>
               </div>
-              <p>{{ $dokumentasi_list->tanggal }}</p>
             </div>
           </div>
         </div>
