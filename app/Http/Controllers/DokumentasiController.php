@@ -97,10 +97,6 @@ class DokumentasiController extends Controller
     $dokumentasi->judul_foto = $request->input_judulfoto;
     $dokumentasi->tanggal = $request->input_tanggalfoto;
 
-    $dokumentasi->validate($request, [
-       'keterangan_foto' => 'required|max:340',
-   ]);
-
     $dokumentasi->save();
     // $dokumentasi = Dokumentasi::all();
     return redirect('dokumentasi_index');
