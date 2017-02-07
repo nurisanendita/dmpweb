@@ -46,7 +46,7 @@ class DokumentasiController extends Controller
     //   }
     // }
     //return view('dokumentasi.dokumentasi', compact('dokumentasi1','dokumentasi2'));
-    return view('dokumentasi.dokumentasi')
+    return view('dokumentasi.dokumentasi');
   }
 
   public function __construct()
