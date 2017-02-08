@@ -185,7 +185,7 @@
     <div class="col-md-3 col-lg-3">
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
           <div class="row container info-box bg-orange" style="height:200px;">
-            <img src="img_kaltim1.jpg" style="height:200px;width:270px;">
+            <img src="logodmp.png" style="height:200px;width:270px;">
           </div>
       </div>
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
