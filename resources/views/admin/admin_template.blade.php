@@ -103,7 +103,7 @@
                         <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                     </a>
                 </li>
-                <ul class="treeview menu">
+                <li class="treeview menu">
                   <li href="{{ url('/') }}/quote_index" class="treeview {{ Request::is('/quote_index') ? "active" : "" }}">
                       <a href="{{ url('/') }}/quote_index">
                           <i class="fa fa-sticky-note-o"></i><span>Quote</span>
@@ -114,8 +114,7 @@
                           <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                       </a>
                   </li>
-                </ul>
-
+                </li>
             </ul>
         </section>
         <footer></footer>
