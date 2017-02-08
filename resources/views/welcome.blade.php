@@ -196,7 +196,7 @@
         </div>
       </div>
       <div class="row container col-md-12 col-lg-12" style="margin-top:20px;">
-        <span>CAPAIAN REKOR HARI KESELAMATAN JAM KERJA</span>
+        <span style="margin-left:30px;">CAPAIAN REKOR KESELAMATAN JAM KERJA</span>
         <div>
           <p style="text-align:right"><b>JAM</b></p>
           <p style="text-align:right"><b>HARI</b></p>
