@@ -122,7 +122,7 @@
 
         <script>
         //carousel-slides
-        var myIndex = 0;
+        var myIndex1 = 0;
         carousel();
 
         function carousel() {
@@ -131,9 +131,9 @@
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}
-            x[myIndex-1].style.display = "block";
+            myIndex1++;
+            if (myIndex1 > x.length) {myIndex1 = 1}
+            x[myIndex1-1].style.display = "block";
             setTimeout(carousel, 15000);
         }
         </script>
@@ -204,7 +204,7 @@
       </div>
 
       <script>
-      var myIndex = 0;
+      var myIndex2 = 0;
       carousel();
 
       function carousel() {
@@ -213,9 +213,9 @@
           for (i = 0; i < x.length; i++) {
              x[i].style.display = "none";
           }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}
-          x[myIndex-1].style.display = "block";
+          myIndex2++;
+          if (myIndex2 > x.length) {myIndex2 = 1}
+          x[myIndex2-1].style.display = "block";
           setTimeout(carousel, 10000); // Change image every 10 seconds
       }
       </script>
