@@ -105,7 +105,7 @@
                 </li>
                 <li class="treeview">
                   <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Jam Keselamatan Kerja</span>
+                    <i class="fa fa-clock"></i> <span>Jam Keselamatan Kerja</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-down pull-right"></i>
                     </span>
