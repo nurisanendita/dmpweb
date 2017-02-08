@@ -189,14 +189,14 @@
           </div>
       </div>
       <div class="row row2 container col-md-12 col-lg-12">
-        <span><img style="margin-left:30px;" src="green_safety_2.png">REKOR KESELAMATAN JAM KERJA YANG PERNAH DICAPAI</span>
+        <span><img style="margin-left:30px;" src="rekorcapaian.png"></span>
         <div>
           <p style="text-align:right"><b>JAM</b></p>
           <p style="text-align:right"><b>HARI</b></p>
         </div>
       </div>
       <div class="row container col-md-12 col-lg-12" style="margin-top:20px;">
-        <span style="margin-left:30px;">CAPAIAN REKOR KESELAMATAN JAM KERJA</span>
+        <span><img style="margin-left:30px;" src="rekorskrg.png"></span>
         <div>
           <p style="text-align:right"><b>JAM</b></p>
           <p style="text-align:right"><b>HARI</b></p>
