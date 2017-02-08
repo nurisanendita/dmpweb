@@ -69,7 +69,7 @@
 
 
       </div>
-      <div class="row " style="margin-top50px; font-family:Montserrat; font-size:20px;">
+      <div class="row " style="margin-top100px; font-family:Montserrat; font-size:20px;">
         <div class="container bg-blue">
           @foreach ($quotes as $quote_list)
           <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quote_list->quote }}</marquee>
