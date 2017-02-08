@@ -184,13 +184,13 @@
     <!-- Keselamatan Jam Kerja -->
     <div class="col-md-3 col-lg-3">
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
-          <div class="row container info-box" style="height:200px;">
-            <img src="img_kaltim1.jpg">
+          <div class="row container info-box bg-orange" style="height:200px;">
+            <img src="img_kaltim1.jpg" style="height:200px;width:200px;">
           </div>
       </div>
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
           <div class="row container info-box" style="height:200px;">
-            <img src="img_kaltim2.jpg">
+            <img src="img_kaltim2.jpg" style="height:200px;width:200px;">
           </div>
       </div>
       <div class="row row2 container col-md-12 col-lg-12">
