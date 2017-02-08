@@ -134,7 +134,7 @@
             myIndex1++;
             if (myIndex1 > x.length) {myIndex1 = 1}
             x[myIndex1-1].style.display = "block";
-            setTimeout(carousel, 15000);
+            setTimeout(carousel, 5000);
         }
         </script>
 
@@ -184,8 +184,13 @@
     <!-- Keselamatan Jam Kerja -->
     <div class="col-md-3 col-lg-3">
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
-          <div class="row container info-box bg-orange" style="height:200px;">
-            <img src="">
+          <div class="row container info-box" style="height:200px;">
+            <img src="img_kaltim1.jpg">
+          </div>
+      </div>
+      <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
+          <div class="row container info-box" style="height:200px;">
+            <img src="img_kaltim2.jpg">
           </div>
       </div>
       <div class="row row2 container col-md-12 col-lg-12">
@@ -216,7 +221,7 @@
           myIndex2++;
           if (myIndex2 > x.length) {myIndex2 = 1}
           x[myIndex2-1].style.display = "block";
-          setTimeout(carousel, 10000); // Change image every 10 seconds
+          setTimeout(carousel, 3000); // Change image every 10 seconds
       }
       </script>
     </div>
