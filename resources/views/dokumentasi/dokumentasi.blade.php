@@ -32,47 +32,50 @@
       </div>
       @endforeach
 
-  <div class="row bg-blue" style="margin-top50px; font-family:Montserrat; font-size:20px;">
-    <div class="container">
-      @foreach ($quotes as $quote_list)
-      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quote_list->quote }}</marquee>
-      @endforeach
-  </div>
+      <script>
+      var myIndex = 0;
+      carousel();
 
-  <script>
-  var myIndex = 0;
-  carousel();
-
-  function carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 10000); // Change image every 10 seconds
       }
-      myIndex++;
-      if (myIndex > x.length) {myIndex = 1}
-      x[myIndex-1].style.display = "block";
-      setTimeout(carousel, 10000); // Change image every 10 seconds
-  }
 
-  var slideIndex = 1;
-  showDivs(slideIndex);
+      var slideIndex = 1;
+      showDivs(slideIndex);
 
-  function plusDivs(n) {
-    showDivs(slideIndex += n);
-  }
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
 
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-  }
-  </script>
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+      </script>
 
+
+      </div>
+      <div class="row bg-blue" style="margin-top50px; font-family:Montserrat; font-size:20px;">
+        <div class="container">
+          @foreach ($quotes as $quote_list)
+          <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quote_list->quote }}</marquee>
+          @endforeach
+      </div>
+    </div>
+  </div>
 </div>
 @endsection
