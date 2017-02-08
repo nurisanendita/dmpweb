@@ -70,10 +70,6 @@ p{
 
 /* navbar */
 
-.navbar .navbar-inverse{
-    height: 500px;
-}
-
 .navbar-inverse {
   background-color: #0060AF;
   border-color: #fff;
