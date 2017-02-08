@@ -80,7 +80,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 
-                <li href="{{ url('/') }}/agenda_index" class="{{ Request::is('/agenda_index') ? "active" : "" }}">
+                <li href="{{ url('/') }}/agenda_index" class="{{ Request::is('/agenda_index') ? "active treeview" : "" }}">
                     <a href="{{ url('/') }}/agenda_index">
                         <i class="fa fa-calendar"></i><span>Agenda</span>
                     </a>
@@ -93,7 +93,7 @@
                 </li>
 
                 <li href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active treeview" : "" }}">
-                    <a href="{{ url('/') }}/dokumentasi_index">
+                    <a href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active treeview" : "" }}">
                         <i class="fa fa-picture-o"></i><span>Dokumentasi</span>
                     </a>
                 </li>
