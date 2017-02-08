@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container bg-orange">
+<div class="container bg-orange" style="margin-bottom:100px;">
   <div class="row">
     <div class="container">
 
