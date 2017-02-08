@@ -188,7 +188,7 @@
             <img src="">
           </div>
       </div>
-      <div class="row row1 container col-md-12 col-lg-12">
+      <div class="row row2 container col-md-12 col-lg-12">
         <span><img style="margin-left:30px;" src="green_safety_2.png">REKOR KESELAMATAN JAM KERJA YANG PERNAH DICAPAI</span>
       </div>
 
