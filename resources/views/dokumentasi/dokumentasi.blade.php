@@ -34,7 +34,9 @@
 
   <div class="row" style="margin-top:30px; font-family:Montserrat; font-size:20px;">
     <div class="container">
-      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quotes->quote }}</marquee>
+      @foreach ($quotes as $quote_list)
+      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quote_list->quote }}</marquee>
+      @endforeach
   </div>
 
   <script>
