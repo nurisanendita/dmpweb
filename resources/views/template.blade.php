@@ -32,7 +32,7 @@
                   </div>
               </div>
         </div>
-        <nav class="navbar navbar-inverse" style="height:10px;">
+        <nav class="navbar navbar-inverse">
             <div class="container">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
