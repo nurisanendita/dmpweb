@@ -15,6 +15,7 @@ use App\Models\LantaiRuang;
 use App\Models\NamaRuang;
 use App\Models\RekorSkrg;
 use App\Models\RekorTercapai;
+use App\Models\Banners;
 use App\Counter;
 use Session;
 
@@ -33,7 +34,8 @@ class AgendaController extends Controller
     $agenda3 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(8)->limit(4)->get();
     $rekorskrg = RekorSkrg::orderBy('id','desc')->limit(1)->get();
     $rekortercapai = RekorTercapai::orderBy('id','desc')->limit(1)->get();
-    return view('welcome', compact('agenda1','agenda2','agenda3','rekorskrg','rekortercapai'));
+    $banners = Banners::orderBy('id','desc')->limit(3)->get();
+    return view('welcome', compact('agenda1','agenda2','agenda3','rekorskrg','rekortercapai','banners'));
   }
 
   // public function __construct()

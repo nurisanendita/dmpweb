@@ -33,8 +33,8 @@
 				<tbody>
 	            @foreach ($banners as $banner)
 	                <tr>
-				          <td>{{ $banner->banner }}</td>
-                  <td>{{ $banner->banner }}</td>
+				          <td>{{ $banner->id }}</td>
+                  <td>{{ $banner->gambar }}</td>
                   <td>
                     <a class="btn btn-warning btn-xs" href="{{ url('/') }}/banners_edit/{{ $banner->id }}">EDIT</a>
                     <a class="btn btn-danger btn-xs" href="{{ url('/') }}/banners_delete/{{ $banner->id }}">HAPUS</a>
