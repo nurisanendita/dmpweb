@@ -2,14 +2,14 @@
 
 @section('content')
 
-<div class="container">
+<div class="container bg-orange">
   <div class="row">
     <div class="container">
 
       @foreach($dokumentasi as $dokumentasi_list)
       <div class="container mySlides col-md-12 col-lg-12" >
         <div class="col-md-3 col-lg-3">
-          <div class="info-box bg-orange" style="height:500px; font-family:Hind;">
+          <div class="info-box" style="height:500px; font-family:Hind;">
             <div class="info-box-content" style="margin-left:20px; margin-right:20px;">
               <span><h5 style="margin-top:20px;"><b>{{ $dokumentasi_list->judul_foto }} </b></h5></span><br>
               <div class="container" style="height:300px; width:220px; font-family:Hind;">
@@ -66,14 +66,14 @@
         x[slideIndex-1].style.display = "block";
       }
       </script>
-      </div>
     </div>
   </div>
-  <div class="row " style="margin-top100px; font-family:Montserrat; font-size:20px;">
-    <div class="container">
-      @foreach ($quotes as $quote_list)
-      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;margin-top100px;">{{ $quote_list->quote }}</marquee>
-      @endforeach
+</div>
+<div class="row " style="margin-top100px; font-family:Montserrat; font-size:20px;">
+  <div class="container">
+    @foreach ($quotes as $quote_list)
+    <marquee behavior="scroll" direction="left" style="text-transform:uppercase;margin-top100px;">{{ $quote_list->quote }}</marquee>
+    @endforeach
   </div>
 </div>
 @endsection
