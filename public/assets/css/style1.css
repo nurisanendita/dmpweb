@@ -11,9 +11,7 @@
 @import url("http://www.w3schools.com/lib/w3.css");
 /*@import url("{{ url('/') }}/dist/css/AdminLTE.min.css");*/
 
-/*a{
-  font-family: "Hind",sans-serif;
-}*/
+
 
 h4{
   font-family: "Hind",sans-serif;
@@ -76,7 +74,8 @@ p{
   border-color: #fff;
   font-size: 14px;
   font-weight: bold;
-  font-family:"Montserrat",sans-serif;;
+  font-family:"Montserrat",sans-serif;
+  height: 500px;
 }
 /* link */
 .navbar-inverse .navbar-nav > li > a {
