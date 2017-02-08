@@ -196,19 +196,15 @@
       <div class="row row2 container col-md-12 col-lg-12">
         <span><img style="margin-left:30px; margin-bottom:10px" src="rekorcapaian.png"></span>
         <div>
-          @foreach($rekortercapai as $rekortercapai_list)
-          <p style="text-align:right;color:#6A6161;"><b>{{$rekortercapai_list->hari}} HARI</b></p>
-          <p style="text-align:right;color:#6A6161;"><b>{{$rekortercapai_list->jam}} JAM</b></p>
-          @endforeach
+          <p style="text-align:right;color:#6A6161;"><b>{{$rekortercapai->hari}} HARI</b></p>
+          <p style="text-align:right;color:#6A6161;"><b>{{$rekortercapai->jam}} JAM</b></p>
         </div>
       </div>
       <div class="row container col-md-12 col-lg-12" style="margin-top:20px;">
         <span><img style="margin-left:30px; margin-bottom:10px" src="rekorskrg.png"></span>
         <div>
-          @foreach($rekorskrg as $rekorskrg_list)
-          <p style="text-align:right;color:#6A6161;"><b>{{$rekorskrg_list->hari}} HARI</b></p>
-          <p style="text-align:right;color:#6A6161;"><b>{{$rekorskrg_list->jam}} JAM</b></p>
-          @endforeach
+          <p style="text-align:right;color:#6A6161;"><b>{{$rekorskrg->hari}} HARI</b></p>
+          <p style="text-align:right;color:#6A6161;"><b>{{$rekorskrg->jam}} JAM</b></p>
         </div>
       </div>
 
