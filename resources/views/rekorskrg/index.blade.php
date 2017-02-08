@@ -5,7 +5,7 @@
 <section class="content-header">
 	<h1>REKOR CAPAIAN JAM KESELAMATAN KERJA</h1>
 	<ol class="breadcrumb">
-		<li><a href="{{ url('/') }}"><i class="fa fa-picture-o"></i> Beranda</a></li>
+		<li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Beranda</a></li>
     <li>Jam Keselamatan Kerja</li>
 		<li class="active">Rekor Saat Ini Index</li>
 	</ol>
