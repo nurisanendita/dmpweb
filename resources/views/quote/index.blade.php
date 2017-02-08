@@ -36,8 +36,8 @@
                   <td>{{ $quote_list->id }}</td>
 				          <td>{{ $quote_list->quote }}</td>
                   <td>
-										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $quote_list -> id }}">EDIT</a>
-										<a class="btn btn-danger btn-xs" href="{{ url('/') }}/agenda_delete/{{ $quote_list -> id }}">HAPUS</a>
+										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/quote_edit/{{ $quote_list -> id }}">EDIT</a>
+										<a class="btn btn-danger btn-xs" href="{{ url('/') }}/quote_delete/{{ $quote_list -> id }}">HAPUS</a>
                   </td>
 	                </tr>
 	            @endforeach
