@@ -191,8 +191,8 @@
       <div class="row row2 container col-md-12 col-lg-12">
         <span><img style="margin-left:30px;" src="green_safety_2.png">REKOR KESELAMATAN JAM KERJA YANG PERNAH DICAPAI</span>
         <div>
-          <p style="text-align:right">JAM</p>
-          <p>HARI</p>
+          <p style="text-align:right"><b>JAM</b></p>
+          <p style="text-align:right"><b>HARI</b></p>
         </div>
       </div>
 
