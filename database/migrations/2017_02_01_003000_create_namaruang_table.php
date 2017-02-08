@@ -19,19 +19,19 @@ class CreateNamaruangTable extends Migration
             $table->timestamps();
             $table->primary ('nama');
         });
-        DB::insert('insert into namaruang (nama) values (?)', ['R. AULA']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Pertemuan']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Unggul']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Integritas']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Kebersamaan']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Mushola']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. BPMMT']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Kepuasan Pelanggan']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Tanggap']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. LSP']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Ammonia']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Urea Prill']);
-        DB::insert('insert into namaruang (nama) values (?)', ['R. Urea Granul']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.AULA']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Pertemuan']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Unggul']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Integritas']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Kebersamaan']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Mushola']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.BPMMT']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Kepuasan Pelanggan']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Tanggap']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.LSP']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Ammonia']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Urea Prill']);
+        DB::insert('insert into namaruang (nama) values (?)', ['R.Urea Granul']);
     }
 
     /**
