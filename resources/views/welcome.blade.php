@@ -51,7 +51,7 @@
 
         <!-- carousel slide 2 -->
         <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
-          <img src"img_kaltim2.jpg">
+          <img src="img_kaltim2.jpg">
           <!-- Individual row agenda 1-->
           <!-- @foreach($agenda2 as $agenda2_list)
             <div class="row row1" style="margin-top:10px;">
@@ -212,20 +212,20 @@
       </div>
 
       <script>
-      // var myIndex2 = 0;
-      // carousel();
-      //
-      // function carousel() {
-      //     var i;
-      //     var x = document.getElementsByClassName("mySlides2");
-      //     for (i = 0; i < x.length; i++) {
-      //        x[i].style.display = "none";
-      //     }
-      //     myIndex2++;
-      //     if (myIndex2 > x.length) {myIndex2 = 1}
-      //     x[myIndex2-1].style.display = "block";
-      //     setTimeout(carousel, 3000); // Change image every 10 seconds
-      // }
+      var myIndex2 = 0;
+      carousel();
+
+      function carousel() {
+          var a;
+          var b = document.getElementsByClassName("mySlides2");
+          for (a = 0; a < b.length; a++) {
+             b[a].style.display = "none";
+          }
+          myIndex2++;
+          if (myIndex2 > b.length) {myIndex2 = 1}
+          b[myIndex2-1].style.display = "block";
+          setTimeout(carousel, 3000); // Change image every 10 seconds
+      }
       </script>
     </div>
     <!-- Keselamatan Jam Kerja -->
