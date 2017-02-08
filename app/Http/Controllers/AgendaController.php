@@ -116,7 +116,7 @@ class AgendaController extends Controller
     $agenda->save();
 
     $agenda = Agenda::all();
-    return redirect('/agenda_index');
+    return redirect('agenda_index');
   }
 
   public function destroy($id)

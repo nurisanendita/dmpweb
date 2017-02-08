@@ -63,7 +63,7 @@ class QuoteController extends Controller
     $quotes->save();
 
     $quotes = Quotes::all();
-    return redirect('/quote_index');
+    return redirect('quote_index');
   }
 
   public function destroy($id)

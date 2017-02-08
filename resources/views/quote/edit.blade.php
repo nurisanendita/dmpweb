@@ -14,7 +14,7 @@
 
 <form action="{{ url('/') }}/quote_update" method="post">
 	<b>Masukkan Quote</b>
-		<textarea class="form-control" type="text" name="input_quote">{{$quotes->quote}} {{old('input_quote')}}</textarea><br><br>
+		<textarea class="form-control" type="text" name="input_quote">{{$quotes->quote}}</textarea><br><br>
 
 	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
 	{{ csrf_field() }}

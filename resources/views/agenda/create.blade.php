@@ -14,21 +14,21 @@
 
 <form action="{{ url('/') }}/agenda_store" method="post">
 	<b>Tanggal Mulai</b>
-		<input style="margin-left:10px;" type="date" name="input_tanggalmulai">
+		<input style="margin-left:10px;" type="date" name="input_tanggalmulai" value="{{old('input_tanggalmulai')}}">
 
 	<span style="margin-left:110px;"><b>Tanggal Selesai</b>
-		<input style="margin-left:10px;" type="date" name="input_tanggalselesai">
+		<input style="margin-left:10px;" type="date" name="input_tanggalselesai" value="{{old('input_tanggalselesai')}}">
 	</span> <br><br>
 
 	<b>Kode Ruang</b>
-	<select type="text" style="margin-left:40px;" name="input_koderuang">
+	<select type="text" style="margin-left:40px;" name="input_koderuang" value="{{old('input_koderuang')}}">
 		@foreach($kodeRuang as $kRuang)
 				<option value="{{ $kRuang->kode }}">{{ $kRuang->kode }}</option>
 		@endforeach
 	</select>
 
 	<span style="margin-left:110px;"><b>Nama Ruang</b>
-		<select type="text" style="margin-left:10px;" name="input_namaruang">
+		<select type="text" style="margin-left:10px;" name="input_namaruang" value="{{old('input_namaruang')}}">
 			@foreach($namaRuang as $nRuang)
 					<option value="{{ $nRuang->nama }}">{{ $nRuang->nama }}</option>
 			@endforeach
@@ -36,7 +36,7 @@
 	</span>
 
 	<span style="margin-left:110px;"><b>Lantai</b>
-		<select type="text" style="margin-left:10px;" name="input_lantairuang">
+		<select type="text" style="margin-left:10px;" name="input_lantairuang" value="{{old('input_lantairuang')}}">
 			@foreach($lantaiRuang as $lRuang)
 					<option value="{{ $lRuang->lantai }}">{{ $lRuang->lantai }}</option>
 			@endforeach
@@ -44,10 +44,10 @@
 	</span><br><br>
 
 	<b>Nama Kegiatan</b>
-	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan"></textarea><br><br>
+	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan">{{old('input_namakegiatan')}}</textarea><br><br>
 
 	<b>Keterangan</b>
-	<textarea class="form-control" style="height:200px; width:700px;" type="text" name="input_keterangan"></textarea><br><br><br>
+	<textarea class="form-control" style="height:200px; width:700px;" type="text" name="input_keterangan">{{old('input_keterangan')}}</textarea><br><br><br>
 
 	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
 	{{ csrf_field() }}
