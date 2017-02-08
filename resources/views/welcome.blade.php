@@ -58,7 +58,7 @@
                 <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                 <div class="info-box-content" style="margin-left:30px;">
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda2_list->tanggal_mulai))}}</span>
-                  <span class="info-box-text" style="font-size:15px; ">s.d.</span>
+                  <span class="info-box-text" style="font-size:15px;text-transform:lowercase; ">s.d.</span>
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda2_list->tanggal_selesai))}}</span>
                 </div>
                 </div>
@@ -93,7 +93,7 @@
                 <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                 <div class="info-box-content" style="margin-left:30px;">
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda3_list->tanggal_mulai))}}</span>
-                  <span class="info-box-text" style="font-size:15px; ">s.d.</span>
+                  <span class="info-box-text" style="font-size:15px;text-transform:uppercase; ">s.d.</span>
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda3_list->tanggal_selesai))}}</span>
                 </div>
                 </div>

@@ -2,19 +2,19 @@
 
 @section('content')
 
-<div class="container" style="margin-bottom:40px;margin-top:30px;background:#565656;">
+<div class="container" style="margin-bottom:40px;">
   <div class="row">
     <div class="container">
 
       @foreach($dokumentasi as $dokumentasi_list)
       <div class="container mySlides col-md-12 col-lg-12" >
         <div class="col-md-3 col-lg-3">
-          <div class="info-box" style="height:500px; font-family:Hind; margin-top:20px;">
+          <div class="info-box bg-orange" style="height:500px; font-family:Hind; margin-top:20px;">
             <div class="info-box-content" style="margin-left:10px; margin-right:10px;">
-              <span><h5 style="margin-top:20px;color: #525252;"><b>{{ $dokumentasi_list->judul_foto }} </b></h5></span><br>
+              <span><h5 style="margin-top:20px;"><b>{{ $dokumentasi_list->judul_foto }} </b></h5></span><br>
               <div class="container" style="height:300px; width:220px; font-family:Hind">
-                <p style="color: #525252;">{{ $dokumentasi_list->keterangan_foto }}</p><br>
-                <p style="color: #525252;">{{ $dokumentasi_list->tanggal }}</p>
+                <p>{{ $dokumentasi_list->keterangan_foto }}</p><br>
+                <p>{{ $dokumentasi_list->tanggal }}</p>
               </div>
             </div>
           </div>
