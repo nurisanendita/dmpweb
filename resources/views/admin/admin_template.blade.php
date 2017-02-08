@@ -80,19 +80,19 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 
-                <li href="{{ url('/') }}/agenda_index" class="active treeview">
+                <li href="{{ url('/') }}/agenda_index" class="{{ Request::is('/agenda_index') ? "active treeview" : "" }}">
                     <a href="{{ url('/') }}/agenda_index">
                         <i class="fa fa-calendar"></i><span>Agenda</span>
                     </a>
                 </li>
 
-                <li href="#" class="active treeview">
+                <li href="#" class="active treeview"class="{{ Request::is('#') ? "active treeview" : "" }}">
                     <a href="#">
                         <i class="fa fa-newspaper-o"></i><span>Berita</span>
                     </a>
                 </li>
 
-                <li href="{{ url('/') }}/dokumentasi_index" class="active treeview">
+                <li href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active treeview" : "" }}">
                     <a href="{{ url('/') }}/dokumentasi_index">
                         <i class="fa fa-picture-o"></i><span>Dokumentasi</span>
                     </a>
