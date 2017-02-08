@@ -9,7 +9,7 @@
   <div class="container">
     <h1 class="title" style="font-family:Hind">Agenda</h1>
     <div class="row" style="margin-top:20px;">
-    	<div class="col-md-10 col-lg-10">
+    	<div class="col-md-9 col-lg-9">
 
         <div class="row container">
 
@@ -182,7 +182,7 @@
     </div>
 
     <!-- Keselamatan Jam Kerja -->
-    <div class="col-md-2 col-lg-2">
+    <div class="col-md-3 col-lg-3">
       <!-- Belum siap -->
     </div>
     <!-- Keselamatan Jam Kerja -->

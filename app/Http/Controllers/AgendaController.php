@@ -25,10 +25,6 @@ class AgendaController extends Controller
       Session::flash('message', 'Masukkan Agenda');
       return redirect('agenda_index');
     }
-    // $agenda1 = Agenda::where('kode_ruang','like','A%')->orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->limit(4)->get();
-    // $agenda2 = Agenda::where('kode_ruang','like','B%')->orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->limit(4)->get();
-    // $agenda3 = Agenda::where('kode_ruang','like','C%')->orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->limit(4)->get();
-    // return view('welcome', compact('agenda1','agenda2','agenda3'));
 
     $agenda1 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(0)->limit(4)->get();
     $agenda2 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(4)->limit(4)->get();
