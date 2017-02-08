@@ -22,7 +22,7 @@ class QuoteController extends Controller
 
   public function index()
   {
-    $quote = Quote::all();
+    $quote = Quotes::all();
     return view('quote.index', compact('quote'));
   }
 
@@ -47,13 +47,13 @@ class QuoteController extends Controller
 
   public function edit($id)
   {
-    $quote = Quote::find($id);
+    $quote = Quotes::find($id);
       return view('quote.edit',compact('quote');
   }
 
   public function update($id, Request $request)
   {
-    $quote = Quote::find($id);
+    $quote = Quotes::find($id);
 
     $this->validate($request, [
         'input_quote' => 'required',
@@ -62,13 +62,13 @@ class QuoteController extends Controller
     $quote->quote = $request->input('input_quote');
     $agenda->save();
 
-    $quote = Quote::all();
+    $quote = Quotes::all();
     return redirect('/quote_index');
   }
 
   public function destroy($id)
   {
-    $quote = Quote::findorFail($id);
+    $quote = Quotes::findorFail($id);
     $quote->delete();
     return redirect('quote_index');
   }
