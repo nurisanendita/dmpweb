@@ -80,33 +80,39 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 
-                <li href="{{ url('/') }}/agenda_index" class="{{ Request::is('/agenda_index') ? "active treeview" : "" }}">
+                <li href="{{ url('/') }}/agenda_index" class="treeview {{ Request::is('/agenda_index') ? "active" : "" }}">
                     <a href="{{ url('/') }}/agenda_index">
                         <i class="fa fa-calendar"></i><span>Agenda</span>
                     </a>
                 </li>
 
-                <li href="#" class="{{ Request::is('') ? "active" : "" }}">
+                <li href="#" class="treeview {{ Request::is('') ? "active" : "" }}">
                     <a href="#">
                         <i class="fa fa-newspaper-o"></i><span>Berita</span>
                     </a>
                 </li>
 
-                <li href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active treeview" : "" }}">
-                    <a href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active" : "" }}">
+                <li href="{{ url('/') }}/dokumentasi_index" class="treeview {{ Request::is('/dokumentasi_index') ? "active" : "" }}">
+                    <a href="{{ url('/') }}/dokumentasi_index">
                         <i class="fa fa-picture-o"></i><span>Dokumentasi</span>
                     </a>
                 </li>
 
-                <li href="{{ url('/') }}/quote_index" class="{{ Request::is('/quote_index') ? "active treeview" : "" }}">
+                <li href="{{ url('/') }}/quote_index" class="treeview {{ Request::is('/quote_index') ? "active" : "" }}">
                     <a href="{{ url('/') }}/quote_index">
                         <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                     </a>
                 </li>
-                <ul>
-                  <li>
+                <ul class="treeview menu">
+                  <li href="{{ url('/') }}/quote_index" class="treeview {{ Request::is('/quote_index') ? "active" : "" }}">
+                      <a href="{{ url('/') }}/quote_index">
+                          <i class="fa fa-sticky-note-o"></i><span>Quote</span>
+                      </a>
                   </li>
-                  <li>
+                  <li href="{{ url('/') }}/quote_index" class="treeview {{ Request::is('/quote_index') ? "active" : "" }}">
+                      <a href="{{ url('/') }}/quote_index">
+                          <i class="fa fa-sticky-note-o"></i><span>Quote</span>
+                      </a>
                   </li>
                 </ul>
 
