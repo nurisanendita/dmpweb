@@ -191,7 +191,7 @@
 
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
           <div class="row container info-box" style="height:200px;">
-            <img src="img_kaltim2.jpg" style="height:200px;width:270px;">
+            <img src="green_safety.png" style="height:200px;width:270px;">
           </div>
       </div>
 
