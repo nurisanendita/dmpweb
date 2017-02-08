@@ -9,7 +9,7 @@
   <div class="container">
     <h1 class="title" style="font-family:Hind">Agenda</h1>
     <div class="row">
-    	<div class="col-md-9 col-lg-9" style="margin-left:-20px;">
+    	<div class="col-md-9 col-lg-9" style="margin-left:-20px; margin-top:-20px;">
 
         <div class="row container">
 
