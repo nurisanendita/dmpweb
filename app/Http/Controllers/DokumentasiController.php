@@ -113,7 +113,7 @@ class DokumentasiController extends Controller
     $dokumentasi->tanggal = $request->input_tanggalfoto;
 
     $dokumentasi->save();
-    // $dokumentasi = Dokumentasi::all();
+    $dokumentasi = Dokumentasi::all();
     return redirect('dokumentasi_index');
   }
 
