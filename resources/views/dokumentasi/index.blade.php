@@ -42,6 +42,7 @@
                   <td>{{ $dokumentasi_list->judul_foto }}</td>
 				          <td>{{ $dokumentasi_list->keterangan_foto }}</td>
                   <td><a class="btn btn-warning btn-xs" href="{{ url('/') }}/dokumentasi_edit/{{ $dokumentasi_list -> id }}">EDIT</a>
+                    <td><a class="btn btn-warning btn-xs" href="{{ url('/') }}/dokumentasi_delete/{{ $dokumentasi_list -> id }}">EDIT</a>
 	                </tr>
 	            @endforeach
 	        </tbody>

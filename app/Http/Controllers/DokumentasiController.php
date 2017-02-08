@@ -29,12 +29,13 @@ class DokumentasiController extends Controller
     }
 
     $dokumentasi = Dokumentasi::orderBy('id','desc')->limit(5)->get();
+    $quote = Quotes::orderBy('id','desc')->limit(1)->get();
 
     // $quote = $request->input('input_quote');
     // DB::table('quotes')->insert([
     //         'quote' => $quote
     //       ]);
-    return view('dokumentasi.dokumentasi', compact('dokumentasi'));
+    return view('dokumentasi.dokumentasi', compact('dokumentasi','quote'));
     //return view('dokumentasi.dokumentasi');
   }
 
@@ -95,8 +96,8 @@ class DokumentasiController extends Controller
 
     $this->validate($request, [
         'input_foto' => 'required',
-        'input_keteranganfoto' => 'string|required|max:340',
-        'input_judulfoto' => 'string|required|max:100',
+        'input_keteranganfoto' => 'required|max:300',
+        'input_judulfoto' => 'required|max:100',
         'input_tanggalfoto' => 'required',
     ]);
 
@@ -118,8 +119,8 @@ class DokumentasiController extends Controller
 
   public function destroy($id)
   {
-    $agenda = Agenda::findorFail($id);
-    $agenda->delete();
-    return redirect('agenda_index');
+    $dokumentasi = Dokumentasi::findorFail($id);
+    $dokumentasi->delete();
+    return redirect('dokumentasi_index');
   }
 }
