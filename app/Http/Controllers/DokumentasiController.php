@@ -29,13 +29,13 @@ class DokumentasiController extends Controller
     }
 
     $dokumentasi = Dokumentasi::orderBy('id','desc')->limit(5)->get();
-    $quote = Quotes::orderBy('id','desc')->limit(1)->get();
+    $quotes = Quotes::orderBy('id','desc')->limit(1)->get();
 
     // $quote = $request->input('input_quote');
     // DB::table('quotes')->insert([
     //         'quote' => $quote
     //       ]);
-    return view('dokumentasi.dokumentasi', compact('dokumentasi','quote'));
+    return view('dokumentasi.dokumentasi', compact('dokumentasi','quotes'));
     //return view('dokumentasi.dokumentasi');
   }
 
