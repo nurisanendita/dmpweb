@@ -13,6 +13,8 @@ use App\Models\Dokumentasi;
 use App\Models\KodeRuang;
 use App\Models\LantaiRuang;
 use App\Models\NamaRuang;
+use App\Models\RekorSkrg;
+use App\Models\RekorTercapai;
 use App\Counter;
 use Session;
 
@@ -29,7 +31,9 @@ class AgendaController extends Controller
     $agenda1 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(0)->limit(4)->get();
     $agenda2 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(4)->limit(4)->get();
     $agenda3 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(8)->limit(4)->get();
-    return view('welcome', compact('agenda1','agenda2','agenda3'));
+    $rekorskrg = RekorSkrg::orderBy('id','desc')->limit(1);
+    $rekortercapai = RekorTercapai::orderBy('id','desc')->limit(1);
+    return view('welcome', compact('agenda1','agenda2','agenda3','rekorskrg','rekortercapai'));
   }
 
   // public function __construct()
