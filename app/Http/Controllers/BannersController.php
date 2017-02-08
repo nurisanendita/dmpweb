@@ -67,7 +67,7 @@ class BannersController extends Controller
     $image = $request->file('input_banner');
     $imgname = $image->getClientOriginalName();
     File::delete(public_path() . '/' .$banners->banner);
-    $newSavePath = "bannersUpload/" . $imgname;
+    $newSavePath = "images/" . $imgname;
     $image = $image->move(public_path() . "/bannersUpload/", $imgname);
 
     $banners->banner = $newSavePath;
