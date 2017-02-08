@@ -93,7 +93,7 @@
                 <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                 <div class="info-box-content" style="margin-left:30px;">
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda3_list->tanggal_mulai))}}</span>
-                  <span class="info-box-text" style="font-size:15px;text-transform:lowercase; ">s.d.</span>
+                  <span class="info-box-text" style="font-size:15px;text-transform:lowercase;text-align:center;">s.d.</span>
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda3_list->tanggal_selesai))}}</span>
                 </div>
                 </div>
@@ -120,7 +120,7 @@
         <!-- carousel slide 3 -->
       </div>
 
-        <!-- //carousel-slides -->
+        <!-- //carousel-slides agenda -->
         <script>
         var myIndex = 0;
         carousel();
@@ -134,7 +134,7 @@
             myIndex++;
             if (myIndex > x.length) {myIndex = 1}
             x[myIndex-1].style.display = "block";
-            setTimeout(carousel, 2500);
+            setTimeout(carousel, 15000);
         }
         </script>
 
@@ -222,7 +222,7 @@
           myIndex2++;
           if (myIndex2 > b.length) {myIndex2 = 1}
           b[myIndex2-1].style.display = "block";
-          setTimeout(slideshow, 3000); // Change image every 10 seconds
+          setTimeout(slideshow, 5000);
       }
       </script>
     </div>
