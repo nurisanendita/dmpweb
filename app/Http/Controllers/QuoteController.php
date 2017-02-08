@@ -48,8 +48,7 @@ class QuoteController extends Controller
   public function edit($id)
   {
     $quotes = Quotes::find($id);
-      //return view('quote.edit',compact('quote');
-      return $quotes;
+      return view('quote.edit',compact('quote');
   }
 
   public function update($id, Request $request)
