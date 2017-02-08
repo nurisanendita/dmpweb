@@ -48,7 +48,7 @@ class QuoteController extends Controller
   public function edit($id)
   {
     $quotes = Quotes::findorFail($id);
-      return view('quote.edit',compact('quote');
+      return view('quote.edit', compact('quotes');
   }
 
   public function update($id, Request $request)
