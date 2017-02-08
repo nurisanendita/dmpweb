@@ -67,7 +67,8 @@ class RekorSkrgController extends Controller
     $rekorskrg->save();
 
     $rekorskrg = RekorSkrg::all();
-    return redirect('rekorskrg_index');
+    return $rekorskrg;
+    //return redirect('rekorskrg_index');
   }
 
   public function destroy($id)
