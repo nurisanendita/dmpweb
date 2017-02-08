@@ -105,14 +105,14 @@
                 </li>
                 <li class="treeview">
                   <a href="#">
-                    <i class="fa fa-clock"></i> <span>Jam Keselamatan Kerja</span>
+                    <i class="fa fa-clock-o"></i> <span>Jam Keselamatan Kerja</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-down pull-right"></i>
                     </span>
                   </a>
                   <ul class="treeview-menu" style="display: none;">
-                    <li><a href="../index.html"><i class="fa fa-circle-o"></i>Rekor Tercapai</a></li>
-                    <li><a href="../index2.html"><i class="fa fa-circle-o"></i>Rekor Saat ini</a></li>
+                    <li><a href="{{ url('/') }}/rekortercapai"><i class="fa fa-dot-circle-o"></i>Rekor Tercapai</a></li>
+                    <li><a href="{{ url('/') }}/rekorsaatini"><i class="fa fa-dot-circle-o"></i>Rekor Saat ini</a></li>
                   </ul>
                 </li>
             </ul>
