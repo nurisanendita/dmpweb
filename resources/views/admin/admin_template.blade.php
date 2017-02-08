@@ -94,7 +94,7 @@
 
                 <li href="{{ url('/') }}/dokumentasi_index" class="treeview {{ Request::is('/dokumentasi_index') ? "active" : "" }}">
                     <a href="{{ url('/') }}/dokumentasi_index">
-                        <i class="fa fa-picture-o"></i><span>Dokumentasi</span>
+                        <i class="fa fa-camera-retro"></i><span>Dokumentasi</span>
                     </a>
                 </li>
 
@@ -114,6 +114,11 @@
                     <li><a href="{{ url('/') }}/rekortercapai_index"><i class="fa fa-dot-circle-o"></i>Rekor Tercapai</a></li>
                     <li><a href="{{ url('/') }}/rekorskrg_index"><i class="fa fa-dot-circle-o"></i>Rekor Saat ini</a></li>
                   </ul>
+                </li>
+                <li href="{{ url('/') }}/banners_index" class="treeview {{ Request::is('/banners_index') ? "active" : "" }}">
+                    <a href="{{ url('/') }}/banners_index">
+                        <i class="fa fa-picture-o"></i><span>Banners</span>
+                    </a>
                 </li>
             </ul>
         </section>

@@ -14,7 +14,7 @@
 
 <form action="{{ url('/') }}/dokumentasi_update/{{$dokumentasi->id}}" method="post" enctype="multipart/form-data">
 
-	<b>Foto</b>
+	<b>Upload Foto</b>
 	<input style="margin-left:10px;" type="file" name="input_foto" value="{{$dokumentasi->foto}}"><br><br>
 
 	<b>Judul Foto</b> (maximal 100 karakter)

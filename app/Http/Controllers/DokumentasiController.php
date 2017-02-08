@@ -6,11 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
-use App\Models\Agenda;
 use App\Models\Dokumentasi;
-use App\Models\KodeRuang;
-use App\Models\LantaiRuang;
-use App\Models\NamaRuang;
 use App\Models\Quotes;
 use App\Counter;
 use Session;
@@ -99,7 +95,7 @@ class DokumentasiController extends Controller
     $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
     File::delete(public_path() . '/' .$dokumentasi->foto);
-    $newSavePath = "images/" . $imgname;
+    $newSavePath = "dokumentasiUpload/" . $imgname;
     $image = $image->move(public_path() . "/dokumentasiUpload/", $imgname);
 
     $dokumentasi->foto = $newSavePath;

@@ -14,7 +14,7 @@
 
 <form class="{{$errors->has('img')?'has-error':''}}" action="{{ url('/') }}/dokumentasi_store" method="post" enctype="multipart/form-data">
 
-	<b for="img">Foto</b>
+	<b for="img">Upload Foto</b>
 	<input style="margin-left:10px;" type="file" name="input_foto" id="img" multiple="multilple"><br><br>
 
 	<b>Judul Foto</b> (maximal 100 karakter)

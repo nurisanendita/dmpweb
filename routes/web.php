@@ -56,5 +56,12 @@ Route::get('/rekortercapai_edit/{id}', 'RekorTercapaiController@edit');
 Route::put('/rekortercapai_update/{id}', 'RekorTercapaiController@update');
 Route::get('/rekortercapai_delete/{id}', 'RekorTercapaiController@destroy');
 
+Route::get('/banners_index', 'BannersController@index');
+Route::get('/banners_create', 'BannersController@create');
+Route::post('/banners_store', 'BannersController@store');
+Route::get('/banners_edit/{id}', 'BannersController@edit');
+Route::put('/banners_update/{id}', 'BannersController@update');
+Route::get('/banners_delete/{id}', 'BannersController@destroy');
+
 //
 // Route::get('/admin_dmp', 'HomeController@index');
