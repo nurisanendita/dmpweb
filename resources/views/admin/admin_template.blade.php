@@ -80,7 +80,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 
-                <li href="{{ url('/') }}/agenda_index" class="treeview {{ Request::is('/agenda_index') ? "active" : "" }}" style="border-left-color: #f39c12;">
+                <li href="{{ url('/') }}/agenda_index" class="treeview {{ Request::is('/agenda_index') ? "active" : "" }}">
                     <a href="{{ url('/') }}/agenda_index">
                         <i class="fa fa-calendar"></i><span>Agenda</span>
                     </a>
@@ -103,17 +103,17 @@
                         <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                     </a>
                 </li>
-                <li class="treeview menu">
-                  <li href="{{ url('/') }}/quote_index" class="treeview {{ Request::is('/quote_index') ? "active" : "" }}">
-                      <a href="{{ url('/') }}/quote_index">
-                          <i class="fa fa-sticky-note-o"></i><span>Quote</span>
-                      </a>
-                  </li>
-                  <li href="{{ url('/') }}/quote_index" class="treeview {{ Request::is('/quote_index') ? "active" : "" }}">
-                      <a href="{{ url('/') }}/quote_index">
-                          <i class="fa fa-sticky-note-o"></i><span>Quote</span>
-                      </a>
-                  </li>
+                <li class="treeview active">
+                  <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu menu-open" style="display: block;">
+                    <li><a href="../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                    <li><a href="../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                  </ul>
                 </li>
             </ul>
         </section>
