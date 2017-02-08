@@ -9,7 +9,7 @@
   <div class="container">
     <h1 class="title" style="font-family:Hind" style="margin-left:-20px;">Agenda</h1>
     <div class="row">
-    	<div class="col-md-9 col-lg-9" style="">
+    	<div class="col-md-9 col-lg-9" style="margin-left:-20px; margin-top:-10px;">
 
         <div class="row container">
 
@@ -212,20 +212,20 @@
       </div>
 
       <script>
-      var myIndex2 = 0;
-      carousel();
-
-      function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides2");
-          for (i = 0; i < x.length; i++) {
-             x[i].style.display = "none";
-          }
-          myIndex2++;
-          if (myIndex2 > x.length) {myIndex2 = 1}
-          x[myIndex2-1].style.display = "block";
-          setTimeout(carousel, 3000); // Change image every 10 seconds
-      }
+      // var myIndex2 = 0;
+      // carousel();
+      //
+      // function carousel() {
+      //     var i;
+      //     var x = document.getElementsByClassName("mySlides2");
+      //     for (i = 0; i < x.length; i++) {
+      //        x[i].style.display = "none";
+      //     }
+      //     myIndex2++;
+      //     if (myIndex2 > x.length) {myIndex2 = 1}
+      //     x[myIndex2-1].style.display = "block";
+      //     setTimeout(carousel, 3000); // Change image every 10 seconds
+      // }
       </script>
     </div>
     <!-- Keselamatan Jam Kerja -->
