@@ -8,7 +8,7 @@
 
   <div class="container">
     <h1 class="title" style="font-family:Hind">Agenda</h1>
-    <div class="row" style="margin-top:20px;">
+    <div class="row">
     	<div class="col-md-9 col-lg-9">
 
         <div class="row container">
@@ -189,14 +189,14 @@
           </div>
       </div>
       <div class="row row2 container col-md-12 col-lg-12">
-        <span><img style="margin-left:30px;" src="rekorcapaian.png"></span>
+        <span><img style="margin-left:30px; margin-bottom:10px" src="rekorcapaian.png"></span>
         <div>
           <p style="text-align:right"><b>JAM</b></p>
           <p style="text-align:right"><b>HARI</b></p>
         </div>
       </div>
       <div class="row container col-md-12 col-lg-12" style="margin-top:20px;">
-        <span><img style="margin-left:30px;" src="rekorskrg.png"></span>
+        <span><img style="margin-left:30px; margin-bottom:10px" src="rekorskrg.png"></span>
         <div>
           <p style="text-align:right"><b>JAM</b></p>
           <p style="text-align:right"><b>HARI</b></p>
