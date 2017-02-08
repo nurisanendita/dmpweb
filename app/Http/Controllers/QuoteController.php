@@ -60,7 +60,7 @@ class QuoteController extends Controller
     ]);
 
     $quote->quote = $request->input('input_quote');
-    $agenda->save();
+    $quote->save();
 
     $quote = Quotes::all();
     return redirect('/quote_index');
