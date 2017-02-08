@@ -107,7 +107,7 @@
                   <a href="#">
                     <i class="fa fa-dashboard"></i> <span>Jam Keselamatan Kerja</span>
                     <span class="pull-right-container">
-                      <i class="fa fa-angle-right pull-right"></i>
+                      <i class="fa fa-angle-down pull-right"></i>
                     </span>
                   </a>
                   <ul class="treeview-menu" style="display: none;">
