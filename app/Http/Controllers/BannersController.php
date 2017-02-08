@@ -42,7 +42,7 @@ class BannersController extends Controller
     $imgname = $image->getClientOriginalName();
     // $path = url('/') ;
     $image = $image->move(public_path() . "/bannersUpload/", $imgname);
-    $save_path = "images/" . $imgname;
+    $save_path = "bannersUpload/" . $imgname;
 
     Banners::insert([
             'banner' => $save_path,
@@ -67,7 +67,7 @@ class BannersController extends Controller
     $image = $request->file('input_banner');
     $imgname = $image->getClientOriginalName();
     File::delete(public_path() . '/' .$banners->banner);
-    $newSavePath = "images/" . $imgname;
+    $newSavePath = "bannersUpload/" . $imgname;
     $image = $image->move(public_path() . "/bannersUpload/", $imgname);
 
     $banners->banner = $newSavePath;
