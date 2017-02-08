@@ -40,7 +40,7 @@ class RekorTercapaiController extends Controller
         $hari = $request->input('input_hari_rekortercapai');
         $jam = $request->input('input_jam_rekortercapai');
 
-        DB::table('rekortercapai')->insert([
+        RekorTercapai::insert([
                 'hari' => $hari,
                 'jam' => $jam,
               ]);
