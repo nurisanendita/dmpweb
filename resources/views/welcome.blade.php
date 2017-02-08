@@ -195,16 +195,6 @@
             </div>
           </div>
         </div>
-
-        <div class="col-md-9 col-lg-9" style="margin-top:20px;">
-          <img src="" style="height:500px; width:850px;">
-          <div class="row">
-            <div class="container">
-              <a class="w3-btn-floating w3-display-left w3-opacity-off" onclick="plusDivs(-1)" style="margin-left:20px; opacity: 0.2;">&#10094;</a>
-              <a class="w3-btn-floating w3-display-right w3-opacity-off" onclick="plusDivs(1)" style="margin-right:20px; opacity: 0.2;">&#10095;</a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <script>
@@ -221,24 +211,6 @@
           if (myIndex > x.length) {myIndex = 1}
           x[myIndex-1].style.display = "block";
           setTimeout(carousel, 10000); // Change image every 10 seconds
-      }
-
-      var slideIndex = 1;
-      showDivs(slideIndex);
-
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
-
-      function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";
-        }
-        x[slideIndex-1].style.display = "block";
       }
       </script>
     </div>
