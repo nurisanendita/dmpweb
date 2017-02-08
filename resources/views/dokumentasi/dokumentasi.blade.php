@@ -66,16 +66,14 @@
         x[slideIndex-1].style.display = "block";
       }
       </script>
-
-
-      </div>
-      <div class="row " style="margin-top100px; font-family:Montserrat; font-size:20px;">
-        <div class="container bg-blue">
-          @foreach ($quotes as $quote_list)
-          <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quote_list->quote }}</marquee>
-          @endforeach
       </div>
     </div>
+  </div>
+  <div class="row " style="margin-top100px; font-family:Montserrat; font-size:20px;">
+    <div class="container bg-blue">
+      @foreach ($quotes as $quote_list)
+      <marquee behavior="scroll" direction="left" style="text-transform:uppercase;">{{ $quote_list->quote }}</marquee>
+      @endforeach
   </div>
 </div>
 @endsection
