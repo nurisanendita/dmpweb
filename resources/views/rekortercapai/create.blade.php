@@ -10,11 +10,14 @@
 		</div>
 @endif
 
-<h2>Tambah Quote</h2>
+<h2>Tambah Rekor Yang Pernah Dicapai</h2>
 
-<form action="{{ url('/') }}/quote_store" method="post">
-	<b>Masukkan Quote</b>
-		<textarea class="form-control" type="text" name="input_quote" value="{{old('input_quote')}}"></textarea><br><br>
+<form action="{{ url('/') }}/rekortercapai_store" method="post">
+	<b>Masukkan Jumlah Hari</b>
+		<textarea class="form-control" type="text" name="input_hari_rekortercapai" value="{{old('input_hari_rekortercapai')}}"></textarea><br><br>
+
+  <b>Masukkan Jumlah Jam</b>
+		<textarea class="form-control" type="text" name="input_jam_rekortercapai" value="{{old('input_jam_rekortercapai')}}"></textarea><br><br>
 
 	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
 	{{ csrf_field() }}

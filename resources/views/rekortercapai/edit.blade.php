@@ -10,11 +10,14 @@
 		</div>
 @endif
 
-<h2>Edit Quote</h2>
+<h2>Edit Rekor Yang Pernah Dicapai</h2>
 
-<form action="{{ url('/') }}/quote_update" method="post">
-	<b>Masukkan Quote</b>
-		<textarea class="form-control" type="text" name="input_quote">{{$quotes->quote}}</textarea><br><br>
+<form action="{{ url('/') }}/rekortercapai_update/{{$rekortercapai->id}}" method="post">
+  <b>Masukkan Jumlah Hari</b>
+		<textarea class="form-control" type="text" name="input_hari_rekortercapai">{{$rekortercapai->hari}}</textarea><br><br>
+
+  <b>Masukkan Jumlah Jam</b>
+		<textarea class="form-control" type="text" name="input_jam_rekortercapai">{{$rekortercapai->jam}}</textarea><br><br>
 
 	<input class="btn btn-info" type="submit" name="submit" value="SIMPAN">
 	{{ csrf_field() }}
