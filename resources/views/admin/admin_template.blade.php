@@ -80,13 +80,13 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 
-                <li href="{{ url('/') }}/agenda_index" class="{{ Request::is('/agenda_index') ? "active treeview" : "" }}">
+                <li href="{{ url('/') }}/agenda_index" class="{{ Request::is('/agenda_index') ? "active" : "" }}">
                     <a href="{{ url('/') }}/agenda_index">
                         <i class="fa fa-calendar"></i><span>Agenda</span>
                     </a>
                 </li>
 
-                <li href="#" class="active treeview"class="{{ Request::is('') ? "active treeview" : "" }}">
+                <li href="#" class="{{ Request::is('') ? "active" : "" }}">
                     <a href="#">
                         <i class="fa fa-newspaper-o"></i><span>Berita</span>
                     </a>
