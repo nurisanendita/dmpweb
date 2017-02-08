@@ -111,8 +111,8 @@
                     </span>
                   </a>
                   <ul class="treeview-menu" style="display: none;">
-                    <li><a href="{{ url('/') }}/rekortercapai"><i class="fa fa-dot-circle-o"></i>Rekor Tercapai</a></li>
-                    <li><a href="{{ url('/') }}/rekorsaatini"><i class="fa fa-dot-circle-o"></i>Rekor Saat ini</a></li>
+                    <li><a href="{{ url('/') }}/rekortercapai_index"><i class="fa fa-dot-circle-o"></i>Rekor Tercapai</a></li>
+                    <li><a href="{{ url('/') }}/rekorskrg_index"><i class="fa fa-dot-circle-o"></i>Rekor Saat ini</a></li>
                   </ul>
                 </li>
             </ul>
