@@ -55,7 +55,7 @@ class RekorSkrgController extends Controller
 
   public function update($id, Request $request)
   {
-    $rekorskrg = RekorSkrg::find($id);
+    $rekorskrg = RekorSkrg::findorFail($id);
 
     $this->validate($request, [
         'input_hari_rekorskrg' => 'required',
@@ -66,7 +66,7 @@ class RekorSkrgController extends Controller
     $rekorskrg->jam = $request->input('input_jam_rekorskrg');
     $rekorskrg->save();
 
-    $rekorskrg = RekorSkrg::all();
+    //$rekorskrg = RekorSkrg::all();
     return $rekorskrg;
     //return redirect('rekorskrg_index');
   }

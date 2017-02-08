@@ -52,7 +52,7 @@ class QuoteController extends Controller
 
   public function update($id, Request $request)
   {
-    $quotes = Quotes::find($id);
+    $quotes = Quotes::findorFail($id);
 
     $this->validate($request, [
         'input_quote' => 'required',

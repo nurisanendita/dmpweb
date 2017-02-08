@@ -95,7 +95,7 @@ class AgendaController extends Controller
 
   public function update($id, Request $request)
   {
-    $agenda = Agenda::find($id);
+    $agenda = Agenda::findorFail($id);
 
     $this->validate($request, [
         'input_tanggalmulai' => 'required',
