@@ -3,7 +3,7 @@
 @section('content')
 
 <section class="content-header">
-	<h1>REKOR CAPAIAN JAM KESELAMATAN KERJA</h1>
+	<h1>REKOR JAM KESELAMATAN KERJA YANG PERNAH DICAPAI</h1>
 	<ol class="breadcrumb">
 		<li><a href="{{ url('/') }}"><i class="fa fa-home"></i> Beranda</a></li>
     <li>Jam Keselamatan Kerja</li>
