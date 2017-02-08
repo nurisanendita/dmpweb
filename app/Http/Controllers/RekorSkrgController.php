@@ -40,7 +40,7 @@ class RekorSkrgController extends Controller
         $hari = $request->input('input_hari_rekorskrg');
         $jam = $request->input('input_jam_rekorskrg');
 
-        DB::table('rekorskrg')->insert([
+        RekorSkrg::insert([
                 'hari' => $hari,
                 'jam' => $jam,
               ]);
