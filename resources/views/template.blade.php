@@ -32,16 +32,16 @@
                   </div>
               </div>
         </div>
-        <nav class="navbar navbar-inverse" style="height:20px;">
+        <nav class="navbar navbar-inverse" style="height:10px;">
             <div class="container">
-              <div class="navbar-header" style="height:20px;">
+              <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
               </div>
-              <div class="collapse navbar-collapse" id="myNavbar" style="height:20px;">
+              <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                   <li><a href="{{ url('/') }}">BERANDA</a></li>
                   <li><a href="{{ url('/') }}/berita">BERITA</a></li>
