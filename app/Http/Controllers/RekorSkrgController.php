@@ -38,11 +38,11 @@ class RekorSkrgController extends Controller
     ]);
 
         $hari = $request->input('input_hari_rekorskrg');
-        $jam = $request->input('input_hari_rekorskrg');
+        $jam = $request->input('input_jam_rekorskrg');
 
         DB::table('rekorskrg')->insert([
                 'hari' => $hari,
-                'hari' => $jam,
+                'jam' => $jam,
               ]);
         return redirect('rekorskrg_index');
     }
