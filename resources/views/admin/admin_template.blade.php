@@ -80,7 +80,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 
-                <li href="{{ url('/') }}/agenda_index" class="treeview {{ Request::is('/agenda_index') ? "active" : "" }}">
+                <li href="{{ url('/') }}/agenda_index" class="treeview {{ Request::is('/agenda_index') ? "active" : "" }}" style="border-left-color: #f39c12;">
                     <a href="{{ url('/') }}/agenda_index">
                         <i class="fa fa-calendar"></i><span>Agenda</span>
                     </a>
