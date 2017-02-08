@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container bg-orange" style="margin-bottom:40px;margin-top:30px;color=black">
+<div class="container bg-orange" style="margin-bottom:40px;margin-top:30px;">
   <div class="row">
     <div class="container">
 
@@ -11,8 +11,8 @@
         <div class="col-md-3 col-lg-3">
           <div class="info-box" style="height:500px; font-family:Hind; margin-top:20px;">
             <div class="info-box-content" style="margin-left:20px; margin-right:20px;">
-              <span><h5 style="margin-top:20px;"><b>{{ $dokumentasi_list->judul_foto }} </b></h5></span><br>
-              <div class="container" style="height:300px; width:220px; font-family:Hind;">
+              <span><h5 style="margin-top:20px;color=black"><b>{{ $dokumentasi_list->judul_foto }} </b></h5></span><br>
+              <div class="container" style="height:300px; width:220px; font-family:Hind;color=black">
                 <p>{{ $dokumentasi_list->keterangan_foto }}</p><br>
                 <p>{{ $dokumentasi_list->tanggal }}</p>
               </div>
