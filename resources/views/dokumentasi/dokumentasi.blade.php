@@ -10,7 +10,7 @@
       <div class="container mySlides col-md-12 col-lg-12" >
         <div class="col-md-3 col-lg-3">
           <div class="info-box" style="height:500px; font-family:Hind; margin-top:20px;">
-            <div class="info-box-content" style="margin-left:20px; margin-right:20px;">
+            <div class="info-box-content" style="margin-left:10px; margin-right:10px;">
               <span><h5 style="margin-top:20px;color: #525252;"><b>{{ $dokumentasi_list->judul_foto }} </b></h5></span><br>
               <div class="container" style="height:300px; width:220px; font-family:Hind">
                 <p style="color: #525252;">{{ $dokumentasi_list->keterangan_foto }}</p><br>
