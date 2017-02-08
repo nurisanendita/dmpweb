@@ -26,9 +26,9 @@ class AgendaController extends Controller
       return redirect('agenda_index');
     }
 
-    $agenda1 = Agenda::orderBy('tanggal_mulai','desc')->limit(4)->get();
-    $agenda2 = Agenda::orderBy('tanggal_mulai','desc')->limit(4)->get();
-    $agenda3 = Agenda::orderBy('tanggal_mulai','desc')->limit(4)->get();
+    $agenda1 = Agenda::orderBy('tanggal_mulai','desc')->offset(0)->limit(4)->get();
+    $agenda2 = Agenda::orderBy('tanggal_mulai','desc')->offset(4)->limit(4)->get();
+    $agenda3 = Agenda::orderBy('tanggal_mulai','desc')->offset(8)->limit(4)->get();
     return view('welcome', compact('agenda1','agenda2','agenda3'));
   }
 
