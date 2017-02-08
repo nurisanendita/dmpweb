@@ -183,13 +183,13 @@
 
     <!-- Keselamatan Jam Kerja -->
     <div class="col-md-3 col-lg-3">
-      <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:50px;">
+      <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
           <div class="row container info-box bg-orange" style="height:200px;">
             <img src="">
           </div>
       </div>
       <div class="row row1 container col-md-12 col-lg-12">
-        <span><img src="green_safety_2.png"></span>
+        <span><img style="margin-left:30px;" src="green_safety_2.png">REKOR KESELAMATAN JAM KERJA YANG PERNAH DICAPAI</span>
       </div>
 
       <script>

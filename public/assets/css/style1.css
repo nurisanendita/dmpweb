@@ -31,6 +31,14 @@ p{
     border: 1px solid #F5F5F5;
 }
 
+.row .row2::after{
+    content: ' ';
+    margin-top: 10px;
+    width: 100px;
+    display: block;
+    border: 1px solid #F5F5F5;
+}
+
 .mySlides {display:none;}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
