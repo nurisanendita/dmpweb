@@ -14,7 +14,7 @@
         <div class="row container">
 
           <!-- carousel slide 1 -->
-          <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
+          <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
             <!-- Individual row agenda 1-->
             @foreach($agenda1 as $agenda1_list)
         			<div class="row row1" style="margin-top:10px;">
@@ -49,7 +49,7 @@
             </div>
 
         <!-- carousel slide 2 -->
-        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide2">
+        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
           <!-- Individual row agenda 1-->
           @foreach($agenda2 as $agenda2_list)
             <div class="row row1" style="margin-top:10px;">
@@ -84,7 +84,7 @@
           </div>
 
         <!-- carousel slide 3 -->
-        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3">
+        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
           <!-- Individual row agenda 1-->
           @foreach($agenda3 as $agenda3_list)
             <div class="row row1" style="margin-top:10px;">
@@ -93,7 +93,7 @@
                 <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                 <div class="info-box-content" style="margin-left:30px;">
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda3_list->tanggal_mulai))}}</span>
-                  <span class="info-box-text" style="font-size:15px;text-transform:uppercase; ">s.d.</span>
+                  <span class="info-box-text" style="font-size:15px;text-transform:lowercase; ">s.d.</span>
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda3_list->tanggal_selesai))}}</span>
                 </div>
                 </div>
@@ -127,14 +127,14 @@
 
         function carousel() {
             var i;
-            var x = document.getElementsByClassName("mySlides");
+            var x = document.getElementsByIdName("slide");
             for (i = 0; i < x.length; i++) {
               x[i].style.display = "none";
             }
             myIndex1++;
             if (myIndex1 > x.length) {myIndex1 = 1}
             x[myIndex1-1].style.display = "block";
-            setTimeout(carousel, 5000);
+            setTimeout(carousel, 2000);
         }
         </script>
 
