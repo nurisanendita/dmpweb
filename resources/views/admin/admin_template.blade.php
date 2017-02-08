@@ -86,7 +86,7 @@
                     </a>
                 </li>
 
-                <li href="#" class="active treeview"class="{{ Request::is('#') ? "active treeview" : "" }}">
+                <li href="#" class="active treeview"class="{{ Request::is('') ? "active treeview" : "" }}">
                     <a href="#">
                         <i class="fa fa-newspaper-o"></i><span>Berita</span>
                     </a>
