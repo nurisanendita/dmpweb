@@ -183,7 +183,7 @@
 
     <!-- Keselamatan Jam Kerja -->
     <div class="col-md-3 col-lg-3">
-      <div class="container mySlides2 col-md-12 col-lg-12" >
+      <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
           <div class="info-box bg-orange" style="height:500px; font-family:Hind; margin-top:20px;">
             <div class="info-box-content" style="margin-left:10px; margin-right:10px;">
               <span><h5 style="margin-top:20px;"><b></b></h5></span><br>
