@@ -62,7 +62,7 @@ class DokumentasiController extends Controller
     $image = $request->file('input_foto');
     $imgname = $image->getClientOriginalName();
     // $path = url('/') ;
-    $image = $image->move(public_path() . "/images/", $imgname);
+    $image = $image->move(public_path() . "/dokumentasiUpload/", $imgname);
     $save_path = "images/" . $imgname;
 
     $Keterangan_Foto = $request->input_keteranganfoto;
@@ -100,7 +100,7 @@ class DokumentasiController extends Controller
     $imgname = $image->getClientOriginalName();
     File::delete(public_path() . '/' .$dokumentasi->foto);
     $newSavePath = "images/" . $imgname;
-    $image = $image->move(public_path() . "/images/", $imgname);
+    $image = $image->move(public_path() . "/dokumentasiUpload/", $imgname);
 
     $dokumentasi->foto = $newSavePath;
     $dokumentasi->keterangan_foto = $request->input_keteranganfoto;
