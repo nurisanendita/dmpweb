@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container bg-orange" style="margin-bottom:50px;margin-top:30px;">
+<div class="container bg-orange" style="margin-bottom:40px;margin-top:30px;">
   <div class="row">
     <div class="container">
 
@@ -20,7 +20,7 @@
           </div>
         </div>
 
-        <div class="col-md-9 col-lg-9">
+        <div class="col-md-9 col-lg-9" style="margin-top:20px;">
           <img src="{{ $dokumentasi_list->foto }}" style="height:500px; width:850px;">
           <div class="row">
             <div class="container">
@@ -69,7 +69,7 @@
     </div>
   </div>
 </div>
-<div class="row " style="margin-top100px; font-family:Montserrat; font-size:20px;">
+<div class="row" style="font-family:Montserrat; font-size:20px;">
   <div class="container">
     @foreach ($quotes as $quote_list)
     <marquee behavior="scroll" direction="left" style="text-transform:uppercase;margin-top100px;">{{ $quote_list->quote }}</marquee>
