@@ -33,8 +33,9 @@ p{
 
 .row .row2::after{
     content: ' ';
-    margin-top: 10px;
-    width: 100px;
+    margin-top: 5px;
+    margin-top: 30px;
+    width: 150px;
     display: block;
     border: 1px solid #F5F5F5;
 }
