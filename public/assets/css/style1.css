@@ -69,13 +69,18 @@ p{
 }
 
 /* navbar */
+
+.navbar .navbar-inverse{
+    height: 500px;
+}
+
 .navbar-inverse {
   background-color: #0060AF;
   border-color: #fff;
   font-size: 14px;
   font-weight: bold;
   font-family:"Montserrat",sans-serif;
-  height: 500px;
+
 }
 /* link */
 .navbar-inverse .navbar-nav > li > a {
