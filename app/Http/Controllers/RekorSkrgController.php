@@ -64,11 +64,10 @@ class RekorSkrgController extends Controller
 
     $rekorskrg->hari = $request->input('input_hari_rekorskrg');
     $rekorskrg->jam = $request->input('input_jam_rekorskrg');
-    //$rekorskrg->save();
+    $rekorskrg->save();
 
-    //$rekorskrg = RekorSkrg::all();
-    return $rekorskrg;
-    //return redirect('rekorskrg_index');
+    $rekorskrg = RekorSkrg::all();
+    return redirect('rekorskrg_index');
   }
 
   public function destroy($id)

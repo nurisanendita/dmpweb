@@ -12,7 +12,7 @@
 
 <h2>Edit Rekor Capaian Saat Ini</h2>
 
-<form action="{{ url('/') }}/rekorskrg_update" method="post">
+<form action="{{ url('/') }}/rekorskrg_update/{{$rekorskrg->id}}" method="post">
   <b>Masukkan Jumlah Hari</b>
 		<textarea class="form-control" type="text" name="input_hari_rekorskrg">{{$rekorskrg->hari}}</textarea><br><br>
 

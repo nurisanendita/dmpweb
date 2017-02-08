@@ -12,7 +12,7 @@
 
 <h2>Edit Quote</h2>
 
-<form action="{{ url('/') }}/quote_update" method="post">
+<form action="{{ url('/') }}/quote_update/{{$quotes->id}}" method="post">
 	<b>Masukkan Quote</b>
 		<textarea class="form-control" type="text" name="input_quote">{{$quotes->quote}}</textarea><br><br>
 

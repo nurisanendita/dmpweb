@@ -12,20 +12,15 @@
 */
 
 Route::get('/', 'AgendaController@show');
-
 Route::get('/dokumentasi', 'DokumentasiController@show');
-Route::post('/dokumentasi', 'DokumentasiController@show');
-
 Route::get('/berita', function () {return view('berita.berita');});
-
 Route::get('/tentang_kami', function () {return view('profil.profil');});
-
 Route::get('/kontak', function () {return view('kontak.kontak');});
 
 // Route::get('/admin_dmp', function () {return view('admin.admin_login');});
 // Route::post('/admin_dmpPost', 'AdminController@authenticate');
 
-Auth::routes();
+//Auth::routes();
 Route::get('/agenda_index', 'AgendaController@index');
 Route::get('/agenda_create', 'AgendaController@create');
 Route::post('/agenda_store', 'AgendaController@store');
