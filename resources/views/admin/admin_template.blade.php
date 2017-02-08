@@ -105,14 +105,14 @@
                 </li>
                 <li class="treeview">
                   <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    <i class="fa fa-dashboard"></i> <span>Jam Keselamatan Kerja</span>
                     <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-left"></i>
+                      <i class="fa fa-angle-right pull-right"></i>
                     </span>
                   </a>
                   <ul class="treeview-menu" style="display: none;">
-                    <li><a href="../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                    <li><a href="../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                    <li><a href="../index.html"><i class="fa fa-circle-o"></i>Rekor Tercapai</a></li>
+                    <li><a href="../index2.html"><i class="fa fa-circle-o"></i>Rekor Saat ini</a></li>
                   </ul>
                 </li>
             </ul>
