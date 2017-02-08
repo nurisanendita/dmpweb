@@ -22,8 +22,8 @@ class QuoteController extends Controller
 
   public function index()
   {
-    $quote = Quotes::all();
-    return view('quote.index', compact('quote'));
+    $quotes = Quotes::all();
+    return view('quote.index', compact('quotes'));
   }
 
   public function create()
@@ -47,29 +47,30 @@ class QuoteController extends Controller
 
   public function edit($id)
   {
-    $quote = Quotes::find($id);
-      return view('quote.edit',compact('quote');
+    $quotes = Quotes::find($id);
+      //return view('quote.edit',compact('quote');
+      return $quotes;
   }
 
   public function update($id, Request $request)
   {
-    $quote = Quotes::find($id);
+    $quotes = Quotes::find($id);
 
     $this->validate($request, [
         'input_quote' => 'required',
     ]);
 
-    $quote->quote = $request->input('input_quote');
-    $quote->save();
+    $quotes->quote = $request->input('input_quote');
+    $quotes->save();
 
-    $quote = Quotes::all();
+    $quotes = Quotes::all();
     return redirect('/quote_index');
   }
 
   public function destroy($id)
   {
-    $quote = Quotes::findorFail($id);
-    $quote->delete();
+    $quotes = Quotes::findorFail($id);
+    $quotes->delete();
     return redirect('quote_index');
   }
 }

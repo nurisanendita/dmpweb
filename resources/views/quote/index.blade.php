@@ -31,7 +31,7 @@
 				</thead>
 
 				<tbody>
-	            @foreach ($quote as $quote_list)
+	            @foreach ($quotes as $quote_list)
 	                <tr>
                   <td>{{ $quote_list->id }}</td>
 				          <td>{{ $quote_list->quote }}</td>
