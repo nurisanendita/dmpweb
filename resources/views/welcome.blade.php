@@ -203,7 +203,7 @@
       </div>
       @endforeach
 
-      <div class="row row2 container col-md-12 col-lg-12">
+      <div class="row row2 container col-md-12 col-lg-12" style="margin-top:25px;">
         <span><img style="margin-left:30px; margin-bottom:10px" src="rekorcapaian.png"></span>
         <div>
           @foreach($rekortercapai as $rekortercapai_list)
