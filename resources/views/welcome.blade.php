@@ -213,9 +213,9 @@
 
       <script>
       var myIndex2 = 0;
-      carousel();
+      slideshow();
 
-      function carousel() {
+      function slideshow() {
           var a;
           var b = document.getElementsByClassName("mySlides2");
           for (a = 0; a < b.length; a++) {
@@ -224,7 +224,7 @@
           myIndex2++;
           if (myIndex2 > b.length) {myIndex2 = 1}
           b[myIndex2-1].style.display = "block";
-          setTimeout(carousel, 3000); // Change image every 10 seconds
+          setTimeout(slideshow, 3000); // Change image every 10 seconds
       }
       </script>
     </div>
