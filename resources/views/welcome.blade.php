@@ -195,6 +195,13 @@
           <p style="text-align:right"><b>HARI</b></p>
         </div>
       </div>
+      <div class="row row2 container col-md-12 col-lg-12">
+        <span>CAPAIAN REKOR HARI KESELAMATAN JAM KERJA</span>
+        <div>
+          <p style="text-align:right"><b>JAM</b></p>
+          <p style="text-align:right"><b>HARI</b></p>
+        </div>
+      </div>
 
       <script>
       var myIndex = 0;
