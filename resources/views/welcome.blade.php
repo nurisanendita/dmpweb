@@ -9,22 +9,21 @@
   <div class="container">
     <h1 class="title" style="font-family:Hind" style="margin-left:-20px;">Agenda</h1>
     <div class="row">
-    	<div class="col-md-9 col-lg-9" style="margin-left:-20px; margin-top:-10px;">
+    	<div class="col-md-9 col-lg-9" style="margin-left:-20px; margin-top:-15px;">
 
         <div class="row container">
 
           <!-- carousel slide 1 -->
-          <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
-            <img src="img_kaltim1.jpg">
+          <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide1">
             <!-- Individual row agenda 1-->
-            <!-- @foreach($agenda1 as $agenda1_list)
+            @foreach($agenda1 as $agenda1_list)
         			<div class="row row1" style="margin-top:10px;">
         				<div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                   <div class="info-box bg-blue" style="font-family:Hind;">
                   <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
                     <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda1_list->tanggal_mulai))}}</span>
-                    <span class="info-box-text" style="font-size:15px;text-transform:lowercase; ">s.d.</span>
+                    <span class="info-box-text" style="font-size:15px;text-transform:lowercase;text-align:center;">s.d.</span>
                     <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda1_list->tanggal_selesai))}}</span>
                   </div>
                   </div>
@@ -35,7 +34,7 @@
                   <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                   <div class="info-box-content" style="margin-left:30px;">
                     <span class="info-box-text" style="font-size:16px;">{{$agenda1_list->kode_ruang}}</span>
-                    <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;">{{$agenda1_list->nama_ruang}}</span>
+                    <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;text-align:center;">{{$agenda1_list->nama_ruang}}</span>
                     <span class="info-box-text" style="font-size:16px;">{{$agenda1_list->lantai}}</span>
                   </div>
                   </div>
@@ -46,21 +45,20 @@
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda1_list->keterangan_acara}}</p>
                 </div>
               </div>
-              @endforeach -->
+              @endforeach
             </div>
 
         <!-- carousel slide 2 -->
-        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
-          <img src="img_kaltim2.jpg">
+        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3">
           <!-- Individual row agenda 1-->
-          <!-- @foreach($agenda2 as $agenda2_list)
+          @foreach($agenda2 as $agenda2_list)
             <div class="row row1" style="margin-top:10px;">
               <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                 <div class="info-box bg-blue" style="font-family:Hind;">
                 <span class="info-box-icon bg-blue" style="width:60px;"><i style="font-size: 30px; "class="fa fa-calendar"></i></span>
                 <div class="info-box-content" style="margin-left:30px;">
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda2_list->tanggal_mulai))}}</span>
-                  <span class="info-box-text" style="font-size:15px;text-transform:lowercase; ">s.d.</span>
+                  <span class="info-box-text" style="font-size:15px;text-transform:lowercase;text-align:center;">s.d.</span>
                   <span class="info-box-text" style="font-size:18px; ">{{date('j M Y',strtotime($agenda2_list->tanggal_selesai))}}</span>
                 </div>
                 </div>
@@ -71,7 +69,7 @@
                 <span class="info-box-icon bg-orange" style="width:40px;"><i style="font-size: 40px; "class="ion ion-ios-location-outline"></i></span>
                 <div class="info-box-content" style="margin-left:30px;">
                   <span class="info-box-text" style="font-size:16px;">{{$agenda2_list->kode_ruang}}</span>
-                  <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;">{{$agenda2_list->nama_ruang}}</span>
+                  <span class="info-box-tex" style="font-size:16px;text-transform:uppercase;text-align:center;">{{$agenda2_list->nama_ruang}}</span>
                   <span class="info-box-text" style="font-size:16px;">{{$agenda2_list->lantai}}</span>
                 </div>
                 </div>
@@ -82,14 +80,13 @@
                 <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda2_list->keterangan_acara}}</p>
               </div>
             </div>
-            @endforeach -->
+            @endforeach
           </div>
 
         <!-- carousel slide 3 -->
-        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide">
-          <img src="img_kaltim3.jpg">
+        <div class="container mySlides col-md-12 col-lg-12 w3-animate-right" id="slide3">
           <!-- Individual row agenda 1-->
-          <!-- @foreach($agenda3 as $agenda3_list)
+          @foreach($agenda3 as $agenda3_list)
             <div class="row row1" style="margin-top:10px;">
               <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
                 <div class="info-box bg-blue" style="font-family:Hind;">
@@ -118,7 +115,7 @@
                 <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda3_list->keterangan_acara}}</p>
               </div>
             </div>
-            @endforeach -->
+            @endforeach
         </div>
         <!-- carousel slide 3 -->
       </div>
@@ -211,6 +208,7 @@
         </div>
       </div>
 
+      <!-- carousel keselamatan jam kerja -->
       <script>
       var myIndex2 = 0;
       slideshow();
