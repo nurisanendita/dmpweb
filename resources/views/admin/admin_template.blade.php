@@ -103,7 +103,7 @@
                         <i class="fa fa-sticky-note-o"></i><span>Quote</span>
                     </a>
                 </li>
-                <li class="treeview active">
+                <li class="treeview">
                   <a href="#">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     <span class="pull-right-container">
