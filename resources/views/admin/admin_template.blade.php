@@ -93,7 +93,7 @@
                 </li>
 
                 <li href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active treeview" : "" }}">
-                    <a href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active treeview" : "" }}">
+                    <a href="{{ url('/') }}/dokumentasi_index" class="{{ Request::is('/dokumentasi_index') ? "active" : "" }}">
                         <i class="fa fa-picture-o"></i><span>Dokumentasi</span>
                     </a>
                 </li>
