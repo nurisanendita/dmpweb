@@ -59,8 +59,8 @@ class DokumentasiController extends Controller
   {
     $this->validate($request, [
         'input_foto' => 'required',
-        'input_keteranganfoto' => 'required'|'max:340',
-        'input_judulfoto' => 'required'|'max:100',
+        'input_keteranganfoto' => 'required|max:300',
+        'input_judulfoto' => 'required|max:100',
         'input_tanggalfoto' => 'required',
     ]);
 
@@ -96,7 +96,7 @@ class DokumentasiController extends Controller
 
     $this->validate($request, [
         'input_foto' => 'required',
-        'input_keteranganfoto' => 'required',
+        'input_keteranganfoto' => 'required|max:300',
         'input_judulfoto' => 'required|max:100',
         'input_tanggalfoto' => 'required',
     ]);
