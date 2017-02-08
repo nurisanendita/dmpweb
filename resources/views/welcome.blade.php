@@ -184,14 +184,8 @@
     <!-- Keselamatan Jam Kerja -->
     <div class="col-md-3 col-lg-3">
       <div class="container mySlides2 col-md-12 col-lg-12" style="margin-left:30px;">
-          <div class="row container info-box bg-orange" style="height:300px; font-family:Hind; margin-top:20px;">
-            <div class="info-box-content" style="margin-left:10px; margin-right:10px;">
-              <span><h5 style="margin-top:20px;"><b></b></h5></span><br>
-              <div class="container" style="height:300px; width:220px; font-family:Hind">
-                <p></p><br>
-                <p></p>
-              </div>
-            </div>
+          <div class="row container info-box bg-orange" style="height:200px;">
+            
           </div>
       </div>
 
