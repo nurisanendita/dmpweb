@@ -70,7 +70,7 @@ class BannersController extends Controller
     $newSavePath = "bannersUpload/" . $imgname;
     $image = $image->move(public_path() . "/bannersUpload/", $imgname);
 
-    $banners->banner = $newSavePath;
+    $banners->gambar = $newSavePath;
     $banners->save();
     $banners = Banners::all();
     return redirect('banners_index');
