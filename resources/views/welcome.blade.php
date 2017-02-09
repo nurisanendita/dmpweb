@@ -204,7 +204,7 @@
       @endforeach
 
       <div class="row row2 container col-md-12 col-lg-12" style="margin-top:25px;">
-        <span><img style="margin-left:30px; margin-bottom:10px; height:30px;" src="rekorcapaian.png"></span>
+        <span><img style="margin-left:30px; margin-bottom:10px; height:40px;" src="rekorcapaian.png"></span>
         <div>
           @foreach($rekortercapai as $rekortercapai_list)
           <p style="text-align:right;color:#6A6161;"><b>{{$rekortercapai_list->hari}} HARI</b></p>
@@ -214,7 +214,7 @@
       </div>
 
       <div class="row container col-md-12 col-lg-12" style="margin-top:20px;">
-        <span><img style="margin-left:30px; margin-bottom:10px; height:30px;" src="rekorskrg.png"></span>
+        <span><img style="margin-left:30px; margin-bottom:10px; height:40px;" src="rekorskrg.png"></span>
         <div>
           @foreach($rekorskrg as $rekorskrg_list)
           <p style="text-align:right;color:#6A6161;"><b>{{$rekorskrg_list->hari}} HARI</b></p>
