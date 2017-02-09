@@ -125,11 +125,11 @@ class AgendaController extends Controller
     $agenda->ruangan_id = $request->input('input_koderuang');
     $agenda->nama_acara = $request->input('input_namakegiatan');
     $agenda->keterangan_acara = $request->input('input_keterangan');
-    // $agenda->save();
+    $agenda->save();
 
-    $agenda = DB::table('agenda')
-                  ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
-                  ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')->get();
+    // $agenda = DB::table('agenda')
+    //               ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
+    //               ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')->get();
     return redirect('agenda_index');
   }
 
