@@ -15,7 +15,7 @@ class CreateAgendaTable extends Migration
     {
         Schema::create('agenda', function (Blueprint $table) {
           $table->increments('id');
-          $table->integer('ruangan_id')
+          $table->integer('ruangan_id');
           $table->date('tanggal_mulai');
           $table->date('tanggal_selesai');
           $table->text('nama_acara');
