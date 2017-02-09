@@ -119,7 +119,7 @@ class AgendaController extends Controller
         'input_keterangan' => 'required',
       ])
 
-    DB::table('agenda')
+    $agenda=DB::table('agenda')
             ->where('id',$id)
             ->update([
               'tanggal_mulai' => $request->input('input_tanggalmulai'),
