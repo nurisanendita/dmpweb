@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-6">
-                  <a href="#"><h4 style="text-transform:uppercase;">{{$agenda1_list->nama_acara}}</h4></a>
+                  <a href="#"><h5 style="text-transform:uppercase;">{{$agenda1_list->nama_acara}}</h5></a>
                   <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda1_list->keterangan_acara}}</p>
                 </div>
               </div>
@@ -76,7 +76,7 @@
               </div>
 
               <div class="col-md-6 col-lg-6">
-                <a href="#"><h4 style="text-transform:uppercase;">{{$agenda2_list->nama_acara}}</h4></a>
+                <a href="#"><h5 style="text-transform:uppercase;">{{$agenda2_list->nama_acara}}</h5></a>
                 <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda2_list->keterangan_acara}}</p>
               </div>
             </div>
@@ -111,7 +111,7 @@
               </div>
 
               <div class="col-md-6 col-lg-6">
-                <a href="#"><h4 style="text-transform:uppercase;">{{$agenda3_list->nama_acara}}</h4></a>
+                <a href="#"><h5 style="text-transform:uppercase;">{{$agenda3_list->nama_acara}}</h5></a>
                 <p style="text-overflow: ellipsis; white-space:nowrap; overflow:hidden; font-size: 15px;">{{$agenda3_list->keterangan_acara}}</p>
               </div>
             </div>
@@ -204,7 +204,7 @@
       @endforeach
 
       <div class="row row2 container col-md-12 col-lg-12" style="margin-top:25px;">
-        <span><img style="margin-left:30px; margin-bottom:10px" src="rekorcapaian.png"></span>
+        <span><img style="margin-left:30px; margin-bottom:10px; height:30px;" src="rekorcapaian.png"></span>
         <div>
           @foreach($rekortercapai as $rekortercapai_list)
           <p style="text-align:right;color:#6A6161;"><b>{{$rekortercapai_list->hari}} HARI</b></p>
@@ -214,7 +214,7 @@
       </div>
 
       <div class="row container col-md-12 col-lg-12" style="margin-top:20px;">
-        <span><img style="margin-left:30px; margin-bottom:10px" src="rekorskrg.png"></span>
+        <span><img style="margin-left:30px; margin-bottom:10px; height:30px;" src="rekorskrg.png"></span>
         <div>
           @foreach($rekorskrg as $rekorskrg_list)
           <p style="text-align:right;color:#6A6161;"><b>{{$rekorskrg_list->hari}} HARI</b></p>
