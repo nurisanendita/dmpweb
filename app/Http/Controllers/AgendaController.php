@@ -66,7 +66,7 @@ class AgendaController extends Controller
   public function create()
   {
     $ruangan = Ruangan::all();
-        return view('agenda.create', compact('ruangan');
+        return view('agenda.create', compact('ruangan'));
   }
 
   public function store(Request $request)
