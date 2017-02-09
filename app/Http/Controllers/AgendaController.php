@@ -30,20 +30,19 @@ class AgendaController extends Controller
                   ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')
                   ->orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')
                   ->where('tanggal_selesai','>','sysdate')->offset(0)->limit(4)->get();
+
     $agenda2 = DB::table('agenda')
                   ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
                   ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')
                   ->orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')
                   ->where('tanggal_selesai','>','sysdate')->offset(4)->limit(4)->get();
+
     $agenda3 = DB::table('agenda')
                   ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
                   ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')
                   ->orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')
                   ->where('tanggal_selesai','>','sysdate')->offset(8)->limit(4)->get();
 
-    // $agenda1 = Agenda::
-    // $agenda2 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(4)->limit(4)->get();
-    // $agenda3 = Agenda::orderBy('tanggal_mulai','desc')->orderBy('tanggal_selesai','asc')->where('tanggal_selesai','>','sysdate')->offset(8)->limit(4)->get();
     $rekorskrg = RekorSkrg::orderBy('id','desc')->limit(1)->get();
     $rekortercapai = RekorTercapai::orderBy('id','desc')->limit(1)->get();
     $banners = Banners::orderBy('id','desc')->limit(3)->get();
@@ -107,10 +106,10 @@ class AgendaController extends Controller
 
   public function update($id, Request $request)
   {
-    $agenda = DB::table('agenda')
-                  ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
-                  ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')
-                  ->where('agenda.id',$id)->first();
+    // $agenda = DB::table('agenda')
+    //               ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
+    //               ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')
+    //               ->where('agenda.id',$id)->first();
 
     $this->validate($request, [
         'input_tanggalmulai' => 'required',
@@ -118,18 +117,17 @@ class AgendaController extends Controller
         'input_koderuang' => 'required',
         'input_namakegiatan' => 'required',
         'input_keterangan' => 'required',
-    ]);
 
-    $agenda->tanggal_mulai = $request->input('input_tanggalmulai');
-    $agenda->tanggal_selesai = $request->input('input_tanggalselesai');
-    $agenda->ruangan_id = $request->input('input_koderuang');
-    $agenda->nama_acara = $request->input('input_namakegiatan');
-    $agenda->keterangan_acara = $request->input('input_keterangan');
-    $agenda->save();
+    DB::table('agenda')
+            ->where('id',$id)
+            ->update([
+              'tanggal_mulai' => $request->input('input_tanggalmulai'),
+              'tanggal_selesai' => $request->input('input_tanggalselesai'),
+              'ruangan_id' => $request->input('input_koderuang'),
+              'nama_acara' => $request->input('input_namakegiatan'),
+              'keterangan_acara' => $request->input('input_keterangan'),
+            ]);
 
-    // $agenda = DB::table('agenda')
-    //               ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
-    //               ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')->get();
     return redirect('agenda_index');
   }
 
