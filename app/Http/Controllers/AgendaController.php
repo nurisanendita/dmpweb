@@ -106,11 +106,6 @@ class AgendaController extends Controller
 
   public function update($id, Request $request)
   {
-    // $agenda = DB::table('agenda')
-    //               ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
-    //               ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')
-    //               ->where('agenda.id',$id)->first();
-
     $this->validate($request, [
         'input_tanggalmulai' => 'required',
         'input_tanggalselesai' => 'required',
@@ -128,6 +123,9 @@ class AgendaController extends Controller
               'nama_acara' => $request->input('input_namakegiatan'),
               'keterangan_acara' => $request->input('input_keterangan'),
             ]);
+    $agenda = DB::table('agenda')
+                  ->join('ruangan','agenda.ruangan_id','=','ruangan.id')
+                  ->select('agenda.*','ruangan.kode_ruang','ruangan.nama_ruang','ruangan.lantai')->get();
 
     return redirect('agenda_index');
   }
