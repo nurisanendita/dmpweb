@@ -22,26 +22,10 @@
 
 	<b>Kode Ruang</b>
 	<select type="text" style="margin-left:40px;" name="input_koderuang">
-		@foreach($kodeRuang as $kRuang)
-				<option value="{{ $kRuang->kode }}">{{ $kRuang->kode }}</option>
+		@foreach($ruangan as $ruang)
+				<option value="{{ $ruang->id }}">{{ $ruang->kode_ruang }}</option>
 		@endforeach
-	</select>
-
-	<span style="margin-left:110px;"><b>Nama Ruang</b>
-		<select type="text" style="margin-left:10px;" name="input_namaruang">
-			@foreach($namaRuang as $nRuang)
-					<option value="{{ $nRuang->nama }}">{{ $nRuang->nama }}</option>
-			@endforeach
-		</select>
-	</span>
-
-	<span style="margin-left:110px;"><b>Lantai</b>
-		<select type="text" style="margin-left:10px;" name="input_lantairuang">
-			@foreach($lantaiRuang as $lRuang)
-					<option value="{{ $lRuang->lantai }}">{{ $lRuang->lantai }}</option>
-			@endforeach
-		</select>
-	</span><br><br>
+	</select><br><br>
 
 	<b>Nama Kegiatan</b>
 	<textarea class="form-control" style="height:100px; width:500px;" type="text" name="input_namakegiatan"></textarea><br><br>

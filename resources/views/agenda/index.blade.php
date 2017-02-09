@@ -48,8 +48,8 @@
 				          <td>{{ $agenda_list->nama_acara }}</td>
 				          <td>{{ $agenda_list->keterangan_acara }}</td>
                   <td>
-										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $agenda_list -> id }}">EDIT</a>
-										<a class="btn btn-danger btn-xs" href="{{ url('/') }}/agenda_delete/{{ $agenda_list -> id }}">HAPUS</a>
+										<a class="btn btn-warning btn-xs" href="{{ url('/') }}/agenda_edit/{{ $agenda_list->id }}">EDIT</a>
+										<a class="btn btn-danger btn-xs" href="{{ url('/') }}/agenda_delete/{{ $agenda_list->id }}">HAPUS</a>
                   </td>
 	                </tr>
 	            @endforeach
