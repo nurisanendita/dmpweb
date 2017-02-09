@@ -117,6 +117,7 @@ class AgendaController extends Controller
         'input_koderuang' => 'required',
         'input_namakegiatan' => 'required',
         'input_keterangan' => 'required',
+      ])
 
     DB::table('agenda')
             ->where('id',$id)
